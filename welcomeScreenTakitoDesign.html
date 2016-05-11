@@ -35,20 +35,20 @@ Title container below.
 <!--
 Options Container below.
 -->
-<div class="container">
+<div class="container" id="mainSelection">
     <div class="row">
         <button type="button" class="btn btn-default btn-lg btn-block">
-            <img class="img-circle" src="images/dodge.gif" width="46px"; height="46px" alt="">
+            <img id="dodge" class="img-circle" src="images/dodge.gif" width="46px"; height="46px" alt="">
             Marathon Mode</button>
     </div>
     <div class="row">
-        <button type="button" class="btn btn-default btn-lg btn-block">Speed Mode</button>
+        <button type="button" class="btn btn-default btn-lg btn-block"><img>Speed Mode</button>
     </div>
     <div class="row">
-        <button type="button" class="btn btn-default btn-lg btn-block">Leaderboard</button>
+        <button type="button" class="btn btn-default btn-lg btn-block"><img>Leaderboard</button>
     </div>
     <div class="row">
-        <button type="button" class="btn btn-default btn-lg btn-block">Settings</button>
+        <button type="button" class="btn btn-default btn-lg btn-block"><img>Settings</button>
     </div>
 </div>
 
@@ -61,5 +61,23 @@ Options Container below.
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script>
+    //DOM manipulation of this particular site happens below
+    $(document).ready(function(){
+
+        //With the below function I can only make the dodge disappear. I cannot toggle it on or off... yet
+        //The goal is:
+        // 1.- One click, dodge moves to location
+        // 2.- Click again where dodge is, link works and takes you to the next screen.
+        $("#dodge").click(function(){
+            $("#dodge").attr({
+                "class" : "",
+                "src" : "",
+                "width" : "",
+                "height" : ""
+            });
+        });
+    });
+</script>
 </body>
 </html>
