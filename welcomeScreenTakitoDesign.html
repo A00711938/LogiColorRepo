@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Log in Takito Design Page</title>
+    <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -22,51 +22,62 @@
 </head>
 <body>
 <!--
-Below I add all the content required for Boostrap to create the log-in page.
+Takito's design of main screen (aka welcome screen):
+-->
+
+<!--
+Title container below.
 -->
 <div class="container">
+    <h1 class="text-warning text-center">Logicolor</h1>
+</div>
+
+<!--
+Options Container below.
+-->
+<div class="container" id="mainSelection">
     <div class="row">
-        <div class="col-xs-12 text-center">
-            <h1><span class="text-warning">Logicolor</span></h1>
-        </div>
-    </div>
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col-xs-12">
-                    <h3 class="text-success text-center">
-                        Welcome back!
-                    </h3>
-            </div>
-            <div class="col-xs-12">
-                <form role="form">
-                    <div class="form-group">
-                        <label for="email">Email address:</label>
-                        <input type="email" class="form-control" id="email" placeholder="hola@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" id="pwd">
-                    </div>
-                    <div class="checkbox text-center">
-                        <label><input type="checkbox"> Remember me</label>
-                    </div>
-                </form>
-            </div>
-            <div class="col-xs-12 text-center">
-                <button type="submit" class="btn btn-default">Log in</button>
-            </div>
-        </div>
+        <button type="button" class="btn btn-default btn-lg btn-block">
+            <img id="dodge" class="img-circle" src="images/dodge.gif" width="46px"; height="46px" alt="">
+            Marathon Mode</button>
     </div>
     <div class="row">
-        <div class="col-xs-12 text-center">
-            <h6>Not a member? <span class="text-primary"><u>Sign in</u></span></h6>
-        </div>
+        <button type="button" class="btn btn-default btn-lg btn-block"><img>Speed Mode</button>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-default btn-lg btn-block"><img>Leaderboard</button>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-default btn-lg btn-block"><img>Settings</button>
     </div>
 </div>
+
+
+
+
+
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script>
+    //DOM manipulation of this particular site happens below
+    $(document).ready(function(){
+
+        //With the below function I can only make the dodge disappear. I cannot toggle it on or off... yet
+        //The goal is:
+        // 1.- One click, dodge moves to location
+        // 2.- Click again where dodge is, link works and takes you to the next screen.
+        $("#dodge").click(function(){
+            $("#dodge").attr({
+                "class" : "",
+                "src" : "",
+                "width" : "",
+                "height" : ""
+            });
+        });
+    });
+</script>
 </body>
 </html>
