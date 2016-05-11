@@ -181,8 +181,8 @@ function displayMessage2() {
 			c1 = 7 , c2 = 3, c3 = 8, op = 0; //orange7 + blue3 = black8;
 			break;
 		case 15:
-			ran = Math.floor(Math.random() * 9);
-			c1 = ran, c2 = ran, c3 = ran, op = op = Math.floor(Math.random() * 2);	
+			ran = Math.floor(Math.random() * 9); //same color combination
+			c1 = ran, c2 = ran, c3 = ran, op = 0;	//(eg) red + red = red
 			break;
 		default: 
 			c1 = Math.floor(Math.random() * 9);
