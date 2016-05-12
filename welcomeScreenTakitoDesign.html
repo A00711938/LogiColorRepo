@@ -60,18 +60,18 @@ I copied the format which I think works well.
             </h3>
         </div>
     </div>
-    <button type="button" class="btn btn-default btn-lg btn-block">
-        <img id="dodge" class="img-circle" src="images/dodge.gif" width="46px"; height="46px" alt="">
+    <button type="button" class="dodge btn btn-default btn-lg btn-block">
+        <img class="img-circle" src="images/dodge.gif" width="30px"; height="30px" alt="">
         Marathon Mode</button>
 
 
-    <button type="button" class="btn btn-default btn-lg btn-block"><img>Speed Mode</button>
+    <button type="button" class="dodge btn btn-default btn-lg btn-block"><img>Speed Mode</button>
 
 
-    <button type="button" class="btn btn-default btn-lg btn-block"><img>Leaderboard</button>
+    <button type="button" class="dodge btn btn-default btn-lg btn-block"><img>Leaderboard</button>
 
 
-    <button type="button" class="btn btn-default btn-lg btn-block"><img>Settings</button>
+    <button type="button" class="dodge btn btn-default btn-lg btn-block"><img>Settings</button>
 
 
 </div>
@@ -89,24 +89,25 @@ I copied the format which I think works well.
     //DOM manipulation of this particular site happens below
     $(document).ready(function(){
 
-        //With the below function I can only make the dodge disappear. I cannot toggle it on or off... yet
-        //The goal is:
-        // 1.- One click, dodge moves to location
-        // 2.- Click again where dodge is, link works and takes you to the next screen.
-        $("#dodge").click(function(){
-            $("#dodge").attr({
-                "class" : "",
-                "src" : "",
-                "width" : "",
-                "height" : ""
-            });
+        //The first two functions below this message allow me to manipulate the dodge pic
+        //so the selector moves as the user clicks. We can change that eventually if we like to.
+        $(".dodge").find("img").css({"float":"left"});
+
+        $(".dodge").click(function(){
+            $(".dodge").find("img").remove();
+            $(this).prepend("<img class=\"img-circle\" src=\"images/dodge.gif\" width=\"30px\"; height=\"30px\" alt=\"\">");
+            $(".dodge").find("img").css({"float":"left"});
         });
 
+        //The following function manipulates the DOM so the whole container class centers in any
+        //cellphone and the background color stays black.
         $(".container").css({
             "padding-top":"30%",
             "padding-bottom":"30%",
             "background-color":"black"
         });
+
+
     });
 </script>
 </body>

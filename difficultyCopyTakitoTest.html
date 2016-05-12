@@ -62,14 +62,19 @@ Below I add all the content required for Boostrap to create the log-in page.
         </div>
         <div class="row">
             <div class="col-xs-12">
+<!-- The original info entered by Jonathan looked like:
+<button class="dodge btn btn-default btn-lg btn-block" type="button" onclick="alert('test!')">
+As you can see below. I removed the alert in all the buttons.
+-->
+                        <button class="dodge btn btn-default btn-lg btn-block" type="button" onclick="">
+                            <img class="img-circle" src="images/dodge.gif" width="30px"; height="30px" alt="">
+                            Easy</button>
 
-                        <button class="btn btn-default btn-lg btn-block" type="button" onclick="alert('test!')">Easy</button>
+
+                        <button class="dodge btn btn-default btn-lg btn-block" type="button" onclick="">Medium</button>
 
 
-                        <button class="btn btn-default btn-lg btn-block" type="button" onclick="alert('test!')">Medium</button>
-
-
-                        <button class="btn btn-default btn-lg btn-block" type="button" onclick="alert('test!')">Colors Everywhere!</button>
+                        <button class="dodge btn btn-default btn-lg btn-block" type="button" onclick="">Colors Everywhere!</button>
 
 
             </div>
@@ -88,6 +93,18 @@ Below I add all the content required for Boostrap to create the log-in page.
         $(".container").css({
             "padding-top":"30%",
             "padding-bottom":"30%"
+        });
+
+        //The two functions below this message allow me to manipulate the dodge pic
+        //so the selector moves as the user clicks. We can change that eventually if we like to.
+        //Note this is a common functions in two pages. If we use a JS file it could easily affect
+        //entire website.
+        $(".dodge").find("img").css({"float":"left"});
+
+        $(".dodge").click(function(){
+            $(".dodge").find("img").remove();
+            $(this).prepend("<img class=\"img-circle\" src=\"images/dodge.gif\" width=\"30px\"; height=\"30px\" alt=\"\">");
+            $(".dodge").find("img").css({"float":"left"});
         });
     });
 </script>
