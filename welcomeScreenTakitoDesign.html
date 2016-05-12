@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Welcome Screen</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -29,29 +29,53 @@ Takito's design of main screen (aka welcome screen):
 Title container below.
 -->
 <div class="container">
-    <h1 class="text-warning text-center">Logicolor</h1>
+
+<div class="row">
+    <div class="col-xs-12 text-center">
+        <!--
+        <a href="loginTakitoDesign.html">
+        REMOVING THIS REF TEMPORARILY TO CHECK IF I CAN CENTER THE LOGICOLOR IMAGE with
+        Bootstrap. It worked so maybe we'll talk and confirm if the ref to the main screen is
+        necessary :)
+
+        P.S. I personally love this image as our logo. So I'd like to keep it.
+        -->
+        <img class="" src="images/logo.jpg" alt="logicolor" width="300px" height="80px">
+        <!--
+        </a>
+        -->
+    </div>
 </div>
 
 <!--
-Options Container below.
+Options Container below. Similar to the difficultyCopyTakitoTest,
+I copied the format which I think works well.
 -->
-<div class="container" id="mainSelection">
-    <div class="row">
-        <button type="button" class="btn btn-default btn-lg btn-block">
-            <img id="dodge" class="img-circle" src="images/dodge.gif" width="46px"; height="46px" alt="">
-            Marathon Mode</button>
-    </div>
-    <div class="row">
-        <button type="button" class="btn btn-default btn-lg btn-block"><img>Speed Mode</button>
-    </div>
-    <div class="row">
-        <button type="button" class="btn btn-default btn-lg btn-block"><img>Leaderboard</button>
-    </div>
-    <div class="row">
-        <button type="button" class="btn btn-default btn-lg btn-block"><img>Settings</button>
-    </div>
-</div>
+<div class="jumbotron">
 
+    <div class="row">
+        <div class="col-xs-12">
+            <h3 class="text-success text-center">
+                Pick your Dodgeventure!
+            </h3>
+        </div>
+    </div>
+    <button type="button" class="btn btn-default btn-lg btn-block">
+        <img id="dodge" class="img-circle" src="images/dodge.gif" width="46px"; height="46px" alt="">
+        Marathon Mode</button>
+
+
+    <button type="button" class="btn btn-default btn-lg btn-block"><img>Speed Mode</button>
+
+
+    <button type="button" class="btn btn-default btn-lg btn-block"><img>Leaderboard</button>
+
+
+    <button type="button" class="btn btn-default btn-lg btn-block"><img>Settings</button>
+
+
+</div>
+</div>
 
 
 
@@ -76,6 +100,12 @@ Options Container below.
                 "width" : "",
                 "height" : ""
             });
+        });
+
+        $(".container").css({
+            "padding-top":"30%",
+            "padding-bottom":"30%",
+            "background-color":"black"
         });
     });
 </script>
