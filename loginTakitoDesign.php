@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,28 +42,32 @@ Below I add all the content required for Boostrap to create the log-in page.
                     </h3>
             </div>
             <div class="col-xs-12">
-                <form role="form">
+                <form class="form" role="form" action="logintodb.php" method="post">
                     <div class="form-group">
                         <label for="email">Email address:</label>
-                        <input type="email" class="form-control" id="email" placeholder="hola@email.com">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="hola@email.com">
                     </div>
                     <div class="form-group">
                         <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" id="pwd">
+                        <input type="password" class="form-control" id="pwd" name="password">
                     </div>
                     <div class="checkbox text-center">
+                        <!--
+                        NOTE: The remember me function is not working yet. We need to get that information
+                        working sometime in week 4. I won't add this until beg. of week 4 scrum :O
+                        -->
                         <label><input type="checkbox"> Remember me</label>
                     </div>
+                    <div class="text-center">
+                        <button type="submit" name="submit" class="btn btn-default">Log in</button>
+                    </div>
                 </form>
-            </div>
-            <div class="col-xs-12 text-center">
-                <button type="submit" class="btn btn-default">Log in</button>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 text-center">
-            <h6>Not a member? <span class="text-primary"><u>Sign in</u></span></h6>
+            <h6>Not a member? <span class="text-primary"><u><a href="signinTakitoDesign.html">Sign in</a></u></span></h6>
         </div>
     </div>
 </div>
