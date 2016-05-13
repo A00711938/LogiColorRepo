@@ -23,12 +23,27 @@
 		#box{
 			width:80%;
 		}
+		#return{
+			position: absolute;
+			top:0px;
+			left: 0px;
+			height: 32px;
+			width: 32px;
+		}
 		
+		@media screen and (min-width: 768px){
+			#box{
+				font-size: 30pt;
+				margin: center;
+			}
+		}
 	</style>
 </head>
 <body style="background: black; font-family: 'Nunito', sans-serif; color: blue; font-size: 18pt">
 	<br/>
-	<img src="images/setting.png" class="setting img-responsive text-center">
+	<img src="images/setting.png" class="setting">
+	<!--CHANGE THE # TO THE INDEX PAGE-->
+	<a href="#"><img src="images/return_2.jpg" id="return"></a>
 	<!--Puts space between the picture and menu-->
 	<div id="space">
 		<br/><br/>
