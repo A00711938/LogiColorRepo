@@ -316,6 +316,8 @@ function newGame() {
 
 function playSound(el,soundfile) {
     if (el.mp3) {
+        el.mp3.pause();
+        el.mp3.currentTime = 0;
         el.mp3.play();
     } else {
         el.mp3 = new Audio(soundfile);
