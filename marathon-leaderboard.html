@@ -2,18 +2,50 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
 		<link rel="stylesheet" type="text/css" href="Style/style.css">
+
 		<link rel="stylesheet" type="text/css" href="Style/stylemarathon.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <title>LogiColour</title>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<!-- [endif]-->
+
+		<title>LogiColour</title>
     </head>
 	<body class = "entire">
 		<div class = "container">
-			<div class="header">
-				<a href="welcomeScreenTakitoDesign.html"><img src="images/logo.jpg" alt = "Logo"></a>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<!--
+                    <a href="loginTakitoDesign.html">
+                    REMOVING THIS REF TEMPORARILY TO CHECK IF I CAN CENTER THE LOGICOLOR IMAGE with
+                    Bootstrap. It worked so maybe we'll talk and confirm if the ref to the main screen is
+                    necessary :)
+
+                    P.S. I personally love this image as our logo. So I'd like to keep it.
+                    -->
+					<img class="" src="images/logo.jpg" alt="logicolor" width="300px" height="80px">
+					<!--
+                    </a>
+                    -->
+				</div>
 			</div>
-			
+<!--
+For the table design below, I believe we should use basic bootstrap css styles as opposed to manually
+changing the styles using css. In this way it'll be much easier to make the app look very streamlined
+and simple.
+
+Also, some of the future functions on the app should involve:
+ a.- showing only 10 results at a time
+ b.- User can swipe multiple screens to see other user's scores (max to top 40 maybe)
+ b.- Fixing users scores to show all the time the user accesses the leaderboard.
+-->
 			<div class = "centered text-center">
 				<div class="row">
 					<a href="marathon-leaderboard.html" class="btn btn-default" style = "background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
@@ -67,5 +99,18 @@
 				</tbody>
 			</table> 
 		</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+	//The following manipulates the DOM so the image renders in the middle of the app
+	//screen. More DOM manipulation can be added as needed. :)
+	$(document).ready(function(){
+		$(".container").css({
+			"padding-top":"30%",
+			"padding-bottom":"30%"
+		});
+
+	});
+</script>
 	</body>
 </html>
