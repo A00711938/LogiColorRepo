@@ -40,7 +40,7 @@ Title container below.
 
         P.S. I personally love this image as our logo. So I'd like to keep it.
         -->
-        <img class="" src="images/logo.jpg" alt="logicolor" width="300px" height="80px">
+        <img id="myLogo" onclick="easterEgg()" src="images/logo.jpg" alt="logicolor" width="300px" height="80px">
         <!--
         </a>
         -->
@@ -56,10 +56,11 @@ I copied the format which I think works well.
     <div class="row">
         <div class="col-xs-12">
             <h3 class="text-success text-center">
-                Pick your Dodgeventure!
+                Pick your Dogeventure!
             </h3>
         </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <a href="testFolder/Colt'sStuff/marathon.html"><button type="button" class="dodge btn btn-default btn-lg btn-block">
         <img class="img-circle" src="images/dodge.gif" width="30px"; height="30px" alt="">
@@ -89,18 +90,24 @@ I copied the format which I think works well.
 >>>>>>> master
 
 
+=======
+    <div id="doge">
+        <button type="button" class="dodge btn btn-default btn-lg btn-block">
+            <img class="img-circle" src="images/dodge.gif" width="30px"; height="30px" alt="">
+            Marathon Mode</button>
+        <button type="button" class="dodge btn btn-default btn-lg btn-block"><img>Speed Mode</button>
+        <button type="button" class="dodge btn btn-default btn-lg btn-block"><img>Leaderboard</button>
+        <button type="button" class="dodge btn btn-default btn-lg btn-block"><img>Settings</button>
+    </div>
+>>>>>>> master
 </div>
 </div>
-
-
-
-
-
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script>
+    var index = 1;
     //DOM manipulation of this particular site happens below
     $(document).ready(function(){
 
@@ -109,6 +116,20 @@ I copied the format which I think works well.
         $(".dodge").find("img").css({"float":"left"});
 
         $(".dodge").click(function(){
+            if(index == whichChild(this)){
+                switch(index){
+                    case 1: window.location.href = "difficulty.html";
+                            break;
+                    case 2: window.location.href = "difficulty.html";
+                            break;
+                    case 3: window.location.href = "marathon-leaderboard.html";
+                            break;
+                    case 4: window.location.href = "setting.html";
+                            break;
+                    default: break;
+                }
+            }
+            index = whichChild(this);
             $(".dodge").find("img").remove();
             $(this).prepend("<img class=\"img-circle\" src=\"images/dodge.gif\" width=\"30px\"; height=\"30px\" alt=\"\">");
             $(".dodge").find("img").css({"float":"left"});
@@ -124,6 +145,20 @@ I copied the format which I think works well.
 
 
     });
+    function easterEgg() {
+        var image = document.getElementById('myLogo');
+        if (image.src.match("alt")) {
+            image.src = "Images/logo.jpg";
+        } else {
+            image.src = "Images/logoalt.jpg";
+        }
+    }
+    function whichChild(elem){
+        var i = 1;
+        while((elem=elem.previousElementSibling)!=null)
+            ++i;
+        return i;
+    }
 </script>
 </body>
 </html>
