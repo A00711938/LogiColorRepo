@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Difficulty</title>
 	
-	
+	<script src="Scripts/script.js"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="Style/difficulty.css">
@@ -85,6 +85,7 @@ As you can see below. I removed the alert in all the buttons.
     //The following manipulates the DOM so the image renders in the middle of the app
     //screen. More DOM manipulation can be added as needed. :)
     $(document).ready(function(){
+        playSound(this,'sounds/diffmusic.mp3');
         $(".container").css({
             "padding-top":"30%",
             "padding-bottom":"30%"

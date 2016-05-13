@@ -324,3 +324,12 @@ function playSound(el,soundfile) {
         el.mp3.play();
     }
 }
+
+function playMusic(el,soundfile) {
+    el.mp3 = new Audio(soundfile);
+    el.mp3.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+    el.mp3.play();
+}
