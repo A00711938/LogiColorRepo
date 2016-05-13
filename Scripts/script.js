@@ -157,6 +157,8 @@ function colorComb( op, x, y, z) {
 			return true;	
 		} else if (x == 4 && y == 8 && z == 5) { // white + black = grey
 			return true;
+        } else if (x == 8 && y == 4 && z == 5) { // black + white = grey
+			return true;
 		} else if (x == 6 && y == 2 && z == 8) { // purple(r+b) + yellow = black
 			return true;
 		} else if (x == 2 && y == 6 && z == 8) { // yellow + purple = black
