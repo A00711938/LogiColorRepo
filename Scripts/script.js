@@ -242,7 +242,7 @@ window.onload = function() {
 function trueFun() {
     if ((checkPlay(play, op)) && (numberComb(op, nb1, nb2, sum))) {
         score++;
-        document.getElementById('score').innerHTML = "Score" + score;
+        document.getElementById('score').innerHTML = "Score: " + score;
         document.getElementById('message').style.color = "green";
         document.getElementById('message').innerHTML = "Correct!";
         if(score % 5 == 0){
@@ -259,11 +259,9 @@ function trueFun() {
         } else if(lives == 2){
             document.getElementById('heart2').className = "glyphicon glyphicon-heart-empty";
             lives--;
-        } else{
+        } else if(lives == 1){
             document.getElementById('heart1').className = "glyphicon glyphicon-heart-empty";
             lives--;
-        }
-        if(lives == 0){
             levelEnd(score);
         }
         displayMessage();
@@ -290,11 +288,9 @@ function falseFun() {
         } else if(lives == 2){
             document.getElementById('heart2').className = "glyphicon glyphicon-heart-empty";
             lives--;
-        } else{
+        } else if(lives == 1){
             document.getElementById('heart1').className = "glyphicon glyphicon-heart-empty";
             lives--;
-        }
-        if(lives == 0){
             levelEnd(score);
         }
         displayMessage();

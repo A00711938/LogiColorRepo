@@ -32,13 +32,10 @@ function playerReady() {
 function levelEnd(score) {
 	var modal = document.getElementById('myModal');
 	var body = document.getElementById('entire');
-	
-	var playAgain = document.getElementById('playAgain');
+	var playAgain = document.getElementById('tryAgain');
 	var nextLevel = document.getElementById('next');
-	if (score == 5) {
-		modal.style.display = "block";
-		body.style.opacity = 0.4;
-	}
+    modal.style.display = "block";
+    body.style.opacity = 0.4;
 	
 	playAgain.onclick = function() {
 		modal.style.display = "none";
