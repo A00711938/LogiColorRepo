@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Demo of the Marathon JavaScript</title>
+	<script type="text/javascript" src="js/marathonLives.js"></script>
+	<style>
+		button, #time{
+			width: 400px;
+			height: 200px;
+			font-size: 30pt;
+		}
+	</style>
+</head>
+<body>
+	<!--This div is a container of where the hearts will be, use CSS to reposition on screen-->
+	<div id="life"></div>
+	<!--This button will starts the stimulation when the user press ready-->
+	<button id="start" onclick="start();">Start</button>
+	<!--Whenever user answers correctly it will add points AND refill heart per # of stage finished-->
+	<!--see the javascript files to change the amount of stages to pass for additional heart-->
+	<button id="correct" onclick="correctAnswer();">Correct</button>
+	<!--Whenever user answers wrong, it will decriment the heart inside the heart div container-->
+	<button id="wrong" onclick="minusLife();">Wrong</button>
+	<!--This is the time have elapse before the heart decriment by 1-->
+	<!--see the javascript files to change the amount of time the user have before heart decriment-->
+	<div id="time"></div>
+</body>
+</html>
