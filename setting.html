@@ -1,14 +1,23 @@
+<!--
+I didn't modify much on this file since I didn't have time. Note that there are cool sliders built with JS
+that we can use for our website. I 'll prepare that over the weekend (week 3) so that everyone can see :)
+-->
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Setting</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<!--Google font-->
 	<link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
 	<!--Bootstrap addon-->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!-- [endif]-->
 	<!--Script for the slider changing on view-->
 	<script type="text/javascript">
 		function sliderChange(value){
@@ -38,6 +47,8 @@
 			}
 		}
 	</style>
+
+	<title>Settings</title>
 </head>
 <body style="background: black; font-family: 'Nunito', sans-serif; color: blue; font-size: 18pt">
 	<br/>
@@ -57,8 +68,10 @@
 				<br/><br/>
 				<label><input type="checkbox" name="hint"/> Hints</label><br/><br/>
 				<label><input type="checkbox" name="colorblind"/> Colorblind Mode</label>
-			</div>	
+			</div>
 		</div>
 	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 </body>
 </html>
