@@ -31,9 +31,21 @@ Below I add all the content required for Boostrap to create the log-in page.
 <div class="container">
     <div class="row">
         <div class="col-xs-12 text-center">
-            <h1><span class="text-warning">Logicolor</span></h1>
+            <!--
+            <a href="loginTakitoDesign.html">
+            REMOVING THIS REF TEMPORARILY TO CHECK IF I CAN CENTER THE LOGICOLOR IMAGE with
+            Bootstrap. It worked so maybe we'll talk and confirm if the ref to the main screen is
+            necessary :)
+
+            P.S. I personally love this image as our logo. So I'd like to keep it.
+            -->
+            <img class="" src="images/logo.jpg" alt="logicolor" width="300px" height="80px">
+            <!--
+            </a>
+            -->
         </div>
     </div>
+
     <div class="jumbotron">
         <div class="row">
             <div class="col-xs-12">
@@ -67,7 +79,7 @@ Below I add all the content required for Boostrap to create the log-in page.
     </div>
     <div class="row">
         <div class="col-xs-12 text-center">
-            <h6>Not a member? <span class="text-primary"><u><a href="signinTakitoDesign.html">Sign in</a></u></span></h6>
+            <h6 class="text-muted">Not a member? <span class="text-primary"><u><a href="signinTakitoDesign.html">Sign in</a></u></span></h6>
         </div>
     </div>
 </div>
@@ -76,5 +88,20 @@ Below I add all the content required for Boostrap to create the log-in page.
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script>
+    //The following manipulates the DOM so the image renders in the middle of the app
+    //screen. More DOM manipulation can be added as needed. :)
+    $(document).ready(function(){
+        $(".container").css({
+            "padding-top":"30%",
+            "padding-bottom":"30%"
+        });
+
+        //The following Jquery function manipulates the pages background color so it's set to
+        //black. This function can be easily replaced with a CSS file. I'll keep it here for now :p
+        $("body").css({"background-color":"black"});
+
+    });
+</script>
 </body>
 </html>
