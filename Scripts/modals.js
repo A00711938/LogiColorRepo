@@ -11,11 +11,7 @@ function playerReady() {
 	
 	btn1.onclick = function() {
 		modal.style.display = "none";
-<<<<<<< HEAD
 		window.location.href = "difficulty.html";
-=======
-		window.location.href = "index.html";
->>>>>>> master
 	}
 	
 	btn2.onclick = function() {
@@ -33,7 +29,6 @@ function playerReady() {
 
 
 // End - Level Modal Display
-<<<<<<< HEAD
 function levelEnd(score, lives) {
 	var modal = document.getElementById('gameOver');
 	var body = document.getElementById('entire');
@@ -50,31 +45,6 @@ function levelEnd(score, lives) {
 	playAgain.onclick = function() {
 		modal.style.display = "none";
 		newGame();
-=======
-function levelEnd(score) {
-	var modal = document.getElementById('myModal');
-	var body = document.getElementById('entire');
-	
-	var playAgain = document.getElementById('playAgain');
-	var nextLevel = document.getElementById('next');
-	if (score == 5) {
-		modal.style.display = "block";
-		body.style.opacity = 0.4;
-	}
-	
-	playAgain.onclick = function() {
-		modal.style.display = "none";
-		displayMessage();
-		document.getElementById('message').innerHTML = "";
-		score = 0;
-	}
-	nextLevel.onclick = function() {
-		modal.style.display = "none";
-<<<<<<< HEAD
->>>>>>> master
-=======
-		window.location.href = "difficulty.html";
->>>>>>> master
 	}
 	
 	window.onclick = function(event) {
@@ -82,7 +52,6 @@ function levelEnd(score) {
 			modal.style.display = "none";
 		}
 	}
-<<<<<<< HEAD
 }
 
 function playSound(el,soundfile) {
@@ -92,6 +61,4 @@ function playSound(el,soundfile) {
         el.mp3 = new Audio(soundfile);
         el.mp3.play();
     }
-=======
->>>>>>> master
 }
