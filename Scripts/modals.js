@@ -33,15 +33,22 @@ function levelEnd(score) {
 	var modal = document.getElementById('myModal');
 	var body = document.getElementById('entire');
 	
-	var span = document.getElementsById('tryAgain')[0];
-	
+	var playAgain = document.getElementById('playAgain');
+	var nextLevel = document.getElementById('next');
 	if (score == 5) {
 		modal.style.display = "block";
 		body.style.opacity = 0.4;
 	}
 	
-	span.onclick = function() {
+	playAgain.onclick = function() {
 		modal.style.display = "none";
+		displayMessage();
+		document.getElementById('message').innerHTML = "";
+		score = 0;
+	}
+	nextLevel.onclick = function() {
+		modal.style.display = "none";
+		window.location.href = "difficulty.html";
 	}
 	
 	window.onclick = function(event) {
