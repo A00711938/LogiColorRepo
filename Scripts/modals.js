@@ -30,7 +30,7 @@ function playerReady() {
 
 // End - Level Modal Display
 function levelEnd(score) {
-	var modal = document.getElementById('myModal');
+	var modal = document.getElementById('gameOver');
 	var body = document.getElementById('entire');
 	var playAgain = document.getElementById('tryAgain');
 	var nextLevel = document.getElementById('next');
