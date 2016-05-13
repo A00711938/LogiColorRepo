@@ -1,8 +1,4 @@
-/* Javascript Doc*/
-	
 var color = ["green", "red", "yellow", "blue", "white", "grey", "purple", "orange", "black"];
-
-/* Randomize colors*/
 var c1;
 var c2;
 var c3;
@@ -13,11 +9,10 @@ var nb1;
 var nb2;
 var sum;	
 var score = 0;
-var lives = 3;
-var level = 1;
 var play = Math.floor(Math.random() * 33);
 var operation = ["+", "-"];
-
+var lives = 3;
+var level = 1;
 
 function displayMessage() {
 	play = Math.floor(Math.random() * 33);
@@ -128,10 +123,9 @@ function displayMessage() {
 	document.getElementById('sum').style.color = color[c3];
 	
 	// Display results
-	document.getElementById('num1').innerHTML = "&nbsp;&nbsp;&nbsp;" + nb1;
+	document.getElementById('num1').innerHTML = nb1;
 	document.getElementById('operation').innerHTML = operation[op];
-	document.getElementById('num2').innerHTML = "&nbsp;&nbsp;&nbsp;" + nb2;
-	
+	document.getElementById('num2').innerHTML = nb2;
 	if (op == 0) {
 		document.getElementById('sum').innerHTML = nb1 + nb2;
 		sum = nb1 + nb2;
@@ -140,23 +134,6 @@ function displayMessage() {
 		sum = nb1 - nb2;
 	}
 } // end displayMessage
-
-
-function newGame() {
-	var modal = document.getElementById('gameOver');
-	modal.style.display = "none";
-	score = 0;
-	lives = 3;
-	level = 1;
-	document.getElementById('message').innerHTML = "";
-	document.getElementById('level').innerHTML = "Level: " + level;
-	document.getElementById('score').innerHTML = "Score: " + score;
-	document.getElementById('heart1').className = "glyphicon glyphicon-heart";
-	document.getElementById('heart2').className = "glyphicon glyphicon-heart";
-	document.getElementById('heart3').className = "glyphicon glyphicon-heart";
-	displayMessage();
-}// end newGame
-
 
 
 function colorComb( op, x, y, z) {
@@ -254,48 +231,17 @@ function checkPlay(cPlay, op){
 	return false;
 }
 
-
-window.onload = function() { // (True & False)Btns implemented
-    var trueBtn = document.getElementById("tr");
+//  True & False Buttons and Their Actions
+window.onload = function() {
+    var trueBtn = document.getElementById("tru");
 	trueBtn.addEventListener("onclick", trueFun, false);
 	var falseBtn = document.getElementById("fal");
 	falseBtn.addEventListener("onclick", falseFun, true);
 }
 
 function trueFun() {
-	if ((checkPlay(play, op)) && (numberComb(op, nb1, nb2, sum))) {
-		score++;
-        document.getElementById('score').innerHTML = "Score: " + score;
-        document.getElementById('message').style.color = "green";
-        document.getElementById('message').innerHTML = "Correct!";
-		if(score % 5 == 0){
-            level++;
-            document.getElementById('level').innerHTML = "Level: " + level;
-        }
-        displayMessage();
-    } else{
-        document.getElementById('message').style.color = "red";
-        document.getElementById('message').innerHTML = "Wrong!";
-        if(lives == 3){
-            document.getElementById('heart3').className = "glyphicon glyphicon-heart-empty";
-            lives = 2;
-        } else if(lives == 2){
-            document.getElementById('heart2').className = "glyphicon glyphicon-heart-empty";
-            lives = 1;
-        } else{
-            document.getElementById('heart1').className = "glyphicon glyphicon-heart-empty";
-            lives = 0;
-        }
-        if(lives == 0){
-            levelEnd(score, lives);
-        }
-        displayMessage();
-    }
-}// end trueFun
-
-function falseFun() {
-    if (!(checkPlay(play, op) && numberComb(op, nb1, nb2, sum))) {
-		score++;
+    if ((checkPlay(play, op)) && (numberComb(op, nb1, nb2, sum))) {
+        score++;
         document.getElementById('score').innerHTML = "Score: " + score;
         document.getElementById('message').style.color = "green";
         document.getElementById('message').innerHTML = "Correct!";
@@ -309,18 +255,53 @@ function falseFun() {
         document.getElementById('message').innerHTML = "Wrong!";
         if(lives == 3){
             document.getElementById('heart3').className = "glyphicon glyphicon-heart-empty";
-            lives = 2;
+            lives--;
         } else if(lives == 2){
             document.getElementById('heart2').className = "glyphicon glyphicon-heart-empty";
-            lives = 1;
-        } else{
+            lives--;
+        } else if(lives == 1){
             document.getElementById('heart1').className = "glyphicon glyphicon-heart-empty";
-            lives = 0;
-        }
-        if(lives == 0){
-            levelEnd(score, lives);
+            lives--;
+            levelEnd(score);
         }
         displayMessage();
     }
-}// end falseFun
+}
 
+function falseFun() {
+    if (!(checkPlay(play, op) && numberComb(op, nb1, nb2, sum))) {
+        score++;
+        document.getElementById('score').innerHTML = "Score: " + score;
+        document.getElementById('message').style.color = "green";
+        document.getElementById('message').innerHTML = "Correct!";
+        if(score % 5 == 0){
+            level++;
+            document.getElementById('level').innerHTML = "Level: " + level;
+        }
+        displayMessage();
+    } else{
+        document.getElementById('message').style.color = "red";
+        document.getElementById('message').innerHTML = "Wrong!";
+        if(lives == 3){
+            document.getElementById('heart3').className = "glyphicon glyphicon-heart-empty";
+            lives--;
+        } else if(lives == 2){
+            document.getElementById('heart2').className = "glyphicon glyphicon-heart-empty";
+            lives--;
+        } else if(lives == 1){
+            document.getElementById('heart1').className = "glyphicon glyphicon-heart-empty";
+            lives--;
+            levelEnd(score);
+        }
+        displayMessage();
+    }
+}
+
+function playSound(el,soundfile) {
+    if (el.mp3) {
+        el.mp3.play();
+    } else {
+        el.mp3 = new Audio(soundfile);
+        el.mp3.play();
+    }
+}
