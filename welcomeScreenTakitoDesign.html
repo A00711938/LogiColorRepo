@@ -78,7 +78,7 @@ I copied the format which I think works well.
     var index = 1;
     //DOM manipulation of this particular site happens below
     $(document).ready(function(){
-
+        playSound(this,'sounds/bgmusic.mp3');
         //The first two functions below this message allow me to manipulate the dodge pic
         //so the selector moves as the user clicks. We can change that eventually if we like to.
         $(".dodge").find("img").css({"float":"left"});
