@@ -3,6 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+<<<<<<< HEAD
         <link rel="stylesheet" type="text/css" href="Style/style.css">
 		<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -46,10 +47,32 @@
 					<div class="modal-content">
 					  <div class="modal-header">
 						<h2 class="modal-title" style = "background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+=======
+        <link rel="stylesheet" type="text/css" href="Style/stylemarathon.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="Scripts/script.js"></script>
+        <script src="Scripts/modals.js"></script>
+        <title>LogiColour Marathon Mode</title>
+        <style>
+            body {
+                background-image: url("Images/background.png");
+            }
+        </style>
+    </head>
+<header>
+    <!-- Modal 'Are You Ready'-->
+    <div id = "ready" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 href="marathon-leaderboard.html" class="modal-title" style = "background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+>>>>>>> master
   background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;">Are You Ready?</h2>
+<<<<<<< HEAD
 					  </div>
 					  <div class="modal-body">
 					  </div>
@@ -74,10 +97,45 @@
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						
 						<h2 href="marathon-leaderboard.html" class="modal-title" style = "background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+=======
+                </div>
+				<div class="modal-body"></div>
+				<div class="modal-footer">
+                    <div class = "centered text-center">
+                        <div class="col-md-4 col-md-offset-4">
+							<a href="difficulty.html" class="btn btn-default" data-dismiss="modal" id = "back">Back</a>
+                            <a href="#" class="btn btn-default" name = "play" id = "play">Play</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- Top bar with icons, etc -->
+    <div class="col-md-4 col-xs-6" id = "leftCorner">
+        <a href="index.html"><span class="glyphicon glyphicon-home"></span></a> 
+        <a href="settings.html"><span class="glyphicon glyphicon-cog" ></span></a>
+    </div>
+    <div class="col-md-4 col-xs-6" id="level">Level: 1</div>
+    <div class="col-md-4 col-xs-12" id="hearts"> 
+        Lives:
+        <span class="glyphicon glyphicon-heart" id="heart1"></span>
+        <span class="glyphicon glyphicon-heart" id="heart2"></span>
+        <span class="glyphicon glyphicon-heart" id="heart3"></span>
+    </div>
+    <!-- Modal 'In-Game Settings'-->
+	<div id = "setGame" class="modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h2 href="marathon-leaderboard.html" class="modal-title" style = "background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+>>>>>>> master
   background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;">Settings</h2>
+<<<<<<< HEAD
 					  </div>
 					  <div class="modal-body">
 					  </div>
@@ -116,10 +174,39 @@
 					<div class="modal-content">
 					  <div class="modal-header">
 						<h2 class="modal-title" style = "background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+=======
+				</div>
+				<div class="modal-body"></div>
+				<div class="modal-footer">
+					<div class = "centered text-center"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<body>
+    <!-- Question Display -->
+    <div class="container" id="midtable">
+        <div class="col-sm-3 col-xs-4"><span id = "num1"></span></div>
+        <div class="col-sm-1 col-xs-4" id="operation">+</div>
+        <div class="col-sm-3 col-xs-4"><span id = "num2"></span></div>
+        <div class="col-sm-1 col-xs-6" id="eq">=</div>
+        <div class="col-sm-4 col-xs-6"><span id = "sum"></span></div>
+        <div class="col-xs-12" id="message"></div>
+    </div>
+    
+    <!-- Congrats Modal-->
+	<div id = "myModal" class="modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 href="marathon-leaderboard.html" class="modal-title" style = "background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+>>>>>>> master
   background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;">Congratulations</h2>
+<<<<<<< HEAD
 					  </div>
 					  <div class="modal-body">
 						<div id="scored"></div>
@@ -147,3 +234,32 @@
 		</div>
 	</body>
 </html>
+=======
+                </div>
+				<div class="modal-body">
+					<div id="score"></div>
+					<p>You will get smarter if you keep playing in that manner.</p>
+				</div>
+				<div class="modal-footer">
+                    <div class = "centered text-center">
+						<div class="col-md-4 col-md-offset-4">
+							<a href="#" class="btn btn-default" data-dismiss="modal" id = "tryAgain">Try Again</a>
+							<a href="#" class="btn btn-default" name = "next">Next</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <!-- True and False Buttons -->
+    <div class="container" id="choices">
+        <button class="col-xs-6" id="tru" style="background-color: #4CAF50;" name="answer1" onclick="trueFun();playSound(this,'sounds/click.mp3');"><span class="glyphicon glyphicon-ok" style="color:green;"></span></button>
+        <button class="col-xs-6" id="fal" style="background-color: #BF5B5F;" name="answer2" onclick="falseFun();playSound(this,'sounds/click.mp3');"><span class="glyphicon glyphicon-remove" style="color:red;"></span></button>
+    </div>
+    <div id="scorebox">
+        <div id="score">Score: 0</div>
+    </div>
+</body>
+</html>
+>>>>>>> master

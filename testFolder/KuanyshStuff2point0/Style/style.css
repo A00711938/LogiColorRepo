@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* CSS Doc*/
 
 /* For all */
@@ -236,3 +237,243 @@ btn btn-primary btn-lg:nth-child(2) {
 
 /* Settings*/
 
+=======
+/* CSS Doc*/
+
+/* For all */
+.entire {
+	background-color: lightgrey;
+}
+
+
+/* Index.html */
+.header {
+	
+}
+
+
+/* index link buttons*/
+.col-md-2 a {
+	background-color: black;
+	color: blue;
+	border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.col-md-2 a:nth-child(1):hover{
+	box-shadow: 0 12px 16px 0 lightgreen;
+	color: lightgreen;
+}
+.col-md-2 a:nth-child(2):hover{
+	box-shadow: 0 12px 16px 0 orange;
+	color: orange;
+}
+.col-md-2 a:nth-child(3):hover{
+	box-shadow: 0 12px 16px 0 red;
+	color: red;
+}
+.col-md-2 a:nth-child(4):hover{
+	box-shadow: 0 12px 16px 0 yellow;
+	color: yellow;
+}
+.col-md-2 a:nth-child(5):hover{
+	box-shadow: 0 12px 16px 0 white;
+	color: white;
+}
+
+
+
+/* Marathon.html */
+
+.hd-btn-left a {
+	padding: 5px;
+	font-size: 40px;
+	background-color: black;
+	color: blue;
+	border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.hd-btn-left a:hover{
+	box-shadow: 0 12px 16px 0 red;
+	color: red;
+}
+
+
+.hd-center {
+	text-align:center;
+	margin-left: 200px; /* Dont do like this*/
+	width: 100px;
+	color: yellow;
+	font-size: 35px;
+}
+.hd-right {
+	
+	margin: 4px 2px;
+	
+	color: lightgreen;
+	font-size: 35px;
+	float: right;
+}
+
+.lbl-hearts {
+	padding: 5px;
+	font-size: 35px;
+	background-color: black;
+	color: red;
+	border: none;
+    display: inline-block;
+}
+
+#controls a{
+	height: 120px;
+	width: 400px;
+}
+
+
+/*  For image-associated problems, may not be needed for marathon.html
+#controls img{
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	display: inline;
+}
+.img {
+		margin-left: auto;
+}*/
+
+btn btn-primary btn-lg:nth-child(1) {
+	background-color: green;
+}
+btn btn-primary btn-lg:nth-child(2) {
+	background-color: red;
+}
+#score {
+	color: red;
+	font-size: 40px;
+}
+
+.num {
+	padding: 20px;
+	font-size: 80px;
+}
+
+#message {
+	font-size: 40px;
+}
+
+/* Congratulations Modal */
+
+.modal {
+
+}
+.modal-dialog {
+	background-color: black;
+}
+.col-md-4 a {
+	background-color: black;
+	color: blue;
+	border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.col-md-4 a:nth-child(1):hover{
+	box-shadow: 0 12px 16px 0 red;
+	color: red;
+}
+.col-md-4 a:nth-child(2):hover{
+	box-shadow: 0 12px 16px 0 lightgreen;
+	color: lightgreen;
+}
+
+
+
+/* Leaderboard.html */
+.row a {
+	background-color: black;
+	color: blue;
+	border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.row a:hover {
+	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+	background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+	color:transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+.table th:nth-child(odd) {
+	color: yellow;
+}
+.table th:nth-child(even) {
+	color: blue;
+}
+
+.table td:nth-child(odd) {
+	color: yellow;
+}
+.table td:nth-child(even) {
+	color: blue;
+}
+.table tr {
+	background-color: black;
+	border: none;
+}
+
+/* SIGN UP */
+
+.col-md-2 button {
+	background-color: black;
+	color: blue;
+	border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.col-md-2 button:nth-child(even):hover{
+	box-shadow: 0 12px 16px 0 lightgreen;
+	color: lightgreen;
+}
+.col-md-2 button:nth-child(odd):hover{
+	box-shadow: 0 12px 16px 0 red;
+	color: red;
+}
+
+
+/* Settings*/
+
+>>>>>>> master
