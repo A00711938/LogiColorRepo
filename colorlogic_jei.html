@@ -1,0 +1,51 @@
+<!-- Marathon -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/style_color.css">
+		<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="js/script_color.js"></script>
+        <title>LogiColour Marathon Mode</title>
+        <style> 
+            body {
+                background-image: url("Images/background.png");
+            }
+        </style>
+    </head>
+<header>
+    <div class="col-md-3 col-xs-6" id = "leftCorner">
+        <a href="index.html"><span class="glyphicon glyphicon-home"></span></a> 
+        <a href="settings.html"><span class="glyphicon glyphicon-cog" ></span></a>
+    </div>
+    <div class="col-md-3 col-xs-6" id="level">Level: 1</div>
+    <div class="col-md-6 col-xs-12" id="hearts"> 
+        Lives:
+        <span class="glyphicon glyphicon-heart"></span>
+        <span class="glyphicon glyphicon-heart"></span>
+        <span class="glyphicon glyphicon-heart"></span>
+    </div>
+</header>
+<body style="background-color:black;">
+    <table id="midtable">
+        <col width="40%"><col width="20%"><col width="40%">
+        <tr><td><span id = "num1"></span></td><td></td><td></td></tr>
+        <tr><td id="eq"></td><td id="eq">=</td><td><span id = "sum"></span></td></tr>
+        <tr><td><span id = "num2"></span></td><td id="message"></td><td></td></tr>
+    </table>  
+</body>
+<footer align="center">
+    <div id="controls">
+        <button id="tru" style="background-color: #4CAF50;" name="answer1" onclick="trueFun()">
+		<span class="glyphicon glyphicon-ok" style="color:green;"></span></button>
+		
+		<button id="fal" style="background-color: #BF5B5F;" name="answer2" onclick="falseFun()">
+		<span class="glyphicon glyphicon-remove" style="color:red;"></span></button>
+    </div>
+    <div id="scorebox">
+        <div id="score">Score: 0</div>
+    </div>
+</footer>
+</html>

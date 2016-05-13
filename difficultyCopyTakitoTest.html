@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Difficulty</title>
+	
+	
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/difficulty.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	
+	<!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!--[endif]-->
+</head>
+<body>
+<!--
+Below I add all the content required for Boostrap to create the log-in page.
+-->
+<div class="container">
+    <div class="row">
+		<div class="col-xs-12 text-center">
+			<!--
+			<a href="loginTakitoDesign.html">
+			REMOVING THIS REF TEMPORARILY TO CHECK IF I CAN CENTER THE LOGICOLOR IMAGE with
+			Bootstrap. It worked so maybe we'll talk and confirm if the ref to the main screen is
+			necessary :)
+
+			P.S. I personally love this image as our logo. So I'd like to keep it.
+			-->
+                <img class="" src="images/logo.jpg" alt="logicolor" width="300px" height="80px">
+            <!--
+            </a>
+            -->
+		</div>
+    </div>
+    <div class="jumbotron">
+        <!--
+        I used Bootstrap fonts for the choose a difficulty section. A bit easier to
+        manipulate :P
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <img class="img-responsive text-center" src="images/difficulty.jpg" alt="difficulty">
+            </div>
+        </div>
+        -->
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="text-success text-center">
+                    Choose a difficulty!
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+<!-- The original info entered by Jonathan looked like:
+<button class="dodge btn btn-default btn-lg btn-block" type="button" onclick="alert('test!')">
+As you can see below. I removed the alert in all the buttons.
+-->
+                        <button class="dodge btn btn-default btn-lg btn-block" type="button" onclick="">
+                            <img class="img-circle" src="images/dodge.gif" width="30px"; height="30px" alt="">
+                            Easy</button>
+
+
+                        <button class="dodge btn btn-default btn-lg btn-block" type="button" onclick="">Medium</button>
+
+
+                        <button class="dodge btn btn-default btn-lg btn-block" type="button" onclick="">Colors Everywhere!</button>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+    //The following manipulates the DOM so the image renders in the middle of the app
+    //screen. More DOM manipulation can be added as needed. :)
+    $(document).ready(function(){
+        $(".container").css({
+            "padding-top":"30%",
+            "padding-bottom":"30%"
+        });
+
+        //The two functions below this message allow me to manipulate the dodge pic
+        //so the selector moves as the user clicks. We can change that eventually if we like to.
+        //Note this is a common functions in two pages. If we use a JS file it could easily affect
+        //entire website.
+        $(".dodge").find("img").css({"float":"left"});
+
+        $(".dodge").click(function(){
+            $(".dodge").find("img").remove();
+            $(this).prepend("<img class=\"img-circle\" src=\"images/dodge.gif\" width=\"30px\"; height=\"30px\" alt=\"\">");
+            $(".dodge").find("img").css({"float":"left"});
+        });
+    });
+</script>
+</body>
+</html>
