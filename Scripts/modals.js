@@ -35,6 +35,7 @@ function levelEnd(score) {
 	var body = document.getElementById('entire');
 	var playAgain = document.getElementById('tryAgain');
 	var nextLevel = document.getElementById('next');
+	document.getElementById('scored').innerHTML = "<h3>You scored " + score + "</h3>";
     modal.style.display = "block";
     body.style.opacity = 0.4;
 	
