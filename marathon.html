@@ -5,6 +5,7 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="Style/stylemarathon.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<script src="Scripts/script.js"></script>
         <script src="Scripts/modals.js"></script>
@@ -42,7 +43,7 @@
     <!-- Top bar with icons, etc -->
     <div class="col-md-4 col-xs-6" id = "leftCorner">
         <a href="welcomeScreenTakitoDesign.html"><span class="glyphicon glyphicon-home"></span></a> 
-        <a href="setting.html"><span class="glyphicon glyphicon-cog" ></span></a>
+        <a href="#" id = "setBtn" data-toggle="modal" data-target = "#setGame" onclick = "gameSet();"><span class="glyphicon glyphicon-cog"></span></a>
     </div>
     <div class="col-md-4 col-xs-6" id="level">Level: 1</div>
     <div class="col-md-4 col-xs-12" id="hearts"> 
@@ -52,18 +53,28 @@
         <span class="glyphicon glyphicon-heart" id="heart3"></span>
     </div>
     <!-- Modal 'In-Game Settings'-->
-	<div id = "setGame" class="modal">
+	<div id = "setGame" class="modal" role = "dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<a href = "#" id = "gameReturn"><img src="images/return_2.jpg"/></a>
 					<h2 href="marathon-leaderboard.html" class="modal-title" style = "background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
   background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;">Settings</h2>
 				</div>
-				<div class="modal-body"></div>
+				<div class="modal-body">
+					<div class="col-xs-12">
+						Volume 
+						<input type="range" min="0" max="10" value="5" step="1" onChange="sliderChange(this.value)" style="width:200px;"/>
+						<span id="sliderStatus">5</span>
+						<br/><br/>
+						<input type="checkbox" name="hint"> Hints</input>
+						<input type="checkbox" name="colorblind"> Colorblind Mode</input>
+						<input type="submit" name="submitSet"></input>
+					</div>
+				</div>
 				<div class="modal-footer">
 					<div class = "centered text-center"></div>
 				</div>

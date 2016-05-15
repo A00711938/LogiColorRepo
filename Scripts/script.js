@@ -207,7 +207,7 @@ function numberComb(op, nb1, nb2, sum) {
 function checkPlay(cPlay, op){
 	if (op == 0) {
 		if (cPlay >= 0){
-			if (cPlay <= 7) {
+			if (cPlay <= 9) {
 				return true;
 			} else{
 				return false;
@@ -217,10 +217,10 @@ function checkPlay(cPlay, op){
 		}
 		return false;
 	} else if (op == 1) {
-		if (cPlay >= 8) {
-			if (cPlay <= 16) {
+		if (cPlay > 9) {
+			if (cPlay <= 18) {
 				return true;
-			} else if (cPlay > 16){
+			} else if (cPlay > 18){
 				return colorComb(op, c1, c2, c3);
 			} else{
 				return false;
@@ -332,4 +332,8 @@ function playMusic(el,soundfile) {
         this.play();
     }, false);
     el.mp3.play();
+}
+
+function sliderChange(value){
+	document.getElementById('sliderStatus').innerHTML = value;
 }

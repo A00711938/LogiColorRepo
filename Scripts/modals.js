@@ -1,4 +1,8 @@
 window.addEventListener("load", playerReady, false);
+window.onload = function() {
+	var setBtn = document.getElementById('setBtn');
+	setBtn.addEventListener("onclick", gameSet, false);
+}
 
 // Modal 'Are You Ready'
 function playerReady() {
@@ -28,6 +32,21 @@ function playerReady() {
 }
 
 
+/* In-Game Settings Modal*/
+function gameSet() {
+	var modal = document.getElementById('setGame');
+	modal.style.display = "block";
+	var returnBtn = document.getElementById('gameReturn');
+	returnBtn.onclick = function() {
+		modal.style.display = "none";
+	}
+	
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "block";
+		}
+	}
+}
 
 // End - Level Modal Display
 function levelEnd(score) {
@@ -44,10 +63,6 @@ function levelEnd(score) {
 		displayMessage();
 		document.getElementById('message').innerHTML = "";
 		score = 0;
-	}
-	nextLevel.onclick = function() {
-		modal.style.display = "none";
-		window.location.href = "difficulty.html";
 	}
 	
 	window.onclick = function(event) {
