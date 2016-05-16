@@ -21,6 +21,7 @@ function playerReady() {
 	btn2.onclick = function() {
 		modal.style.display = "none";
         playSound(this,'sounds/marathonmusic.mp3');
+        start();
 		displayMessage();
 	}
 	

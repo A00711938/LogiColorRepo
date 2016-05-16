@@ -7,7 +7,7 @@ var correctStage = 20;
  *                        DO NOT CHANGE THE CODE BELOW                         *
  *******************************************************************************/
  
-var timer=null;
+var timer = null;
 var time, ms, s, correct;
 var life = 3;
 var heart = new Array(life);

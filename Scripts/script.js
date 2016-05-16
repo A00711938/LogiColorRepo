@@ -13,12 +13,16 @@ var play = Math.floor(Math.random() * 33);
 var operation = ["+", "-"];
 var lives = 3;
 var level = 1;
+var time = 0
+var ms = 0;
+var s = 0;
+var timer = null;
 
 function displayMessage() {
 	play = Math.floor(Math.random() * 33);
 	switch (play) {
 		case 0:
-			c1 = 0, c2 = 1, c3 = 8, op = 0; // green0 + red1 = black
+			c1 = 0, c2 = 1, c3 = 8, op = 0; // green + red = black
 			break;
 		case 1:
 			c1 = 1, c2 = 0, c3 = 8, op = 0; // red + green = black
@@ -301,16 +305,7 @@ function falseFun() {
 
 function newGame() {
     var modal = document.getElementById('gameOver');
-    modal.style.display = "none";
-    score = 0;
-    lives = 3;
-    level = 1;
-    document.getElementById('message').innerHTML = "";
-    document.getElementById('level').innerHTML = "Level: " + level;
-    document.getElementById('score').innerHTML = "Score: " + score;
-    document.getElementById('heart1').className = "glyphicon glyphicon-heart";
-    document.getElementById('heart2').className = "glyphicon glyphicon-heart";
-    document.getElementById('heart3').className = "glyphicon glyphicon-heart";
+    reset();
     displayMessage();
 }
 
@@ -334,6 +329,46 @@ function playMusic(el,soundfile) {
     el.mp3.play();
 }
 
+function changeVolume(audio,percent) {
+    audio.volume = percent/100;
+}
+
 function sliderChange(value){
 	document.getElementById('sliderStatus').innerHTML = value;
+}
+
+//This function starts the timer of the marathon mode.
+//The player have atmost timeLimit seconds.
+//THIS IS A PLACEHOLDER FOR THE READY BUTTON.
+function start(){
+	if(timer == null){
+		timer = setInterval('run()', 100);
+	} else {
+		clearInterval(timer);
+        timer = null;
+        timer=setInterval('run()', 100);
+    }
+}
+
+//This function calculate the amount of time has passed.
+//If the time has reached timeLimit, it will move to the game over screen/modal.
+//REQUIRED BLOCK FOR THIS FUNCTION, ID="TIME"
+//Time is in tenths of seconds
+function run(){
+	time++;
+	ms = Math.floor(time%10);
+	s = Math.floor(time/10);
+}
+
+function reset(){
+	modal.style.display = "none";
+    score = 0;
+    lives = 3;
+    level = 1;
+    document.getElementById('message').innerHTML = "";
+    document.getElementById('level').innerHTML = "Level: " + level;
+    document.getElementById('score').innerHTML = "Score: " + score;
+    document.getElementById('heart1').className = "glyphicon glyphicon-heart";
+    document.getElementById('heart2').className = "glyphicon glyphicon-heart";
+    document.getElementById('heart3').className = "glyphicon glyphicon-heart";
 }
