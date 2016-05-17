@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Welcome Screen</title>
-
+	
+	<!--Google font-->
+	<link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <script src="Scripts/script.js"></script>
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" href="Style/style_welcome_setting.css">
+	<script src="Scripts/script.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-<!-- Optional theme -->
+	<!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
@@ -40,7 +46,7 @@ Title container below.
 
         P.S. I personally love this image as our logo. So I'd like to keep it.
         -->
-        <img id="myLogo" onclick="easterEgg()" src="images/logo.jpg" alt="logicolor" width="300px" height="80px">
+        <img id="myLogo" onclick="easterEgg()" src="images/logo.gif" alt="logicolor" width="300px" height="80px">
         <!--
         </a>
         -->
@@ -53,7 +59,7 @@ I copied the format which I think works well.
 -->
 <div class="jumbotron">
 
-    <div class="row">
+    <div class="row heading_welcome">
         <div class="col-xs-12">
             <h3 class="text-success text-center">
                 Pick your Dogeventure!
@@ -61,12 +67,12 @@ I copied the format which I think works well.
         </div>
     </div>
     <div id="doge">
-        <button type="button" class="dodge btn btn-default btn-lg btn-block">
+        <button type="button" class="dodge btn btn-lg btn-block">
             <img class="img-circle" src="images/dodge.gif" width="30px"; height="30px" alt="">
             Marathon Mode</button>
-        <button type="button" class="dodge btn btn-default btn-lg btn-block"><img>Speed Mode</button>
-        <button type="button" class="dodge btn btn-default btn-lg btn-block"><img>Leaderboard</button>
-        <button type="button" class="dodge btn btn-default btn-lg btn-block"><img>Settings</button>
+        <button type="button" class="dodge btn btn-lg btn-block"><img>Speed Mode</button>
+        <button type="button" class="dodge btn btn-lg btn-block"><img>Leaderboard</button>
+        <button type="button" class="dodge btn btn-lg btn-block"><img>Settings</button>
     </div>
 </div>
 </div>
@@ -103,11 +109,11 @@ I copied the format which I think works well.
         });
 
         //The following function manipulates the DOM so the whole container class centers in any
-        //cellphone and the background color stays black.
+        //cellphone and the background color stays #515151.
         $(".container").css({
             "padding-top":"30%",
             "padding-bottom":"30%",
-            "background-color":"black"
+            "background-color":"#515151"
         });
 
 
@@ -115,7 +121,7 @@ I copied the format which I think works well.
     function easterEgg() {
         var image = document.getElementById('myLogo');
         if (image.src.match("alt")) {
-            image.src = "Images/logo.jpg";
+            image.src = "Images/logo.gif";
         } else {
             image.src = "Images/logoalt.jpg";
             playSound(this,'sounds/woof.mp3');

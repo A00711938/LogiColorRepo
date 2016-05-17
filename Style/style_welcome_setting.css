@@ -1,0 +1,37 @@
+body {
+    background-color: #515151;
+	/** Google web font.
+        font-family: 'Chewy', cursive; 
+        or 
+        font-family: 'Permanent Marker', cursive;**/
+	font-family: 'Permanent Marker', cursive;
+	
+}
+
+.jumbotron {
+	background-color: #515151;
+}
+
+.btn {
+	background-color: #F26A68;
+	font-family: 'Trade Winds', cursive;
+	font-size: 20px;
+	color: #FFE272;
+	padding: 15px 10px;
+}
+
+.img-circle {
+	padding-right: 3px;
+}
+/**heading 'Difficulty' in difficulty.html*/
+.heading_difficulty h3 {
+	font-size: 45px;
+	color: #F26A68;
+	margin-bottom: 15px;
+}
+/**heading 'Pick Your Dodeventure' in welcome.html*/
+.heading_welcome h3 {
+	font-size: 40px;
+	color: #F26A68;
+	margin-bottom: 15px;
+}
