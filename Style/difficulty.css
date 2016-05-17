@@ -1,3 +1,27 @@
 body {
-    background-color: #000000;
+    background-color: #515151;
+	/**font-family: 'Chewy', cursive; or Permanent Marker**/
+	font-family: 'Permanent Marker', cursive;
+	
+}
+
+.jumbotron {
+	background-color: #515151;
+}
+
+.btn {
+	background-color: #F26A68;
+	font-family: 'Trade Winds', cursive;
+	font-size: 20px;
+	color: #FFE272;
+	padding: 15px 10px;
+}
+.btn-lg {}
+.img-circle {
+	padding-right: 3px;
+}
+.heading h3 {
+	font-size: 45px;
+	color: #F26A68;
+	margin-bottom: 20px;
 }
