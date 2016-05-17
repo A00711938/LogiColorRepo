@@ -305,7 +305,8 @@ function falseFun() {
 
 function newGame() {
     var modal = document.getElementById('gameOver');
-    reset();
+	modal.style.display = "none";
+    resetGame();
     displayMessage();
 }
 
@@ -360,8 +361,7 @@ function run(){
 	s = Math.floor(time/10);
 }
 
-function reset(){
-	modal.style.display = "none";
+function resetGame(){
     score = 0;
     lives = 3;
     level = 1;
