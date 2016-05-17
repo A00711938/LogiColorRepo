@@ -1,0 +1,37 @@
+
+body {
+    background-color: #51514F;
+	/** Google web font.
+        font-family: 'Chewy', cursive; 
+        or 
+        font-family: 'Permanent Marker', cursive;**/
+	font-family: 'Permanent Marker', cursive;
+	
+}
+
+.jumbotron {
+	background-color: #51514F;
+}
+
+.container {
+	background-color: #F26A68;
+	font-family: 'Trade Winds', cursive;
+	font-size: 20px;
+	color: #FFE272;
+	padding: 15px 10px;
+	margin: 15px;
+}
+.slider {
+	text-align: center;
+}
+
+.img-circle {
+	padding-right: 3px;
+}
+/**heading 'Settings' */
+.heading {
+	text-align: center;
+	font-size: 60px;
+	color: #F26A68;
+	margin-bottom: 15px;
+}

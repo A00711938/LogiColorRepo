@@ -2,132 +2,238 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--q
+        Testing the app without the folowing css changes. Using default bootstrap for now.
         <link rel="stylesheet" type="text/css" href="Style/stylemarathon.css">
+        -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 		<link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<script src="Scripts/script.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="Scripts/script.js"></script>
         <script src="Scripts/modals.js"></script>
         <title>LogiColour Marathon Mode</title>
         <style>
+        /**
+        Temporarily deleted this one. We'll try to keep the background as black. Manipulating
+        the css below using jquery.
             body {
                 background-image: url("Images/background.png");
             }
+        /
         </style>
     </head>
-<header>
-    <!-- Modal 'Are You Ready'-->
-    <div id = "ready" class="modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 href="marathon-leaderboard.html" class="modal-title" style = "background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;">Are You Ready?</h2>
-                </div>
-				<div class="modal-body"></div>
-				<div class="modal-footer">
-                    <div class = "centered text-center">
-                        <div class="col-md-4 col-md-offset-4">
-							<a href="difficultyCopyTakitoTest.html" class="btn btn-default" data-dismiss="modal" id = "back">Back</a>
-                            <a href="#" class="btn btn-default" name = "play" id = "play">Play</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-    <!-- Top bar with icons, etc -->
-    <div class="col-md-4 col-xs-6" id = "leftCorner">
-        <a href="welcomeScreenTakitoDesign.html"><span class="glyphicon glyphicon-home"></span></a> 
-        <a href="#" id = "setBtn" data-toggle="modal" data-target = "#setGame" onclick = "gameSet();"><span class="glyphicon glyphicon-cog"></span></a>
-    </div>
-    <div class="col-md-4 col-xs-6" id="level">Level: 1</div>
-    <div class="col-md-4 col-xs-12" id="hearts"> 
-        Lives:
-        <span class="glyphicon glyphicon-heart" id="heart1"></span>
-        <span class="glyphicon glyphicon-heart" id="heart2"></span>
-        <span class="glyphicon glyphicon-heart" id="heart3"></span>
-    </div>
-    <!-- Modal 'In-Game Settings'-->
-	<div id = "setGame" class="modal" role = "dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<a href = "#" id = "gameReturn"><img src="images/return_2.jpg"/></a>
-					<h2 href="marathon-leaderboard.html" class="modal-title" style = "background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;">Settings</h2>
-				</div>
-				<div class="modal-body">
-					<div class="col-xs-12">
-						Volume 
-						<input type="range" min="0" max="10" value="5" step="1" onChange="sliderChange(this.value)" style="width:200px;"/>
-						<span id="sliderStatus">5</span>
-						<br/><br/>
-						<input type="checkbox" name="hint"> Hints</input>
-						<input type="checkbox" name="colorblind"> Colorblind Mode</input>
-						<input type="submit" name="submitSet"></input>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<div class = "centered text-center"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
+
 <body>
-    <!-- Question Display -->
-    <div class="container" id="midtable">
-        <div class="col-sm-3 col-xs-4"><span id = "num1"></span></div>
-        <div class="col-sm-1 col-xs-4" id="operation">+</div>
-        <div class="col-sm-3 col-xs-4"><span id = "num2"></span></div>
-        <div class="col-sm-1 col-xs-6" id="eq">=</div>
-        <div class="col-sm-4 col-xs-6"><span id = "sum"></span></div>
+<!--
+Modal 'Are You Ready'
+For whatever reason I wasn't able to create the fade in effect when the modal appears on screen.
+I believe it has something to do with the file modals.js; however, I'm not too sure.
+-->
+<div id="ready" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 href="marathon-leaderboard.html" class="modal-title">Are You Ready?</h2>
+            </div>
+
+            <div class="modal-body"></div>
+
+            <div class="modal-footer">
+                <div class = "centered text-center">
+                    <div class="col-md-4 col-md-offset-4">
+                        <a href="difficultyCopyTakitoTest.html" class="btn btn-default" data-dismiss="modal" id = "back">Back</a>
+                        <a href="#" class="btn btn-default" data-dismiss="modal" name = "play" id = "play">Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+The first container holds the game's navigation bar.
+-->
+<div class="container">
+
+<!-- Top bar (nav bar) with icons are placed in the following row -->
+<div class="navigation row">
+
+    <div class="col-xs-3 text-center" id="leftCorner">
+        <h4>
+        <a href="welcomeScreenTakitoDesign.html"><span class="glyphicon glyphicon-home"></span></a>
+        <a href="#" id = "setBtn" data-toggle="modal" data-target = "#setGame" onclick = "gameSet();"><span class="glyphicon glyphicon-cog"></span></a>
+        </h4>
+    </div>
+
+    <div class="col-xs-5 text-center">
+        <h4 id="score">Score: 0</h4>
+    </div>
+
+    <div class="col-xs-4 text-center">
+        <h4 id="level">
+            Level: 1
+        </h4>
+    </div>
+</div>
+
+<div class="navigation row text-center">
+    <div class="col-xs-12" id="hearts">
+        <!-- Lives: -->
+        <h2>
+            <span class="glyphicon glyphicon-heart text-danger" id="heart1"></span>
+            <span class="glyphicon glyphicon-heart text-danger" id="heart2"></span>
+            <span class="glyphicon glyphicon-heart text-danger" id="heart3"></span>
+        </h2>
+    </div>
+</div>
+
+</div>
+
+<!--
+The row below holds the in-game screen. Note that the spans manipulated with id's do not fit
+the bootstrap screen. We'll have to fix this one from JS.
+-->
+<div class="container">
+<!--The following row holds the right or wrong message -->
+    <div class="messagemessage row text-center">
         <div class="col-xs-12" id="message"></div>
     </div>
-    
-    <!-- Congrats Modal-->
-	<div id = "gameOver" class="modal">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h2 href="marathon-leaderboard.html" class="modal-title" style = "background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;">Congratulations</h2>
-                </div>
-				<div class="modal-body">
-					<div id="modscore"></div>
-                    <div id="scored"></div>
-					<p>You will get smarter if you keep playing in that manner.</p>
-				</div>
-				<div class="modal-footer">
-                    <div class = "centered text-center">
-						<div class="col-md-4 col-md-offset-4">
-							<a href="#" class="btn btn-default" data-dismiss="modal" onclick="newGame()" id = "tryAgain">Try Again</a>
-							<a href="difficultyCopyTakitoTest.html" class="btn btn-default" name = "next">Next</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-    
-    <!-- True and False Buttons -->
-    <div class="container" id="choices">
-        <button class="col-xs-6" id="tru" style="background-color: #4CAF50;" name="answer1" onclick="trueFun();playSound(this,'sounds/click.mp3');"><span class="glyphicon glyphicon-ok" style="color:green;"></span></button>
-        <button class="col-xs-6" id="fal" style="background-color: #BF5B5F;" name="answer2" onclick="falseFun();playSound(this,'sounds/click.mp3');"><span class="glyphicon glyphicon-remove" style="color:red;"></span></button>
+
+<!--The following two rows are for in game operations -->
+<div class="game row" id="midtable">
+
+        <div class="col-xs-3 text-center"><h1 id="num1"></h1></div>
+
+        <div class="col-xs-1 text-center"><h1 id="operation">+</h1></div>
+
+        <div class="col-xs-3 text-center"><h1 id="num2"></h1></div>
+
+        <div class="col-xs-1 text-center"><h1 class="eq">=</h1></div>
+
+        <div class="col-xs-3 text-center"><h1 id="sum"></h1></div>
+
+</div>
+
+<!-- The following row will be dedicated specifically for the pattern/color
+logic.
+-->
+<div class="game row">
+    <div class="col-xs-3"></div> <!--Square -->
+    <div class="col-xs-2"></div> <!-- plus -->
+    <div class="col-xs-3"></div> <!--Triangle -->
+    <div class="col-xs-2"></div> <!--Equals -->
+    <div class="col-xs-2"></div> <!--Triasquare? -->
+</div>
+
+<!--
+The following row reserves space for the right/wrong message
+-->
+
+</div>
+
+<!--
+True and False Buttons. Note we deleted the style writting in the line since all the colors can be
+manipulated using bootstrap. The following span style was deleted:
+style="color:green;"
+style="color:red;"
+ -->
+
+<div class="footer container">
+    <div class="row" id="">
+        <div class="col-xs-6">
+            <button type="button" class="success btn btn-lg btn-block" id="tru" name="answer1" onclick="trueFun();playSound(this,'sounds/click.mp3');"><span class="glyphicon glyphicon-ok text-lg" ></span></button>
+        </div>
+        <div class="col-xs-6">
+            <button type="button" class="fail btn btn-lg btn-block" id="fal" name="answer2" onclick="falseFun();playSound(this,'sounds/click.mp3');"><span class="glyphicon glyphicon-remove"></span></button>
+        </div>
     </div>
+</div>
+
+<!--
+Congrats Modal.
+Similar to the first modal, it was strange that the fade in effect doesn't work properly.
+I suspect that the file modals.js has something to do with this problem.
+-->
+<div id ="gameOver" class="modal fade in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 href="marathon-leaderboard.html" class="modal-title">Congratulations</h2>
+            </div>
+            <div class="modal-body">
+                <div id="modscore"></div>
+                <div id="scored"></div>
+                <p>You will get smarter if you keep playing in that manner.</p>
+            </div>
+            <div class="modal-footer">
+                <div class = "centered text-center">
+                    <div class="col-md-4 col-md-offset-4">
+                        <a href="#" class="btn btn-default" data-dismiss="modal" onclick="newGame()" id = "tryAgain">Try Again</a>
+                        <a href="difficultyCopyTakitoTest.html" class="btn btn-default" name = "next">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+We'll try keeping the scorebox at the very top. Let's see how that works
+
     <div id="scorebox">
         <div id="score">Score: 0</div>
     </div>
+-->
+
+
+<script>
+$(document).ready(function () {
+    //Sets the background color
+    $("body").css({"background-color":"#51514f"});
+    //Sets the navigation (top) to awesome yellow
+    $(".navigation").css({"background-color":"#ffe066"});
+    //Sets the background color of the right/wrong message
+    $(".messagemessage").css({"background-color":"#237ba0"});
+    //Sets the background color of the success button. Plus additional
+    //style changes
+    $(".success").css({
+        "background-color":"#70C1B2",
+        "height":"6em"
+    });
+    //Sets the background color of the fail button. Plus additional
+    //style changes
+    $(".fail").css({
+        "background-color":"#f25e5c",
+        "height":"6em"
+    });
+
+    //The following places the footer at the very bottom
+    $(".footer").css({
+        "position":"absolute",
+        "bottom":"1em",
+        "width":"100%"
+    });
+
+    //Manipulates the font to be very visible
+    $("h1").css({
+        "font-size":"300%"
+    });
+
+    $("#ready").modal('show');
+
+
+
+
+
+});
+</script>
+
 </body>
 </html>
