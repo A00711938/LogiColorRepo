@@ -305,7 +305,8 @@ function falseFun() {
 
 function newGame() {
     var modal = document.getElementById('gameOver');
-    reset();
+	modal.style.display = "none";
+    resetGame();
     displayMessage();
 }
 
@@ -361,7 +362,6 @@ function run(){
 }
 
 function resetGame(){
-	modal.style.display = "none";
     score = 0;
     lives = 3;
     level = 1;
