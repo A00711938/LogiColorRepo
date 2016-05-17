@@ -249,16 +249,16 @@ function trueFun() {
     if ((checkPlay(play, op)) && (numberComb(op, nb1, nb2, sum))) {
         score++;
         document.getElementById('score').innerHTML = "Score: " + score;
-        document.getElementById('message').style.color = "green";
-        document.getElementById('message').innerHTML = "Correct!";
+        document.getElementById('message').style.color = "#70C1B2";
+        document.getElementById('message').innerHTML = "<h4>Correct!</h4>";
         if(score % 5 == 0){
             level++;
             document.getElementById('level').innerHTML = "Level: " + level;
         }
         displayMessage();
     } else{
-        document.getElementById('message').style.color = "red";
-        document.getElementById('message').innerHTML = "Wrong!";
+        document.getElementById('message').style.color = "f25e5c";
+        document.getElementById('message').innerHTML = "<h4>Wrong!</h4>";
         if(lives == 3){
             document.getElementById('heart3').className = "glyphicon glyphicon-heart-empty";
             lives--;
@@ -278,16 +278,16 @@ function falseFun() {
     if (!(checkPlay(play, op) && numberComb(op, nb1, nb2, sum))) {
         score++;
         document.getElementById('score').innerHTML = "Score: " + score;
-        document.getElementById('message').style.color = "green";
-        document.getElementById('message').innerHTML = "Correct!";
+        document.getElementById('message').style.color = "#70C1B2";
+        document.getElementById('message').innerHTML = "<h4>Correct!</h4>";
         if(score % 5 == 0){
             level++;
             document.getElementById('level').innerHTML = "Level: " + level;
         }
         displayMessage();
     } else{
-        document.getElementById('message').style.color = "red";
-        document.getElementById('message').innerHTML = "Wrong!";
+        document.getElementById('message').style.color = "#f25e5c";
+        document.getElementById('message').innerHTML = "<h4>Wrong!</h4>";
         if(lives == 3){
             document.getElementById('heart3').className = "glyphicon glyphicon-heart-empty";
             lives--;
@@ -305,8 +305,7 @@ function falseFun() {
 
 function newGame() {
     var modal = document.getElementById('gameOver');
-	modal.style.display = "none";
-    resetGame();
+    reset();
     displayMessage();
 }
 
@@ -362,6 +361,7 @@ function run(){
 }
 
 function resetGame(){
+	modal.style.display = "none";
     score = 0;
     lives = 3;
     level = 1;
