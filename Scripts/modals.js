@@ -15,7 +15,7 @@ function playerReady() {
 	
 	btn1.onclick = function() {
 		modal.style.display = "none";
-		window.location.href = "index.html";
+		window.location.href = "welcomeScreenTakitoDesign.html";
 	}
 	
 	btn2.onclick = function() {
