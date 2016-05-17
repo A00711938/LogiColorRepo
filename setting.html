@@ -11,10 +11,14 @@ that we can use for our website. I 'll prepare that over the weekend (week 3) so
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<!--Google font-->
-	<link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
 	<!--Bootstrap addon-->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="Scripts/script.js"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="Style/style_settings.css">
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<!-- [endif]-->
@@ -24,51 +28,29 @@ that we can use for our website. I 'll prepare that over the weekend (week 3) so
 			document.getElementById('sliderStatus').innerHTML = value;
 		}
 	</script>
-	<style>
-		img{
-			width:95%;
-			margin: auto;
-		}
-		#box{
-			width:80%;
-		}
-		#return{
-			position: absolute;
-			top:0px;
-			left: 0px;
-			height: 32px;
-			width: 32px;
-		}
-		
-		@media screen and (min-width: 768px){
-			#box{
-				font-size: 30pt;
-				margin: center;
-			}
-		}
-	</style>
 
 	<title>Settings</title>
 </head>
-<body style="background: black; font-family: 'Nunito', sans-serif; color: blue; font-size: 18pt">
+<body>
 	<br/>
-	<img src="images/setting.png" class="setting">
-	<!--CHANGE THE # TO THE INDEX PAGE-->
-	<a href="welcomeScreenTakitoDesign.html"><img src="images/return_2.jpg" id="return"></a>
-	<!--Puts space between the picture and menu-->
-	<div id="space">
-		<br/><br/>
+	<div class="heading">
+		<h1>Settings</h1>
 	</div>
 	<!--Menu options-->
 	<div class="container" id="box">
 		<div class="row">
 			<div class="col-xs-12" id="menu">
-				Volume <input type="range" min="0" max="10" value="5" step="1" onChange="sliderChange(this.value)" style="width:200px;"/>
+				<div class="volume"> Volume 
+				<input type="range" class="slider" min="0" max="10" value="5" step="1" onChange="sliderChange(this.value)" style="width:200px;"/>
 				<span id="sliderStatus">5</span>
+				</div>
 				<br/><br/>
 				<label><input type="checkbox" name="hint"/> Hints</label><br/><br/>
 				<label><input type="checkbox" name="colorblind"/> Colorblind Mode</label>
 			</div>
+			
+			<!-- Temporary button for 'back' link -->
+			<button type="button" class="btn btn-lg btn-block"><img>Back</button>
 		</div>
 	</div>
 
