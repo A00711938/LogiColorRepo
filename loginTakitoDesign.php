@@ -11,9 +11,17 @@ session_start();
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Log in Takito Design Page</title>
 
+	<!-- Google font -->
+	<link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
+	
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="Style/style_login.css">
+		
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,7 +47,7 @@ Below I add all the content required for Boostrap to create the log-in page.
 
             P.S. I personally love this image as our logo. So I'd like to keep it.
             -->
-            <img class="" src="images/logo.jpg" alt="logicolor" width="300px" height="80px">
+            <img class="" src="images/logo.gif" alt="logicolor" width="300px" height="80px">
             <!--
             </a>
             -->
@@ -48,8 +56,8 @@ Below I add all the content required for Boostrap to create the log-in page.
 
     <div class="jumbotron">
         <div class="row">
-            <div class="col-xs-12">
-                    <h3 class="text-success text-center">
+            <div class="heading col-xs-12">
+                    <h3 class="text-center">
                         Welcome back!
                     </h3>
             </div>
@@ -71,7 +79,7 @@ Below I add all the content required for Boostrap to create the log-in page.
                         <label><input type="checkbox"> Remember me</label>
                     </div>
                     <div class="text-center">
-                        <button type="submit" name="submit" class="btn btn-default">Log in</button>
+                        <button type="submit" name="submit" class="btn">Log in</button>
                     </div>
                 </form>
             </div>
@@ -79,7 +87,8 @@ Below I add all the content required for Boostrap to create the log-in page.
     </div>
     <div class="row">
         <div class="col-xs-12 text-center">
-            <h6 class="text-muted">Not a member? <span class="text-primary"><u><a href="signinTakitoDesign.html">Sign in</a></u></span></h6>
+            <h5>Not a member? <span class="text-primary"><u>
+			<a href="signinTakitoDesign.html" style="color:#FFE066">Sign in</a></u></span></h5>
         </div>
     </div>
 </div>
@@ -88,20 +97,6 @@ Below I add all the content required for Boostrap to create the log-in page.
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-<script>
-    //The following manipulates the DOM so the image renders in the middle of the app
-    //screen. More DOM manipulation can be added as needed. :)
-    $(document).ready(function(){
-        $(".container").css({
-            "padding-top":"30%",
-            "padding-bottom":"30%"
-        });
 
-        //The following Jquery function manipulates the pages background color so it's set to
-        //black. This function can be easily replaced with a CSS file. I'll keep it here for now :p
-        $("body").css({"background-color":"black"});
-
-    });
-</script>
 </body>
 </html>
