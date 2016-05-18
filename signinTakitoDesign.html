@@ -7,13 +7,21 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Sign in Takito Design Page</title>
 
+	<!-- Google font -->
+	<link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
+	
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="Style/style_signup.css">
+	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-<!-- Optional theme -->
+    
+	<!--[if lt IE 9]>
+	<!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
@@ -27,26 +35,16 @@ Below I add all the content required for Boostrap to create the log-in page.
 <div class="container">
     <div class="row">
         <div class="col-xs-12 text-center">
-            <!--
-            <a href="loginTakitoDesign.html">
-            REMOVING THIS REF TEMPORARILY TO CHECK IF I CAN CENTER THE LOGICOLOR IMAGE with
-            Bootstrap. It worked so maybe we'll talk and confirm if the ref to the main screen is
-            necessary :)
-
-            P.S. I personally love this image as our logo. So I'd like to keep it.
-            -->
-            <img class="" src="images/logo.jpg" alt="logicolor" width="300px" height="80px">
-            <!--
-            </a>
-            -->
+            <!-- Going back to login page when clicking the logo.-->
+            <a href="loginTakitoDesign.php"><img class="" src="images/logo.gif" alt="logicolor" width="300px" height="80px"></a>
         </div>
     </div>
 
     <div class="jumbotron">
         <div class="row">
             <div class="col-xs-12">
-                <h3 class="text-success text-center">
-                    Hi! Welcome to Logicolor
+                <h3 class="heading text-success text-center">
+                    Welcome!
                 </h3>
             </div>
             <div class="col-xs-12">
@@ -57,11 +55,11 @@ Below I add all the content required for Boostrap to create the log-in page.
                     </div>
                     <div class="form-group">
                         <label for="username">Username:</label>
-                        <input type="email" class="form-control" name="username" id="username" placeholder="WinnningBrain101">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="WinnningBrain101">
                     </div>
                     <div class="form-group">
                         <label for="fname">First Name:</label>
-                        <input type="email" class="form-control" name="first" id="fname" placeholder="Love">
+                        <input type="text" class="form-control" name="first" id="fname" placeholder="Love">
                     </div>
                     <div class="form-group">
                         <label for="pwd">Password:</label>
@@ -71,15 +69,9 @@ Below I add all the content required for Boostrap to create the log-in page.
                         <label for="confirmpwd">Confirm Password:</label>
                         <input type="password" class="form-control" id="confirmpwd">
                     </div>
-                    <div class="checkbox text-center">
-                        <!--
-                        As previously explained. We'll add the remember me functionality at
-                        the beginning of week 4.
-                        -->
-                        <label><input type="checkbox"> Remember me</label>
-                    </div>
+
                     <div class="text-center">
-                        <button type="submit" name="submit" class="btn btn-default">Log in</button>
+                        <button type="submit" name="submit" class="btn">Sign Up</button>
                     </div>
                 </form>
             </div>
@@ -102,7 +94,7 @@ Below I add all the content required for Boostrap to create the log-in page.
 
         //The following Jquery function manipulates the pages background color so it's set to
         //black. This function can be easily replaced with a CSS file. I'll keep it here for now :p
-        $("body").css({"background-color":"black"});
+        $("body").css({"background-color":"#51514F"});
 
     });
 </script>
