@@ -148,10 +148,10 @@ style="color:red;"
 <div class="footer container">
     <div class="row" id="">
         <div class="col-xs-6">
-            <button type="button" class="success btn btn-lg btn-block" id="tru" name="answer1" onclick="trueFun();playSound(this,'sounds/click.mp3');"><span class="glyphicon glyphicon-ok text-lg" ></span></button>
+            <button type="button" class="success btn btn-lg btn-block" id="tru" name="answer1" onclick="userAnswer(true);playSound(this,'sounds/click.mp3');"><span class="glyphicon glyphicon-ok text-lg" ></span></button>
         </div>
         <div class="col-xs-6">
-            <button type="button" class="fail btn btn-lg btn-block" id="fal" name="answer2" onclick="falseFun();playSound(this,'sounds/click.mp3');"><span class="glyphicon glyphicon-remove"></span></button>
+            <button type="button" class="fail btn btn-lg btn-block" id="fal" name="answer2" onclick="userAnswer(false);playSound(this,'sounds/click.mp3');"><span class="glyphicon glyphicon-remove"></span></button>
         </div>
     </div>
 </div>
