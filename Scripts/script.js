@@ -1,4 +1,5 @@
-var color = ["green", "red", "yellow", "blue", "white", "grey", "purple", "orange", "black"];
+//var color = ["green", "red", "yellow", "blue", "white", "grey", "purple", "orange", "black"];
+var color = [, "red", "blue", "purple", "yellow", "orange", "green", "black", "white",,,,,,,"gray"];
 var c1;
 var c2;
 var c3;
@@ -18,109 +19,54 @@ var ms = 0;
 var s = 0;
 var timer = null;
 
-function displayMessage() {
-	play = Math.floor(Math.random() * 33);
-	switch (play) {
-		case 0:
-			c1 = 0, c2 = 1, c3 = 8, op = 0; // green + red = black
-			break;
-		case 1:
-			c1 = 1, c2 = 0, c3 = 8, op = 0; // red + green = black
-			break;
-		case 2: 
-			c1 = 1, c2 = 3, c3 = 6, op = 0; // red + blue = purple
-			break;
-		case 3: 
-			c1 = 3, c2 = 1, c3 = 6, op = 0; // blue + red = purple
-			break;
-		case 4:
-			c1 = 1, c2 = 2, c3 = 7, op = 0; // red + yellow = orange
-			break;
-		case 5:
-			c1 = 2, c2 = 1, c3 = 7, op = 0; // yellow + red = orange
-			break;
-		case 6:
-			c1 = 2, c2 = 3, c3 = 0, op = 0; // yellow + blue = green
-			break;
-		case 7:
-			c1 = 3, c2 = 2, c3 = 0, op = 0; // blue + yellow = green
-			break;
-		case 8:
-			c1 = 8, c2 = 4, c3 = 5, op = 0; // black + white = grey
-			break;
-		case 9:
-			c1 = 4, c2 = 8, c3 = 5, op = 0; // white + black = grey
-			break;
-		case 10:
-			c1 = 6, c2 = 1, c3 = 3, op = 1; // purple6 - red1 = blue3
-			break;
-		case 11:
-			c1 = 6, c2 = 3, c3 = 1, op = 1; // purple6 - blue3 = red1
-			break;
-		case 12:
-			c1 = 7, c2 = 1, c3 = 2, op = 1; // orange - red1 = yellow2
-			break;
-		case 13:
-			c1 = 7, c2 = 2, c3 = 1, op = 1; // orange - yellow2 = red1
-			break;
-		case 14: 
-			c1 = 0, c2 = 2, c3 = 3, op = 1; // green0 - yellow2 = blue3
-			break;
-		case 15:
-			c1 = 0, c2 = 3, c3 = 2, op = 1; // green - blue3 = yellow2
-			break;
-		case 16:
-			c1 = 5, c2 = 8, c3 = 4, op = 1; // grey5 - black8 = white4
-			break;
-		case 17:
-			c1 = 5, c2 = 4, c3 = 8, op = 1; // grey - white = black8
-			break;
-		case 18:
-			var ran = Math.floor(Math.random() * 9);
-			op = Math.floor(Math.random() * 2);
-			if (op == 0) {
-				c1 = ran, c2 = ran, c3 = ran;	
-				break;
-			} else{
-				c1 = ran, c2 = ran, c3 = 8;	
-				break;
-			}
-		default: 
-			c1 = Math.floor(Math.random() * 9);
-			c2 = Math.floor(Math.random() * 9);
-			c3 = Math.floor(Math.random() * 9);
-			op = Math.floor(Math.random() * 2);
-			break;
-	}
+function generateColor() {
+	//Selecting the color generation by random.
+	var choice = Math.floor(Math.random() * 2);
+	//Selecting the operand by random.
+	op = Math.floor(Math.random() * 2);
 	
-	// Radomize numbers
-	a = Math.floor(Math.random() * 10 + 1);
-	b = Math.floor(Math.random() * 10 + 1);
-
-	if (a < b) {
-		noFloating(a, b);
-	} else if(a % b != 0) {
-		noFloating(a, b);
-	} else{
-		nb1 = a;
-		nb2 = b;
-	}
-	function noFloating(n1, n2) {
-		n1 = Math.floor(Math.random() * 10 + 1);
-		n2 = Math.floor(Math.random() * 10 + 1);
-		checkFloating(n1,n2);
-	}
-	function checkFloating(n1, n2) {
-		if (n1 < n2) {
-			noFloating(n1, n2);
-		} else if(n1 % n2 != 0) {
-			noFloating(n1, n2);	
-		} else{
-			nb1 = n1;
-			nb2 = n2;
+	if(!choice){
+		//CORRECT COLOR (forcebly)
+		if(!op){
+			//ADDITION
+			//Obtain the final color.
+			var rand = Math.floor(Math.random() * 9);
+			c3 = rand == 0 ? 15 : rand;
+			//Keep rolling second color as long as it is bigger than the final.
+			do{
+				c2 = Math.floor(Math.random() * 9);
+				c2 = c2 == 0 ? 15 : c2;
+			} while (c2 > c3);
+			//Determine the first dependent on the last two colors.
+			c1 = c3 == c2 ? c2 : c3 - c2;
+		} else {
+			//SUBTRACTION
+			//Obtain the first color
+			var rand = Math.floor(Math.random() * 9);
+			c1 = rand == 0 ? 15 : rand;
+			//Keep rolling second color as long as it is bigger than the first.
+			do{
+				c2 = Math.floor(Math.random() * 9);
+				c2 = c2 == 0 ? 15 : c2;
+			} while (c2 > c1);
+			//Determine the outcome depend on the first two color.
+			c3 = c1 == c2 ? 8 : c1 - c2;
 		}
+	} else {
+		//INCORRECT COLOR (mostly)
+		//Generate all 3 color randomly.
+		c1 = Math.floor(Math.random() * 9);
+		c2 = Math.floor(Math.random() * 9);
+		c3 = Math.floor(Math.random() * 9);
+		c1 = c1 == 0 ? 15 : c1;
+		c2 = c2 == 0 ? 15 : c2;
+		c3 = c3 == 0 ? 15 : c3;
 	}
-
+	generateNumber();
+	displayMessage();
+}
+function displayMessage(){
+	
 	// Apply chosen colors to corresponding element
 	document.getElementById('num1').style.color = color[c1];
 	document.getElementById('num2').style.color = color[c2];
@@ -131,13 +77,28 @@ function displayMessage() {
 	document.getElementById('operation').innerHTML = operation[op];
 	document.getElementById('num2').innerHTML = nb2;
 	if (op == 0) {
-		document.getElementById('sum').innerHTML = nb1 + nb2;
-		sum = nb1 + nb2;
+		document.getElementById('sum').innerHTML = sum;
 	} else {
-		document.getElementById('sum').innerHTML = nb1 - nb2;
-		sum = nb1 - nb2;
+		document.getElementById('sum').innerHTML = sum;
+
 	}
 } // end displayMessage
+function generateNumber(){
+	var choice = Math.floor(Math.random() * 2);
+	var a,b;
+	var firstNumber = Math.floor(Math.random() * 10 + 1);
+	var secondNumber = Math.floor(Math.random() * 10 + 1);
+	
+	while(firstNumber < secondNumber){
+		firstNumber = Math.floor(Math.random() * 10 + 1);
+		secondNumber = Math.floor(Math.random() * 10 + 1);
+	}
+	a = firstNumber, b = secondNumber;
+	
+	
+	sum = !choice ? (!op ? a + b : a - b) : (!op ? a + b + 1 : a + 1 - b);
+	nb1 = firstNumber, nb2 = secondNumber;
+}
 
 
 function colorComb( op, x, y, z) {
@@ -199,15 +160,13 @@ function colorComb( op, x, y, z) {
 	}
 }
 
-function numberComb(op, nb1, nb2, sum) {
-	if (op == 0 && (sum == (nb1 + nb2))){
-		return true;
-	} else if (op == 1 && (sum == (nb1 - nb2))) {
-		return true;
-	}
-	return false;
+function numberComb(op, num1, num2, num3){
+	return op ? num1 - num2 == num3 : num1 + num2 == num3;
 }
-
+function icolorComb(op, a){
+	return op ? (a[0] == a[1] && a[2] == 7 || a[0] - a[1] == a[2]) :
+				(a[0] == a[1] && a[1] == a[2] || a[0] + a[1] == a[2]);
+}
 function checkPlay(cPlay, op){
 	if (op == 0) {
 		if (cPlay >= 0){
@@ -236,30 +195,25 @@ function checkPlay(cPlay, op){
 	}
 	return false;
 }
-
-//  True & False Buttons and Their Actions
-window.onload = function() {
-    var trueBtn = document.getElementById("tru");
-	trueBtn.addEventListener("onclick", trueFun, false);
-	var falseBtn = document.getElementById("fal");
-	falseBtn.addEventListener("onclick", falseFun, true);
+function getAnswer(){
+	//return colorComb(op, questionColor) && numberComb(op, firstNumber, secondNumber, sum);
+	return (checkPlay(play, op)) && (numberComb(op, nb1, nb2, sum))
 }
-
-function trueFun() {
-    if ((checkPlay(play, op)) && (numberComb(op, nb1, nb2, sum))) {
-        score++;
-        document.getElementById('score').innerHTML = "Score: " + score;
-        document.getElementById('message').style.color = "#70C1B2";
-        document.getElementById('message').innerHTML = "<h4>Correct!</h4>";
-        if(score % 5 == 0){
-            level++;
-            document.getElementById('level').innerHTML = "Level: " + level;
-        }
-        displayMessage();
-    } else{
-        document.getElementById('message').style.color = "f25e5c";
-        document.getElementById('message').innerHTML = "<h4>Wrong!</h4>";
-        if(lives == 3){
+function userAnswer(myAns){
+	var questionAns = getAnswer();
+	var message = document.getElementById('message');
+	
+	if(myAns == questionAns){
+		//Score increment here
+		message.style.color = "#70C1B2";
+		message.innerHTML = "<h4>Correct!</h4>";
+	} else {
+		//decriment lives
+		message.style.color = "#F25E5C";
+		message.innerHTML = "<h4>Wrong!</h4>"
+		//show hint if enabled
+		
+		if(lives == 3){
             document.getElementById('heart3').className = "glyphicon glyphicon-heart-empty";
             lives--;
         } else if(lives == 2){
@@ -270,44 +224,15 @@ function trueFun() {
             lives--;
             levelEnd(score);
         }
-        displayMessage();
-    }
-}
-
-function falseFun() {
-    if (!(checkPlay(play, op) && numberComb(op, nb1, nb2, sum))) {
-        score++;
-        document.getElementById('score').innerHTML = "Score: " + score;
-        document.getElementById('message').style.color = "#70C1B2";
-        document.getElementById('message').innerHTML = "<h4>Correct!</h4>";
-        if(score % 5 == 0){
-            level++;
-            document.getElementById('level').innerHTML = "Level: " + level;
-        }
-        displayMessage();
-    } else{
-        document.getElementById('message').style.color = "#f25e5c";
-        document.getElementById('message').innerHTML = "<h4>Wrong!</h4>";
-        if(lives == 3){
-            document.getElementById('heart3').className = "glyphicon glyphicon-heart-empty";
-            lives--;
-        } else if(lives == 2){
-            document.getElementById('heart2').className = "glyphicon glyphicon-heart-empty";
-            lives--;
-        } else if(lives == 1){
-            document.getElementById('heart1').className = "glyphicon glyphicon-heart-empty";
-            lives--;
-            levelEnd(score);
-        }
-        displayMessage();
-    }
+	}
+	generateColor();
 }
 
 function newGame() {
     var modal = document.getElementById('gameOver');
 	modal.style.display = "none";
     resetGame();
-    displayMessage();
+    generateColor();
 }
 
 function playSound(el,soundfile) {
@@ -336,29 +261,6 @@ function changeVolume(audio,percent) {
 
 function sliderChange(value){
 	document.getElementById('sliderStatus').innerHTML = value;
-}
-
-//This function starts the timer of the marathon mode.
-//The player have atmost timeLimit seconds.
-//THIS IS A PLACEHOLDER FOR THE READY BUTTON.
-function start(){
-	if(timer == null){
-		timer = setInterval('run()', 100);
-	} else {
-		clearInterval(timer);
-        timer = null;
-        timer=setInterval('run()', 100);
-    }
-}
-
-//This function calculate the amount of time has passed.
-//If the time has reached timeLimit, it will move to the game over screen/modal.
-//REQUIRED BLOCK FOR THIS FUNCTION, ID="TIME"
-//Time is in tenths of seconds
-function run(){
-	time++;
-	ms = Math.floor(time%10);
-	s = Math.floor(time/10);
 }
 
 function resetGame(){

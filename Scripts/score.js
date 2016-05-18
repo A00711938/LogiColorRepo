@@ -1,14 +1,3 @@
-//This is for the speed accordingly by seconds.
-//Eg. quick = 5
-//This will calculate score accumulate if the user finish the question under 5 seconds.
-var slow = 10, normal = 6.7, quick = 3.3;
-//This is the amount of score accumulated by the appropriate score.
-//Eg. scoreHigh = 250
-//This will adds the score by 250 if the user finished the time under QUICK
-var scoreMin = 10, scoreLow = 25, scoreMed = 75, scoreHigh = 150;
-//This will affect how smoothly the bonus bar refreshes.
-//Lower value (> 0) of this the faster (scale to 1000).
-var updateRate = 50;
 /*******************************************************************************
  *                        DO NOT CHANGE THE CODE BELOW                         *
  *          IF GOING TO USE WINDOW.ONLOAD THEN MUST INCLUDE THE INIT()         *
