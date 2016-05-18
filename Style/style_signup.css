@@ -1,0 +1,30 @@
+body {
+    background-color: #51514F;
+	font-family: 'Trade Winds', cursive;
+	color:  #70C1B2;
+}
+.container {
+	
+}
+.jumbotron {
+	background-color: #51514F;
+	padding: 10px 15px;
+	margin-bottom: 10px;
+}
+
+.btn {
+	background-color: #F26A68;
+	font-family: 'Trade Winds', cursive;
+	font-size: 20px;
+	color: #51514F;
+	padding: 7px 25px;
+	margin-top: 0px;
+}
+
+/**heading text*/
+.heading {
+	font-size: 40px;
+	color: #F26A68;
+	margin: 10px 0 20px 0;
+	font-family: 'Permanent Marker', cursive;
+}
