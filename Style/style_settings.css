@@ -1,26 +1,4 @@
 
-body {
-    background-color: #51514F;
-	/** Google web font.
-        font-family: 'Chewy', cursive; 
-        or 
-        font-family: 'Permanent Marker', cursive;**/
-	font-family: 'Permanent Marker', cursive;
-	
-}
-
-.btn {
-	background-color: #F26A68;
-	font-family: 'Trade Winds', cursive;
-	font-size: 20px;
-	color: #FFE272;
-	padding: 15px 10px;
-}
-
-.jumbotron {
-	background-color: #51514F;
-}
-
 .modal-content {
 	background-color: #51514F;
 }
@@ -38,23 +16,6 @@ body {
 	border-top-width: 0;
 }
 
-.container {
-	background-color: #F26A68;
-	font-family: 'Trade Winds', cursive;
-	font-size: 20px;
-	color: #FFE272;
-	padding: 15px 10px;
-	margin: 15px;
-}
-
-.
-.slider {
-	text-align: center;
-}
-
-.img-circle {
-	padding-right: 3px;
-}
 /**heading 'Settings' */
 .heading {
 	/* text-align: center;  Can be done with bootstrap */
