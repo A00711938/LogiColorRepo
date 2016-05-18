@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title> Speed</title>
+	<script src="global.js"></script>
+	<script src="colorLogic.js"></script>
+	<script src="numberLogic.js"></script>
+	<script src="equation.js"></script>
+	
+	<style>
+		div, button{
+			float: left;
+			font-size: 20pt;
+		}
+		body{
+			background: magenta;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="generateQuestion()">Generate random equation</button>
+	<div id="num1">1</div>
+	<div id="operation">2</div>
+	<div id="num2">3</div>
+	<div>=</div>
+	<div id="sum">4</div>
+	<br/><br/>
+	<p id="actionBox">NULL</p>
+	<p id="result"></p>
+</body>
+</html>
