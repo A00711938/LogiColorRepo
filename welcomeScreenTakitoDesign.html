@@ -15,16 +15,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="Style/style_welcome_difficulty.css">
+    <link rel="stylesheet" type="text/css" href="Style/style_settings.css">
+
 	<script src="Scripts/script.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
 	<!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- [endif]-->
+	
+	<!--Script for the slider changing on view-->
+	<script type="text/javascript">
+		function sliderChange(value){
+			document.getElementById('sliderStatus').innerHTML = value;
+		}
+	</script>
 </head>
 <body>
 <!--
@@ -58,9 +68,8 @@ Options Container below. Similar to the difficultyCopyTakitoTest,
 I copied the format which I think works well.
 -->
 <div class="jumbotron">
-
     <div class="row heading_welcome">
-        <div class="col-xs-12">
+        <div class="col-xs-12 text-centre">
             <h3 class="text-success text-center">
                 Pick your Dogeventure!
             </h3>
@@ -72,14 +81,69 @@ I copied the format which I think works well.
             Marathon Mode</button>
         <button type="button" class="dodge btn btn-lg btn-block"><img>Speed Mode</button>
         <button type="button" class="dodge btn btn-lg btn-block"><img>Leaderboard</button>
-        <button type="button" class="dodge btn btn-lg btn-block"><img>Settings</button>
+        <button type="button" class="dodge btn btn-lg btn-block"><img>Tutorial</button>
+		<button type="button" class="dodge btn btn-lg btn-block" id="myBtn">Settings</button>
     </div>
+	
+		<!-- Tutorial modal! -->
+		<!-- Below, we have the code for the complete modal. The code is divided by header, body, and footer -->
+		<div id="settingsModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="row">
+							<div class="col-xs-8"></div>
+							<div class="col-xs-4">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+						</div>
+					<div class="row heading">
+						<div class="col-xs-12 text-center">
+							<h2 class="modal-title">Settings</h2>
+						</div>
+					</div>
+					</div>
+
+					<div class="modal-body">
+
+							<div class="row">
+								<div class="col-xs-12">
+									<h5>Volume</h5>
+								</div>
+								<div class="col-xs-12">
+									<input type="range" class="slider" min="0" max="10" value="5" step="1" onChange="sliderChange(this.value)" style="width:200px;"/>
+								</div>
+								<div class="col-xs-12">
+									<span id="sliderStatus">5</span>
+								</div>
+								<div class="col-xs-12">
+									<input type="checkbox" name="hint"/>&nbsp;&nbsp;Hints
+								</div>
+								<div class="col-xs-12">
+									<input type="checkbox" name="colorblind"/>&nbsp;&nbsp;Colorblind Mode
+								</div>
+							</div>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn" data-dismiss="modal">Back</button>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
 </div>
+
+
 </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+
 <script>
     var index = 1;
     //DOM manipulation of this particular site happens below
@@ -87,7 +151,7 @@ I copied the format which I think works well.
         //The first two functions below this message allow me to manipulate the dodge pic
         //so the selector moves as the user clicks. We can change that eventually if we like to.
         $(".dodge").find("img").css({"float":"left"});
-
+		
         $(".dodge").click(function(){
             if(index == whichChild(this)){
                 switch(index){
@@ -97,8 +161,11 @@ I copied the format which I think works well.
                             break;
                     case 3: window.location.href = "marathon-leaderboard.html";
                             break;
-                    case 4: window.location.href = "setting.html";
+					case 4: window.location.href = "marathon-leaderboard.html";
                             break;
+                    case 5: $("#settingsModal").modal();
+                            break;
+							//data-toggle="modal" data-target="#settingsModal"
                     default: break;
                 }
             }
@@ -112,8 +179,8 @@ I copied the format which I think works well.
         //cellphone and the background color stays #515151.
         $(".container").css({
 
-            "padding-top":"30%",
-            "padding-bottom":"30%",
+            //"padding-top":"30%",
+            //"padding-bottom":"30%",
             "background-color":"#51514F"
 
         });
