@@ -10,9 +10,7 @@
 -->
         <script src="Scripts/script.js"></script>
 
-<!-- Deleted stylesheet temporarily for testing purposes:
 		<link rel="stylesheet" type="text/css" href="Style/stylemarathon.css">
--->
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -23,22 +21,15 @@
 
 		<title>Leaderboard</title>
     </head>
-<body>
+<body id="body">
 <div class = "container">
 	<div class="row">
 		<div class="col-xs-12 text-center">
 <!--
-<a href="loginTakitoDesign.html">
-REMOVING THIS REF TEMPORARILY TO CHECK IF I CAN CENTER THE LOGICOLOR IMAGE with
-Bootstrap. It worked so maybe we'll talk and confirm if the ref to the main screen is
-necessary :)
+Our main logo
+-->
+			<img class="" src="images/logo.gif" alt="logicolor" width="300px" height="80px">
 
-P.S. I personally love this image as our logo. So I'd like to keep it.
--->
-			<img class="" src="images/logo.jpg" alt="logicolor" width="300px" height="80px">
-<!--
-</a>
--->
 		</div>
 	</div>
 <!--
@@ -55,67 +46,68 @@ Also, some of the future functions on the app should involve:
 <br/>
 <br/>
 	<div class="row text-center">
-		<a href="marathon-leaderboard.php"><button type="button" class="btn btn-default">MARATHON</button></a>
-		<a href="speedrun-leaderboard.html"><button type="button" class="btn btn-default">SPEED RUN</button></a>
+		<button type="button" class="btn btn-lg" id="marathon">MARATHON</button>
+		<button type="button" class="btn btn-lg" id="speedrun">SPEED RUN</button>
 	</div>
+	<br/>
+	<br/>
 
-<br/>
-<br/>
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th class="text-center">Rank</th>
-						<th class="text-center">Username</th>
-						<th class="text-center">Score</th>
-					</tr>
-				</thead>
+	<!--
+	The span below is necessary so that the results of the DB query are delivered inside. The results
+	depend on whether the user clicks the marathon button or the speed run button.
+	-->
+	<span id="resultQuery"></span>
 
-				<tbody>
-<?php
-//The require function calls the file with the database details.
-require 'databasedetails.php';
-
-//In here, PHP tried to connect to the database. If so, the variable database connection save the info
-//needed
-try {
-	$databaseConnection = new PDO('mysql:host='._HOST_NAME_.';dbname='._DATABASE_NAME_, _USER_NAME_, _DB_PASSWORD);
-	$databaseConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-	echo 'ERROR: ' . $e->getMessage();
-}
-
-//In here, a query is sent to the DB. then, we request that all the info returned is saved in the
-//variable $row.
-        $records = $databaseConnection->prepare("SELECT * FROM logicolorscores ORDER BY scores DESC");
-		$records->execute();
-		$row = $records->fetch(PDO::FETCH_ASSOC);
-        $rank = 1;
-
-//The following do loop calls every row in the array $row and organizes the returned data
-//in the format requested.
-//Some improvements that can be done:
-// 1) Cap queries to show the top 5. Maybe other items can be show sliding sideways, etc.
-		do {
-			$getUsername = $databaseConnection->prepare("SELECT * FROM logicolorusers WHERE user_id = :user_id");
-			$getUsername->bindParam(':user_id', $row['user_id']);
-			$getUsername->execute();
-			$result = $getUsername->fetch(PDO::FETCH_ASSOC);
-			echo "<tr><td class=\"text-center\">{$rank}</td>
-				<td class=\"text-center\">{$result['username']}</td>
-				<td class=\"text-center\">{$row['scores']}</td></tr>";
-
-			$rank++;
-		} while ($row = $records->fetch(PDO::FETCH_ASSOC))
-?>
-				</tbody>
-			</table> 
 </div>
 
 
 <script>
 	//The following manipulates the DOM so the background music starts:
 	$(document).ready(function(){
+
         playMusic(this,'Sound/scoresmusic.mp3');
+
+	//Even thought it looks like a duplicated piece of code, Well... this is not a duplicated piece of code. By having
+	//the function below, the first DB that shows (by default) is the marathon
+	//database. AJAX
+
+			$.get(
+				"marathonResult.php",
+				{},
+				function (data){
+					$("#resultQuery").html(data);
+				}
+			)
+			event.preventDefault();
+
+
+	//The function below indicates the system to call the marathon database without the need
+	//to refresh the page. If anything changes in the database, the results will be updated on
+	//screen as soon as the user clicks on the button. AJAX
+		$("#marathon").click(function(event){
+			$.get(
+				"marathonResult.php",
+				{},
+				function (data){
+					$("#resultQuery").html(data);
+				}
+			)
+			event.preventDefault();
+		});
+
+	//The function below indicates the system to call the speedrun database without the need
+	//to refresh the page. If anything changes in the database, the results will be updated on
+	//screen as soon as the user clicks on the button.
+		$("#speedrun").click(function(event){
+			$.get(
+				"speedrunResult.php",
+				{},
+				function (data){
+					$("#resultQuery").html(data);
+				}
+			)
+			event.preventDefault();
+		});
 	});
 </script>
 </body>
