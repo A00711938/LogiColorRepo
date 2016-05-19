@@ -35,3 +35,16 @@ body {
 	color: #F26A68;
 	margin-bottom: 15px;
 }
+
+
+#tutorialModal {
+	font-size: 20px;
+	text-align: center;
+}
+/**Tutorial Video*/
+#tutorialVideo {
+	margin-top: 5px;
+	width: 100%;
+	height: auto;
+}
+
