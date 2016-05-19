@@ -205,6 +205,9 @@ function userAnswer(myAns){
 	
 	if(myAns == questionAns){
 		//Score increment here
+		//I added score++ to allow me to visualize the score in the end game
+		//modal. This may need to be modified to reflect a more accurate score.
+		score++;
 		message.style.color = "#70C1B2";
 		message.innerHTML = "<h4>Correct!</h4>";
 	} else {
@@ -270,7 +273,7 @@ function resetGame(){
     document.getElementById('message').innerHTML = "";
     document.getElementById('level').innerHTML = "Level: " + level;
     document.getElementById('score').innerHTML = "Score: " + score;
-    document.getElementById('heart1').className = "glyphicon glyphicon-heart";
-    document.getElementById('heart2').className = "glyphicon glyphicon-heart";
-    document.getElementById('heart3').className = "glyphicon glyphicon-heart";
+    document.getElementById('heart1').className = "glyphicon glyphicon-heart text-danger";
+    document.getElementById('heart2').className = "glyphicon glyphicon-heart text-danger";
+    document.getElementById('heart3').className = "glyphicon glyphicon-heart text-danger";
 }

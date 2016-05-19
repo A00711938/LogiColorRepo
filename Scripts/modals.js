@@ -55,7 +55,11 @@ function levelEnd(score) {
 	var body = document.getElementById('entire');
 	var playAgain = document.getElementById('tryAgain');
 	var nextLevel = document.getElementById('next');
-	document.getElementById('scored').innerHTML = "<h3>You scored " + score + "</h3>";
+	//I added a line to create an invisible input value that holds the score value. I will use
+	//that input value so that I can transfer the score data in the database as needed. :)
+	//Please do not remove that
+	document.getElementById('scored').innerHTML = "<h3>You scored " + score + "</h3>" +
+	"<input id=\"scoreinfo\" name=\"scoreValue\" value=" + score + " hidden=\"true\">";
     modal.style.display = "block";
     body.style.opacity = 0.4;
 	
