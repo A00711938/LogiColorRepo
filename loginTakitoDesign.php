@@ -88,7 +88,7 @@ Below I add all the content required for Boostrap to create the log-in page.
     <div class="row">
         <div class="col-xs-12 text-center">
             <h5>Not a member? <span class="text-primary"><u>
-			<a href="signinTakitoDesign.html" style="color:#FFE066">Sign in</a></u></span></h5>
+			<a href="signinTakitoDesign.html" style="color:#FFE066">Sign Up</a></u></span></h5>
         </div>
     </div>
 </div>

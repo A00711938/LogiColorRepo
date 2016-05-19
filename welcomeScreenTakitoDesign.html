@@ -176,7 +176,7 @@ I copied the format which I think works well.
 									<h5>Volume</h5>
 								</div>
 								<div class="col-xs-12">
-									<input type="range" class="slider" min="0" max="10" value="5" step="1" onChange="sliderChange(this.value)" style="width:200px;"/>
+									<input type="range" id="slider" class="slider" min="0" max="10" value="5" step="1" onChange="sliderChange(this.value)" style="width:200px;"/>
 								</div>
 								<div class="col-xs-12">
 									<span id="sliderStatus">5</span>
@@ -189,6 +189,16 @@ I copied the format which I think works well.
 								</div>
 							</div>
 					</div>
+					
+					<!-- Still working on the volume slider. -->
+					<script>
+						var sound = document.getElementById("sound");
+						
+						function volumeControl() {
+							var x = document.getElementById("slider").value;
+							sound.volume = (x * 0.1);
+						}
+					</script>
 
 					<div class="modal-footer">
 						<button type="button" class="btn" data-dismiss="modal">Back</button>

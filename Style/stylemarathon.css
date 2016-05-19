@@ -8,20 +8,24 @@
 
 }
 
+#body h2 {
+	color: #F26A68;
+}
 .btn {
     background-color: #F26A68;
-    font-family: 'Trade Winds', cursive;
     color: #FFE272;
     padding: 15px 10px;
+	font-family: 'Trade Winds', cursive;
 }
 
 thead {
+	font-family: 'Trade Winds', cursive;
     font-size: 1.5em;
     color: #F26A68;
     margin-bottom: 15px;
 }
 td {
     background-color: #70c1b2;
-    font-family: 'Trade Winds', cursive;
+    font-family: 'Chewy', cursive;
 
 }
