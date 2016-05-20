@@ -17,7 +17,9 @@
     padding: 15px 10px;
 	font-family: 'Trade Winds', cursive;
 }
-
+.backbtn {
+	margin-bottom: 10px;
+}
 thead {
 	font-family: 'Trade Winds', cursive;
     font-size: 1.5em;
