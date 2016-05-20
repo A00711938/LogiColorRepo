@@ -16,7 +16,7 @@
 	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="Style/style_welcome_difficulty.css">
     <link rel="stylesheet" type="text/css" href="Style/style_settings.css">
-
+    <script src="Scripts/Marathon/global.js"></script>
 	<script src="Scripts/sounds.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -169,19 +169,19 @@ I copied the format which I think works well.
 									<h5>Music Volume</h5>
 								</div>
 								<div class="col-xs-12">
-									<input type="range" id="slider" class="slider" min="0" max="10" value="5" step="1" onChange="musicChange(this.value)" style="width:200px;"/>
+									<input type="range" id="musicslider" class="slider" min="0" max="10" value="5" step="1" onChange="musicChange(this.value)" style="width:200px;"/>
 								</div>
 								<div class="col-xs-12">
-									<span id="musicVal">5</span>
+									<span id="musicVal"></span>
 								</div>
                                 <div class="col-xs-12">
 									<h5>SFX Volume</h5>
 								</div>
 								<div class="col-xs-12">
-									<input type="range" id="slider" class="slider" min="0" max="10" value="5" step="1" onChange="sfxChange(this.value)" style="width:200px;"/>
+									<input type="range" id="sfxslider" class="slider" min="0" max="10" value="5" step="1" onChange="sfxChange(this.value)" style="width:200px;"/>
 								</div>
 								<div class="col-xs-12">
-									<span id="sfxVal">5</span>
+									<span id="sfxVal"></span>
 								</div>
 								<div class="col-xs-12">
 									<input type="checkbox" name="hint"/>&nbsp;&nbsp;Hints
@@ -222,6 +222,10 @@ I copied the format which I think works well.
     var index = 1;
     //DOM manipulation of this particular site happens below
     $(document).ready(function(){
+        document.getElementById('musicVal').innerHTML = musicVol*10;
+        document.getElementById('sfxVal').innerHTML = sfxVol*10;
+        document.getElementById('musicslider').value = musicVol*10;
+        document.getElementById('sfxslider').value = sfxVol*10;
         //The first two functions below this message allow me to manipulate the dodge pic
         //so the selector moves as the user clicks. We can change that eventually if we like to.
         $(".dodge").find("img").css({"float":"left"});
@@ -276,6 +280,9 @@ I copied the format which I think works well.
             ++i;
         return i;
     }
+    
+    document.getElementById('musicVal').innerHTML = musicVol*10;
+    document.getElementById('sfxVal').innerHTML = sfxVol*10;
 </script>
 </body>
 </html>
