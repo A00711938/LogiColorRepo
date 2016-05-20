@@ -1,10 +1,19 @@
-window.addEventListener("load", playerReady, false);
+/*window.addEventListener("load", playerReady, false);
 window.onload = function() {
 	var setBtn = document.getElementById('setBtn');
 	setBtn.addEventListener("onclick", gameSet, false);
 }
+*/
 
-// Modal 'Are You Ready'
+/******************************************************************
+ *            THIS NEEDS THE FOLLOWING: COLORLOGIC.JS             *
+ *                                      NUMBERLOGIC.JS            *
+ *                                      EQUATION.JS               *
+ ******************************************************************/
+ 
+//This modal will show the "Are you ready" to the player.
+//When pressed play, the game will initiate
+//When pressed back, the game will return to main menu
 function playerReady() {
 	var modal = document.getElementById('ready');
 	var body = document.getElementById('entire');
@@ -12,17 +21,14 @@ function playerReady() {
 	var btn2 = document.getElementById('play');
 	
 	modal.style.display = "block";
-	
+	//This disperse the modal and redirect the page to menu.
 	btn1.onclick = function() {
 		modal.style.display = "none";
 		window.location.href = "welcomeScreenTakitoDesign.html";
 	}
-	
+	//This disperse the modal and initiate the game.
 	btn2.onclick = function() {
 		modal.style.display = "none";
-        playSound(this,'Sound/marathonmusic.mp3');
-        start();
-		displayMessage();
 	}
 	
 	window.onclick = function(event) {
@@ -55,17 +61,12 @@ function levelEnd(score) {
 	var body = document.getElementById('entire');
 	var playAgain = document.getElementById('tryAgain');
 	var nextLevel = document.getElementById('next');
-	//I added a line to create an invisible input value that holds the score value. I will use
-	//that input value so that I can transfer the score data in the database as needed. :)
-	//Please do not remove that
-	document.getElementById('scored').innerHTML = "<h3>You scored " + score + "</h3>" +
-	"<input id=\"scoreinfo\" name=\"scoreValue\" value=" + score + " hidden=\"true\">";
+	document.getElementById('scored').innerHTML = "<h3>You scored " + score + "</h3>";
     modal.style.display = "block";
-    body.style.opacity = 0.4;
 	
 	playAgain.onclick = function() {
 		modal.style.display = "none";
-		displayMessage();
+		generateQuestion();
 		document.getElementById('message').innerHTML = "";
 		score = 0;
 	}
