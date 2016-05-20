@@ -8,7 +8,7 @@
 		<!-- Deleted stylesheet temporarily for testing purposes:
 		<link rel="stylesheet" type="text/css" href="Style/style.css">
 		-->
-        <script src="Scripts/script.js"></script>
+        <script src="Scripts/sounds.js"></script>
 		
 		<!--Google font-->
 		<link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
