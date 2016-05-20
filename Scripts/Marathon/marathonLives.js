@@ -36,6 +36,7 @@ function minusLife(){
 	}
 	//CALLS THE GAME OVER MODAL
 	if(life == 0){
+        playSound(this,'Sound/finish.mp3');
 		levelEnd(score);
 	}	
 }
