@@ -7,9 +7,7 @@
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<!-- Deleted stylesheet temporarily for testing purposes:
 		<link rel="stylesheet" type="text/css" href="Style/style.css">
-		-->
-        <script src="Scripts/sounds.js"></script>
-        <script src="Scripts/Marathon/global.js"></script>
+		--> 
 		
 		<!--Google font-->
 		<link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
@@ -24,6 +22,11 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<!-- [endif]-->
+		
+		<!--IMPORT GLOBAL VARIABLE FOR THE SCRIPT NEEDED BELOW-->
+		<script src="Scripts/global.js"></script>
+		<!--IMPORT FUNCTIONS FOR BACKGROUND MUSIC/SFX-->
+		<script src="Scripts/sounds.js"></script>
 
 		<title>Leaderboard</title>
     </head>
