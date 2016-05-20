@@ -30,12 +30,6 @@ function playerReady() {
 	btn2.onclick = function() {
 		modal.style.display = "none";
 	}
-	
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "block";
-		}
-	}
 }
 
 
@@ -46,12 +40,6 @@ function gameSet() {
 	var returnBtn = document.getElementById('gameReturn');
 	returnBtn.onclick = function() {
 		modal.style.display = "none";
-	}
-	
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "block";
-		}
 	}
 }
 
@@ -73,11 +61,5 @@ function levelEnd(score) {
 		generateQuestion();
 		document.getElementById('message').innerHTML = "";
 		score = 0;
-	}
-	
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
 	}
 }
