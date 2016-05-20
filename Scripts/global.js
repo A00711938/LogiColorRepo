@@ -1,3 +1,6 @@
+/** global */
+var score;
+
 /** colorLogic.js */
 var op;
 var c1, c2, c3;
@@ -8,3 +11,4 @@ var firstNumber, secondNumber, sum;
 /** equation.js */
 var color = [, "red", "blue", "purple", "yellow", "orange", "green", "black", "white",,,,,,,"gray"];
 var operation = ["+", "-"];
+
