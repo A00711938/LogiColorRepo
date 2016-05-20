@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="Style/style.css">
 		-->
         <script src="Scripts/sounds.js"></script>
+        <script src="Scripts/Marathon/global.js"></script>
 		
 		<!--Google font-->
 		<link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>

@@ -24,10 +24,12 @@ function playMusic(el,soundfile) {
 
 function musicChange(value){
 	document.getElementById('musicVal').innerHTML = value;
+    document.getElementById('musicslider').value = value;
     musicVol = value/10;
 }
 
 function sfxChange(value){
 	document.getElementById('sfxVal').innerHTML = value;
+    document.getElementById('sfxslider').value = value;
     sfxVol = value/10;
 }
