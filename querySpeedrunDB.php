@@ -7,7 +7,7 @@
  */
 //In here, a query is sent to the DB. then, we request that all the info returned is saved in the
 //variable $row.
-$records = $databaseConnection->prepare("SELECT * FROM `logicolorscores` ORDER BY `logicolorscores`.`time` ASC");
+$records = $databaseConnection->prepare("SELECT * FROM `logicolorscores` WHERE `time` != '00:00:00' ORDER BY `logicolorscores`.`time` ASC");
 $records->execute();
 $row = $records->fetch(PDO::FETCH_ASSOC);
 $rank = 1;
