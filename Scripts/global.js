@@ -12,9 +12,6 @@ var firstNumber, secondNumber, sum;
 var color = [, "red", "blue", "purple", "yellow", "orange", "green", "black", "white",,,,,,,"gray"];
 var operation = ["+", "-"];
 
-<<<<<<< HEAD
 /** sounds.js **/
 var musicVol = 0.5;
 var sfxVol = 0.5;
-=======
->>>>>>> chicky
