@@ -76,10 +76,77 @@ The first container holds the game's navigation bar.
     <div class="col-xs-3 text-center" id="leftCorner">
         <h4>
         <a href="welcomeScreenTakitoDesign.html"><span class="glyphicon glyphicon-home"></span></a>
-        <a href="#" id = "setBtn" data-toggle="modal" data-target = "#setGame" onclick = "gameSet();"><span class="glyphicon glyphicon-cog"></span></a>
+		<!-- <button type="button" class="dodge btn btn-lg btn-block" id="myBtn" data-toggle="modal" data-target="#settingsModal">Settings</button> -->
+        <a href="#" id = "setBtn" data-toggle="modal" data-target="#settingsModal"><span class="glyphicon glyphicon-cog"></span></a>
         </h4>
     </div>
+	
+	
+	<!-- Settings modal! -->
+		<!-- Below, we have the code for the complete modal. The code is divided by header, body, and footer -->
+		<div id="settingsModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
 
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="row">
+							<div class="col-xs-8"></div>
+							<div class="col-xs-4">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+						</div>
+					<div class="row heading">
+						<div class="col-xs-12 text-center">
+							<h2 class="modal-title">Settings</h2>
+						</div>
+					</div>
+					</div>
+
+					<div class="modal-body">
+
+							<div class="row">
+								<div class="col-xs-12">
+									<h5>Volume</h5>
+								</div>
+								<div class="col-xs-12">
+									<input type="range" id="slider" class="slider" min="0" max="10" value="5" step="1" onChange="sliderChange(this.value)" style="width:200px;"/>
+								</div>
+								<div class="col-xs-12">
+									<span id="sliderStatus">5</span>
+								</div>
+								<div class="col-xs-12">
+									<input type="checkbox" name="hint"/>&nbsp;&nbsp;Hints
+								</div>
+								<div class="col-xs-12">
+									<input type="checkbox" name="colorblind"/>&nbsp;&nbsp;Colorblind Mode
+								</div>
+							</div>
+					</div>
+					
+					<!-- Still working on the volume slider. -->
+					<script>
+						var sound = document.getElementById("sound");
+						
+						function volumeControl() {
+							var x = document.getElementById("slider").value;
+							sound.volume = (x * 0.1);
+						}
+					</script>
+
+					<div class="modal-footer">
+						<button type="button" class="btn" data-dismiss="modal">Back</button>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<!-- End of the modal -->
+	
+	
+	
     <div class="col-xs-5 text-center">
         <h4 id="score">Score: 0</h4>
     </div>
@@ -260,6 +327,7 @@ $(document).ready(function () {
 
 });
 </script>
+
 
 </body>
 </html>
