@@ -8,9 +8,9 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
         <!--q
-        Testing the app without the folowing css changes. Using default bootstrap for now.
+        Testing the app without the folowing css changes. Using default bootstrap for now.-->
         <link rel="stylesheet" type="text/css" href="Style/stylemarathon.css">
-        -->
+        
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 		<link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -46,7 +46,7 @@ I believe it has something to do with the file modals.js; however, I'm not too s
 -->
 <div id="ready" class="modal fade" role="dialog">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content content">
             <div class="modal-header">
                 <h2 href="marathon-leaderboard.php" class="modal-title">Are You Ready?</h2>
             </div>
@@ -56,8 +56,8 @@ I believe it has something to do with the file modals.js; however, I'm not too s
             <div class="modal-footer">
                 <div class = "centered text-center">
                     <div class="col-md-4 col-md-offset-4">
-						<a href="difficultyCopyTakitoTest.html"><button type="button" class="btn btn-default" id="back">Back</button></a>
-                        <a href="#"><button type="button" class="btn btn-default" data-dismiss="modal" name = "play" id = "play" onclick = "generateQuestion();playSound(this,'Sound/marathonmusic.mp3');">Play</button></a>
+						<a href="difficultyCopyTakitoTest.html"><button type="button" class="btn" id="back">Back</button></a>
+                        <a href="#"><button type="button" class="btn" data-dismiss="modal" name = "play" id = "play" onclick = "generateQuestion();playSound(this,'Sound/marathonmusic.mp3');">Play</button></a>
                     </div>
                 </div>
             </div>
@@ -251,8 +251,8 @@ I suspect that the file modals.js has something to do with this problem.
             </div>
             <div class="modal-footer">
                 <div class = "centered text-center">
-                        <a href="#"> <button class="btn btn-default" data-dismiss="modal" onclick="newGame()" id ="tryAgain">Try Again</button></a>
-                        <a href="welcomeScreenTakitoDesign.html"><button type="button" class="btn btn-default" name ="next" id="next">Next</button></a>
+                        <a href="#"> <button class="btn" data-dismiss="modal" onclick="newGame()" id ="tryAgain">Try Again</button></a>
+                        <a href="welcomeScreenTakitoDesign.html"><button type="button" class="btn" name ="next" id="next">Next</button></a>
                 </div>
             </div>
         </div>
