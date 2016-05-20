@@ -28,13 +28,6 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- [endif]-->
-	
-	<!--Script for the slider changing on view-->
-	<script type="text/javascript">
-		function sliderChange(value){
-			document.getElementById('sliderStatus').innerHTML = value;
-		}
-	</script>
 </head>
 <body>
 <!--
@@ -173,13 +166,22 @@ I copied the format which I think works well.
 
 							<div class="row">
 								<div class="col-xs-12">
-									<h5>Volume</h5>
+									<h5>Music Volume</h5>
 								</div>
 								<div class="col-xs-12">
-									<input type="range" id="slider" class="slider" min="0" max="10" value="5" step="1" onChange="sliderChange(this.value)" style="width:200px;"/>
+									<input type="range" id="slider" class="slider" min="0" max="10" value="5" step="1" onChange="musicChange(this.value)" style="width:200px;"/>
 								</div>
 								<div class="col-xs-12">
-									<span id="sliderStatus">5</span>
+									<span id="musicVal">5</span>
+								</div>
+                                <div class="col-xs-12">
+									<h5>SFX Volume</h5>
+								</div>
+								<div class="col-xs-12">
+									<input type="range" id="slider" class="slider" min="0" max="10" value="5" step="1" onChange="sfxChange(this.value)" style="width:200px;"/>
+								</div>
+								<div class="col-xs-12">
+									<span id="sfxVal">5</span>
 								</div>
 								<div class="col-xs-12">
 									<input type="checkbox" name="hint"/>&nbsp;&nbsp;Hints
