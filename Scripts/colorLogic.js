@@ -1,11 +1,12 @@
+//This fuction will generate the color part of the equation.
+//Currently the answer will generate at 71% correctness
 function generateColor() {
-	document.getElementById('actionBox').innerHTML = "Color Generation Called";
 	//Selecting the color generation by random.
-	var choice = Math.floor(Math.random() * 2);
+	var choice = Math.floor(Math.random() * 100);
 	//Selecting the operand by random.
 	op = Math.floor(Math.random() * 2);
 	
-	if(!choice){
+	if(choice < 71){
 		//CORRECT COLOR (forcebly)
 		if(!op){
 			//ADDITION
@@ -45,9 +46,8 @@ function generateColor() {
 			c3 = c3 == 0 ? 15 : c3;
 		} while(colorCheck(op, c1, c2, c3));
 	}
-	document.getElementById('actionBox').innerHTML = "Color Generation Finished";
 }
-
+//This function checks the equation weither if its correct or not.
 function colorCheck(){
 	return op ? (c1 == c2 && c3 == 7 || c1 - c2 == c3) :
 				(c1 == c2 && c2 == c3 || c1 + c2 == c3);
