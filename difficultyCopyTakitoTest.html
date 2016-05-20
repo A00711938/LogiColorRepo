@@ -90,12 +90,14 @@ As you can see below. I removed the alert in all the buttons.
     var index = 1;
     //The following manipulates the DOM so the image renders in the middle of the app
     //screen. More DOM manipulation can be added as needed. :)
+    //I deleted the function above for simplicity. In this way, all the screens are mobile
+    //and desktop friendly by default.
     $(document).ready(function(){
         playSound(this,'Sound/diffmusic.mp3');
-        $(".container").css({
-            "padding-top":"30%",
-            "padding-bottom":"30%"
-        });
+        //$(".container").css({
+            //"padding-top":"30%",
+            //"padding-bottom":"30%"
+        //});
 
         //The following Jquery function manipulates the pages background color so it's set to
         //#515151 which is dark gray. This function can be easily replaced with a CSS file. I'll keep it here for now :p
@@ -125,6 +127,8 @@ As you can see below. I removed the alert in all the buttons.
             $(".dodge").find("img").css({"float":"left"});
         });
     });
+
+    //I have no idea what the function below does. If anyone coded that please add an explanation here:
     function whichChild(elem){
         var i = 1;
         while((elem=elem.previousElementSibling)!=null)
