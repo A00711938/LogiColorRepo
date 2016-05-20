@@ -52,7 +52,6 @@
 	-->
 
 	<br/>
-	<br/>
 		
 		<div class="row text-center">
 			<button type="button" class="btn btn-lg" id="marathon">MARATHON</button>
@@ -66,7 +65,7 @@
 		<span id="resultQuery"></span>
 		<br/>
 		<!-- Back button to go back to the welcome screen -->
-		<div class="row text-center">
+		<div class="row text-center backbtn">
 		<a href="welcomeScreenTakitoDesign.html"><button type="button" class="btn btn-lg" id="back">Back</button></a>
 		</div>
 	</div>

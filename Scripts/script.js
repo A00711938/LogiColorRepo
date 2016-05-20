@@ -202,6 +202,7 @@ function getAnswer(){
 function userAnswer(myAns){
 	var questionAns = getAnswer();
 	var message = document.getElementById('message');
+	var showScore = document.getElementById('score');
 	
 	if(myAns == questionAns){
 		//Score increment here
@@ -210,6 +211,8 @@ function userAnswer(myAns){
 		score++;
 		message.style.color = "#70C1B2";
 		message.innerHTML = "<h4>Correct!</h4>";
+		showScore.innerHTML = "Score : " + score;
+		
 	} else {
 		//decriment lives
 		message.style.color = "#F25E5C";
