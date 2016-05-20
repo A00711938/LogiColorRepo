@@ -1,0 +1,41 @@
+#timebar{
+	width: 1000px;
+	height: 20px;
+	border: 1px solid black;
+	background: #FFFF00;
+	margin: auto;
+}
+
+body{
+	background-color : #51514F;
+}
+
+.navigation{
+	background-color: #FFE066;
+}
+.messagemessage{
+	background-color: #237BA0;
+}
+.success{
+	background-color: #70C1B2;
+	height: 6em;
+}
+.fail{
+	background-color: #F25E5C;
+	height: 6em;
+}
+.footer{
+	position: absolute;
+	bottom: 1em;
+	width: 100%;
+}
+h1{
+	font-size: 300%;
+}
+
+.fancy{
+	font-family: 'Covered By Your Grace', cursive;
+}
+#racetext{
+	font-size: 500%;
+}
