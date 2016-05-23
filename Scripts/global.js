@@ -15,3 +15,6 @@ var operation = ["+", "-"];
 /** sounds.js **/
 var musicVol = 0.5;
 var sfxVol = 0.5;
+
+/** shapes.js */
+var randomShapes = Math.floor(Math.random() * 33);

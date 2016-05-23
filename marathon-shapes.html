@@ -1,0 +1,377 @@
+<!-- Marathon Shapes-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--q
+        Testing the app without the folowing css changes. Using default bootstrap for now.-->
+        <link rel="stylesheet" type="text/css" href="Style/stylemarathon.css">
+		<link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		
+        <!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<!--IMPORT GLOBAL VARIABLE FOR THE SCRIPT NEEDED BELOW-->
+		<script src="Scripts/global.js"></script>
+		<!--IMPORT FUNCTIONS FOR BACKGROUND MUSIC/SFX-->
+        <script src="Scripts/sounds.js"></script>
+		<!--THIS MODE WILL NEED A MODAL TO INITIATE THE GAME-->
+		<script src="Scripts/modals.js"></script>
+		<!--THIS MODE WILL NEED TO RESET THE GAME-->
+		<script src="Scripts/MarathonShapes/script.js"></script>
+		<!--THIS MODE WILL NEED TO SHOW THE EQUATION TO THE USER-->
+		<script src="Scripts/MarathonShapes/equation.js"></script>
+		<!--THIS MODE WILL REQUIRE COLOR CALCULATION-->
+		<script src="Scripts/MarathonShapes/colorLogic.js"></script>
+		<!--THIS MODE WILL REQUIRE LIVES CALCULATION-->
+		<script src="Scripts/MarathonShapes/marathonLives.js"></script>
+		<!--THIS MODE WILL NEED TO RETREIVE USER RESPONSES WITH BUTTON INTERACTION-->
+		<script src="Scripts/MarathonShapes/playerResponseButton.js"></script>
+		<!--THIS MODE WILL REQUIRE SCORE CALCULATION-->
+		<script src="Scripts/MarathonShapes/score.js"></script>
+		
+		<!--RANODMIZES THE SHAPE COMBINATION REGARDING TO CHOSEN DIFFICULTY-->
+		<script src="Scripts/MarathonShapes/shapesEasy.js"></script><!--EASY-->
+		<script src="Scripts/MarathonShapes/shapesMedium.js"></script><!--MEDIUM (In Progress)-->
+		
+		<!--THIS MODE WILL NEED TO DRAW EACH SHAPES-->
+		<script src="Scripts/MarathonShapes/draw.js"></script>
+		
+		
+		
+        <title>LogiColour Marathon Mode</title>
+    </head>
+
+<body onload = "generateQuestion();">
+<!--
+Modal 'Are You Ready'
+For whatever reason I wasn't able to create the fade in effect when the modal appears on screen.
+I believe it has something to do with the file modals.js; however, I'm not too sure.
+-->
+<div id="ready" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content content">
+            <div class="modal-header">
+                <h2 class="modal-title">Are You Ready?</h2>
+            </div>
+
+            <div class="modal-body"></div>
+
+            <div class="modal-footer">
+                <div class = "centered text-center">
+                    <div class="col-md-4 col-md-offset-4">
+						<a href="difficultyCopyTakitoTest.html"><button type="button" class="btn" id="back">Back</button></a>
+                        <a href="#"><button type="button" class="btn" data-dismiss="modal" name = "play" id = "play" onclick = "generateQuestion();playSound(this,'Sound/marathonmusic.mp3');">Play</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+The first container holds the game's navigation bar.
+-->
+<div class="container">
+
+<!-- Top bar (nav bar) with icons are placed in the following row -->
+<div class="navigation row">
+
+    <div class="col-xs-3 text-center" id="leftCorner">
+        <h4>
+        <a href="welcomeScreenTakitoDesign.html"><span class="glyphicon glyphicon-home"></span></a>
+		<!-- <button type="button" class="dodge btn btn-lg btn-block" id="myBtn" data-toggle="modal" data-target="#settingsModal">Settings</button> -->
+        <a href="#" id = "setBtn" data-toggle="modal" data-target="#settingsModal"><span class="glyphicon glyphicon-cog"></span></a>
+        </h4>
+    </div>
+	
+	
+	<!-- Settings modal! -->
+    <!-- Below, we have the code for the complete modal. The code is divided by header, body, and footer -->
+    <div id="settingsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-xs-8"></div>
+                        <div class="col-xs-4">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                    </div>
+                <div class="row heading">
+                    <div class="col-xs-12 text-center">
+                        <h2 class="modal-title">Settings</h2>
+                    </div>
+                </div>
+                </div>
+
+                <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-xs-12">
+									<h5>Music Volume</h5>
+								</div>
+                            <div class="col-xs-12">
+                                <input type="range" id="musicslider" class="slider" min="0" max="10" value="5" step="1" onChange="musicChange(this.value)" style="width:200px;"/>
+                            </div>
+                            <div class="col-xs-12">
+                                <span id="musicVal">5</span>
+                            </div>
+                            <div class="col-xs-12">
+                                <h5>SFX Volume</h5>
+                            </div>
+                            <div class="col-xs-12">
+                                <input type="range" id="sfxslider" class="slider" min="0" max="10" value="5" step="1" onChange="sfxChange(this.value)" style="width:200px;"/>
+                            </div>
+                            <div class="col-xs-12">
+                                <span id="sfxVal">5</span>
+                            </div>
+                            <div class="col-xs-12">
+                                <input type="checkbox" name="hint"/>&nbsp;&nbsp;Hints
+                            </div>
+                            <div class="col-xs-12">
+                                <input type="checkbox" name="colorblind"/>&nbsp;&nbsp;Colorblind Mode
+                            </div>
+                        </div>
+                </div>
+                
+                <!-- Still working on the volume slider. -->
+                <script>
+                    var sound = document.getElementById("sound");
+                    
+                    function volumeControl() {
+                        var x = document.getElementById("slider").value;
+                        sound.volume = (x * 0.1);
+                    }
+                </script>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of the modal -->
+	
+    <!-- Color Wheel modal! -->
+	<div id="colorwheelModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <div class="modal-header">
+                    <div class="row">
+                        <div class="col-xs-8"></div>
+                        <div class="col-xs-4">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                    </div>
+                    <h2 class="modal-title">Color Combinations</h2>
+                </div>
+                
+                <div class="modal-body">
+                    
+                        <img class="img-responsive"src="images/colorwheel.gif" alt="colorwheel">
+            
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <div class="col-xs-5 text-center">
+        <h4 id="score">Score: 0</h4>
+    </div>
+
+    <div class="col-xs-4 text-center">
+        <h4 id="level">
+            Level: Easy
+        </h4>
+    </div>
+</div>
+
+<div class="navigation row text-center">
+    <div class="col-xs-9" id="hearts">
+        <!-- Lives: -->
+        <h2>
+            <span class="glyphicon glyphicon-heart text-danger" id="heart1"></span>
+            <span class="glyphicon glyphicon-heart text-danger" id="heart2"></span>
+            <span class="glyphicon glyphicon-heart text-danger" id="heart3"></span>
+        </h2>
+    </div>
+    <div class="col-xs-3" id="colorwheel">
+        <h2><a href="#" data-toggle="modal" data-target="#colorwheelModal"><span class="glyphicon glyphicon-tint text-info"></span></a></h2>
+    </div>
+</div>
+
+</div>
+
+<!--
+The row below holds the in-game screen. Note that the spans manipulated with id's do not fit
+the bootstrap screen. We'll have to fix this one from JS.
+-->
+<div class="container">
+<!--The following row holds the right or wrong message -->
+    <div class="messagemessage row text-center">
+        <div class="col-xs-12" id="message"></div>
+    </div>
+	
+	<div id="bonusbar"></div>
+<!--The following two rows are for in game operations -->
+<div class="game row" id="midtable">		
+		
+		<div class = "col-xs-3 text-center"><canvas class = "" id = "figure1" width="80" height="80"></canvas></div>
+			
+		<div class="col-xs-1 text-center"><h1 id="operation"></h1></div>
+			
+		<div class = "col-xs-3 text-center"><canvas class = "" id = "figure2" width="80" height="80"></canvas></div>
+		
+		<div class="col-xs-1 text-center"><h1 class="eq" id = "equal"></h1></div>
+			
+		<div class = "col-xs-3 text-center"><canvas class = "" id = "figure3" width="80" height="80"></canvas></div>
+</div>
+
+<!-- The following row will be dedicated specifically for the pattern/color
+logic.
+-->
+<div class="game row">
+    <div class="col-xs-3"></div> <!--Square -->
+    <div class="col-xs-2"></div> <!-- plus -->
+    <div class="col-xs-3"></div> <!--Triangle -->
+    <div class="col-xs-2"></div> <!--Equals -->
+    <div class="col-xs-2"></div> <!--Triasquare? -->
+</div>
+
+<!--
+The following row reserves space for the right/wrong message
+-->
+
+</div>
+
+<!--
+True and False Buttons. Note we deleted the style writting in the line since all the colors can be
+manipulated using bootstrap. The following span style was deleted:
+style="color:green;"
+style="color:red;"
+ -->
+
+<div class="footer container">
+    <div class="row" id="">
+        <div class="col-xs-6">
+            <button type="button" class="success btn btn-lg btn-block" id="tru" name="answer1" onclick="userAnswer(true);playSound(this,'Sound/click.mp3');"><span class="glyphicon glyphicon-ok text-lg" ></span></button>
+        </div>
+        <div class="col-xs-6">
+            <button type="button" class="fail btn btn-lg btn-block" id="fal" name="answer2" onclick="userAnswer(false);playSound(this,'Sound/click.mp3');"><span class="glyphicon glyphicon-remove"></span></button>
+        </div>
+    </div>
+</div>
+
+<!--
+Congrats Modal.
+Similar to the first modal, it was strange that the fade in effect doesn't work properly.
+I suspect that the file modals.js has something to do with this problem.
+-->
+<div id ="gameOver" class="modal fade in">
+    <form role="form" method="post" action="">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 href="marathon-leaderboard.php" class="modal-title">Congratulations</h2>
+            </div>
+            <div class="modal-body">
+                <div id="modscore"></div>
+                <div id="scored"></div>
+                <p>You will get smarter if you keep playing in that manner.</p>
+            </div>
+            <div class="modal-footer">
+                <div class = "centered text-center">
+                        <a href="#"> <button class="btn" data-dismiss="modal" onclick="newGame()" id ="tryAgain">Try Again</button></a>
+                        <a href="welcomeScreenTakitoDesign.html"><button type="button" class="btn" name ="next" id="next">Next</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+        </form>
+</div>
+
+<!--
+We'll try keeping the scorebox at the very top. Let's see how that works
+
+    <div id="scorebox">
+        <div id="score">Score: 0</div>
+    </div>
+-->
+
+
+<script>
+$(document).ready(function () {
+    document.getElementById('musicVal').innerHTML = musicVol*10;
+    document.getElementById('sfxVal').innerHTML = sfxVol*10;
+    document.getElementById('musicslider').value = musicVol*10;
+    document.getElementById('sfxslider').value = sfxVol*10;
+    //Sets the background color
+    $("body").css({"background-color":"#51514f"});
+    //Sets the navigation (top) to awesome yellow
+    $(".navigation").css({"background-color":"#ffe066"});
+    //Sets the background color of the right/wrong message
+    $(".messagemessage").css({"background-color":"#237ba0"});
+    //Sets the background color of the success button. Plus additional
+    //style changes
+    $(".success").css({
+        "background-color":"#70C1B2",
+        "height":"6em"
+    });
+    //Sets the background color of the fail button. Plus additional
+    //style changes
+    $(".fail").css({
+        "background-color":"#f25e5c",
+        "height":"6em"
+    });
+
+    //The following places the footer at the very bottom
+    $(".footer").css({
+        "position":"absolute",
+        "bottom":"1em",
+        "width":"100%"
+    });
+
+    //Manipulates the font to be very visible
+    $("h1").css({
+        "font-size":"300%"
+    });
+
+    $("#ready").modal('show');
+
+    //Trying to use AJAX jquery to pass on the score value from the modal:
+    $("#next").click(function(event){
+
+        var scoreDB = $("#scoreinfo").val();
+        //alert ($smt);
+
+        $.ajax({
+            url: 'saveScore.php',
+            type:'post',
+            data:{'scoreDB':scoreDB},
+            success: function(data) {
+            console.log(data);
+
+        }
+        });
+
+    });
+
+	start();
+
+
+});
+</script>
+</body>
+</html>
