@@ -24,8 +24,6 @@
 		<script src="Scripts/modals.js"></script>
 		<!--THIS MODE WILL NEED TO RESET THE GAME-->
 		<script src="Scripts/Marathon/script.js"></script>
-		<!--THIS MODE WILL NEED TO SHOW THE EQUATION TO THE USER-->
-		<script src="Scripts/Marathon/equation.js"></script>
 		<!--THIS MODE WILL REQUIRE NUMBER CALCULATION-->
 		<script src="Scripts/Marathon/numberLogic.js"></script>
 		<!--THIS MODE WILL REQUIRE COLOR CALCULATION-->
@@ -36,7 +34,16 @@
 		<script src="Scripts/Marathon/playerResponseButton.js"></script>
 		<!--THIS MODE WILL REQUIRE SCORE CALCULATION-->
 		<script src="Scripts/Marathon/score.js"></script>
-        
+		<!--THIS MODE WILL NEED TO SHOW THE EQUATION TO THE USER-->
+		<script src="Scripts/Marathon/equation.js"></script>
+		<!--RANODMIZES THE SHAPE COMBINATION REGARDING TO CHOSEN DIFFICULTY-->
+		<script src="Scripts/Marathon/shapesEasy.js"></script><!--EASY-->
+		<script src="Scripts/Marathon/shapesMedium.js"></script><!--MEDIUM (In Progress)-->
+		<!--THIS MODE WILL NEED TO DRAW EACH SHAPES-->
+		<script src="Scripts/Marathon/draw.js"></script>
+		<!--THIS CLEARS THE CANVASES-->
+		<script src="Scripts/Marathon/clearCanvas.js"></script>
+		
         <title>LogiColour Marathon Mode</title>
     </head>
 
@@ -221,15 +228,15 @@ the bootstrap screen. We'll have to fix this one from JS.
 <!--The following two rows are for in game operations -->
 <div class="game row" id="midtable">
 
-        <div class="col-xs-3 text-center"><h1 id="num1"></h1></div>
-
-        <div class="col-xs-1 text-center"><h1 id="operation">+</h1></div>
-
-        <div class="col-xs-3 text-center"><h1 id="num2"></h1></div>
-
-        <div class="col-xs-1 text-center"><h1 class="eq">=</h1></div>
-
-        <div class="col-xs-3 text-center"><h1 id="sum"></h1></div>
+        <div class = "col-xs-3 text-center"><h1 id="num1"></h1><canvas class = "" id = "figure1" width="80" height="80"></canvas></div>
+			
+		<div class="col-xs-1 text-center"><h1 id="operation"></h1></div>
+			
+		<div class = "col-xs-3 text-center"><h1 id="num2"></h1><canvas class = "" id = "figure2" width="80" height="80"></canvas></div>
+		
+		<div class="col-xs-1 text-center"><h1 class="eq" id = "equal"></h1></div>
+			
+		<div class = "col-xs-3 text-center"><h1 id="sum"></h1><canvas class = "" id = "figure3" width="80" height="80"></canvas></div>
 
 </div>
 

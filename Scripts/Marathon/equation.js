@@ -1,5 +1,7 @@
 /******************************************************************
- *     THIS NEEDS THE FOLLOWING: COLORLOGIC.JS NUMBERLOGIC.JS     *
+ *     THIS NEEDS THE FOLLOWING: COLORLOGIC.JS 					  *
+ *							     SHAPESEASY.JS     			  	  *
+ *							     SCORE.JS     					  *
  ******************************************************************/
 
 function displayMessage(){
@@ -12,11 +14,51 @@ function displayMessage(){
 	document.getElementById('num1').innerHTML = firstNumber;
 	document.getElementById('operation').innerHTML = operation[op];
 	document.getElementById('num2').innerHTML = secondNumber;
+	document.getElementById('equal').innerHTML = " = ";
 	document.getElementById('sum').innerHTML = sum;
 } // end displayMessage
 
+
 function generateQuestion(){
+	var questionRandomizer = Math.floor(Math.random() * 2);
 	generateColor();
-	generateNumber();
-	displayMessage();
+	if (difficulty == 0) { // Easy 
+		clearCanvases();
+		generateNumber();
+		displayMessage();
+	} else if (difficulty == 1) { // Medium
+		if (questionRandomizer == 0) {
+			clearCanvases();
+			generateNumber();
+			displayMessage();
+		}
+		else if (questionRandomizer == 1) {
+			if (op == 0) {
+				document.getElementById('num1').innerHTML = "";
+				document.getElementById('num2').innerHTML = "";
+				document.getElementById('sum').innerHTML = "";
+				generateEasyShapes();
+				document.getElementById('operation').innerHTML = operation[op];
+				document.getElementById('equal').innerHTML = " = ";
+			} else {
+				clearCanvases();
+				generateNumber();
+				displayMessage();
+			}
+		}	
+	} else if (difficulty == 2) { // Colors Everywhere
+		if (questionRandomizer == 0) {
+			clearCanvases();
+			generateNumber();
+			displayMessage();
+		}
+		else if (questionRandomizer == 1) {
+			document.getElementById('num1').innerHTML = "";
+			document.getElementById('num2').innerHTML = "";
+			document.getElementById('sum').innerHTML = "";
+			generateEasyShapes();
+			document.getElementById('operation').innerHTML = operation[op];
+			document.getElementById('equal').innerHTML = " = ";
+		}
+	}
 }
