@@ -22,7 +22,7 @@ echo "
 					</tr>
 				</thead>
 
-				<tbody class=\"tbodyscroll\" data-spy=\"scroll\" data-target=\".navbar\" data-offset=\"50\">
+				<tbody>
 
 ";
 
