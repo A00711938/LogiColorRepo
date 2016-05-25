@@ -1,19 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title> Speed</title>
+	<title> Speed Mode</title>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<!--IMPORT THE CSS USED FOR THIS PAGE-->
-	<link rel="stylesheet" type="text/css" href="Style/style_speed.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	
+	<!--IMPORT THE CSS USED FOR THIS PAGE-->
+	<link rel="stylesheet" type="text/css" href="Style/style_speed.css">
 	<!--THIS IS THE STYLE USED FOR FONT ON THIS PAGE-->
 	<link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
 	
@@ -37,9 +37,6 @@
 	<script src="Scripts/Speed/speedCheck.js"></script>
 	
 	<script src="Scripts/Speed/newgame.js"></script>
-	
-	<script>
-	</script>
 </head>
 <body>
 	<!--The first container holds the game's navigation bar-->
@@ -73,6 +70,7 @@
 	<br/><br/>
 	
 	<div id="testbox" style="color: white; font-size: 300%"></div>
+	<div id="message" style="display: none"></div>
 	
 	<!--The following two rows are for in game operations -->
 	<div class="game row" id="midtable">
