@@ -1,9 +1,9 @@
+var musEl,musFile;
+
 function playSound(el,soundfile) {
     if (el.mp3) {
-        el.mp3.pause();
         el.mp3.currentTime = 0;
         el.mp3.volume = sfxVol;
-        el.mp3.play();
     } else {
         el.mp3 = new Audio(soundfile);
         el.mp3.volume = sfxVol;
@@ -12,7 +12,10 @@ function playSound(el,soundfile) {
 }
 
 function playMusic(el,soundfile) {
-    el.mp3 = new Audio(soundfile);
+    musEl = el;
+    musFile = soundfile;
+    if (!el.mp3)
+        el.mp3 = new Audio(soundfile);
     el.mp3.addEventListener('ended', function() {
         this.currentTime = 0;
         el.mp3.volume = musicVol;
@@ -26,6 +29,7 @@ function musicChange(value){
 	document.getElementById('musicVal').innerHTML = value;
     document.getElementById('musicslider').value = value;
     musicVol = value/10;
+    playMusic(musEl,musFile);
 }
 
 function sfxChange(value){

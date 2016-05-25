@@ -66,7 +66,7 @@ I believe it has something to do with the file modals.js; however, I'm not too s
                 <div class = "centered text-center">
                     <div class="col-md-4 col-md-offset-4">
 						<a href="difficultyCopyTakitoTest.html"><button type="button" class="btn" id="back">Back</button></a>
-                        <a href="#"><button type="button" class="btn" data-dismiss="modal" name = "play" id = "play" onclick = "generateQuestion();playSound(this,'Sound/marathonmusic.mp3');">Play</button></a>
+                        <a href="#"><button type="button" class="btn" data-dismiss="modal" name = "play" id = "play" onclick = "generateQuestion();playMusic(this,'Sound/marathonmusic.mp3');">Play</button></a>
                     </div>
                 </div>
             </div>
@@ -120,7 +120,7 @@ The first container holds the game's navigation bar.
 									<h5>Music Volume</h5>
 								</div>
                             <div class="col-xs-12">
-                                <input type="range" id="musicslider" class="slider" min="0" max="10" value="5" step="1" onChange="musicChange(this.value)" style="width:200px;"/>
+                                <input type="range" id="musicslider" class="slider" min="0" max="10" value="5" step="1" onChange="musicChange(this.value);" style="width:200px;"/>
                             </div>
                             <div class="col-xs-12">
                                 <span id="musicVal">5</span>
@@ -129,7 +129,7 @@ The first container holds the game's navigation bar.
                                 <h5>SFX Volume</h5>
                             </div>
                             <div class="col-xs-12">
-                                <input type="range" id="sfxslider" class="slider" min="0" max="10" value="5" step="1" onChange="sfxChange(this.value)" style="width:200px;"/>
+                                <input type="range" id="sfxslider" class="slider" min="0" max="10" value="5" step="1" onChange="sfxChange(this.value);" style="width:200px;"/>
                             </div>
                             <div class="col-xs-12">
                                 <span id="sfxVal">5</span>
