@@ -2,7 +2,7 @@ function newGame() {
     var modal = document.getElementById('gameOver');
 	modal.style.display = "none";
     resetGame();
-    generateQuestion();
+	window.location.reload();
 }
 
 function resetGame(){
