@@ -46,26 +46,20 @@ if ($count1 == 1){
             </div>
 
             <div class=\"modal-body\">
-                <div class=\"table-responsive\">
-                    <table class=\"table\">
-                        <thead>
-                            <tr>
-                                <th class=\"text-center\">Badge</th>
-                                <th class=\"text-center\"></th>
-                            </tr>
-                        </thead>
-
-                            <tr>
-                                <td class=\"text-center\"><img src=\"images/pokemon/icons/6-mega-x.png\" class=\"img-responsive\"></td>
-                                <td class=\"text-center\"><h5>You just earned your first badge. Welcome to Logicolor!</h5></td>
-                            </tr>
-                        
-                    </table>
-                </div>
+               
+                        <div class=\"row\">
+                        <div class=\"col-xs-2\">
+                            <img src=\"images\achieve1.png\" alt=\"Dangerous to go alone\" class=\"\">
+                        </div>
+                        <div class=\"col-xs-10\">
+                            <h5>You just earned your first badge. Welcome to Logicolor!</h5>
+                        </div>
+                        </div>
+           
             </div>
 
             <div class=\"modal-footer\">
-                <button type=\"button\" class=\"btn\" data-dismiss=\"modal\">Back</button>
+                <button type=\"button\" class=\"btn\" data-dismiss=\"modal\">Ok</button>
             </div>
 
         </div>
@@ -114,26 +108,20 @@ if ($count2 == 1){
             </div>
 
             <div class=\"modal-body\">
-                <div class=\"table-responsive\">
-                    <table class=\"table\">
-                        <thead>
-                            <tr>
-                                <th class=\"text-center\">Badge</th>
-                                <th class=\"text-center\"></th>
-                            </tr>
-                        </thead>
-
-                            <tr>
-                                <td class=\"text-center\"><img src=\"images/pokemon/icons/155.png\" class=\"img-responsive\"></td>
-                                <td class=\"text-center\"><h5>You've played your first game. Awesome start!</h5></td>
-                            </tr>
-                        
-                    </table>
-                </div>
+         
+                        <div class=\"row\">
+                        <div class=\"col-xs-2\">
+                            <img src=\"images\achieve2.png\" alt=\"Dangerous to go alone\" class=\"\">
+                        </div>
+                        <div class=\"col-xs-10\">
+                            <h5>You've played your first game. Awesome start!</h5>
+                        </div>
+                        </div>
+               
             </div>
 
             <div class=\"modal-footer\">
-                <button type=\"button\" class=\"btn\" data-dismiss=\"modal\">Back</button>
+                <button type=\"button\" class=\"btn\" data-dismiss=\"modal\">Ok</button>
             </div>
 
         </div>
@@ -181,26 +169,20 @@ if ($count3 == 1){
             </div>
 
             <div class=\"modal-body\">
-                <div class=\"table-responsive\">
-                    <table class=\"table\">
-                        <thead>
-                            <tr>
-                                <th class=\"text-center\">Badge</th>
-                                <th class=\"text-center\"></th>
-                            </tr>
-                        </thead>
-
-                            <tr>
-                                <td class=\"text-center\"><img src=\"images/pokemon/icons/65-mega.png\" class=\"img-responsive\"></td>
-                                <td class=\"text-center\"><h5>Over 500 points. You're certainly a pro!</h5></td>
-                            </tr>
-                        
-                    </table>
-                </div>
+            
+                        <div class=\"row\">
+                        <div class=\"col-xs-2\">
+                            <img src=\"images\achieve3.png\" alt=\"Dangerous to go alone\" class=\"\">
+                        </div>
+                        <div class=\"col-xs-10\">
+                            <h5>Over 500 points. You're certainly a pro!</h5>
+                        </div>
+                        </div>
+               
             </div>
 
             <div class=\"modal-footer\">
-                <button type=\"button\" class=\"btn\" data-dismiss=\"modal\">Back</button>
+                <button type=\"button\" class=\"btn\" data-dismiss=\"modal\">Ok</button>
             </div>
 
         </div>

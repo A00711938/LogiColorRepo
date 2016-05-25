@@ -19,40 +19,8 @@
                     </div>
                 </div>
             </div>
-
-            <div class="modal-body">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="text-center">Badge</th>
-                                <th class="text-center"></th>
-                            </tr>
-                        </thead>
-                        <!-- We use AJAX to append the rewards here -->
-                        <tbody id="rewardQuery"></tbody>
-                        <tbody>
-                        <div class="row">
-                        <div class="col-xs-2 text-center">
-                            <img src="images/pokemon/icons/155.png" class="">
-                        </div>
-                        <div class="col-xs-10">
-                            <h5>You just earned your first badge. Welcome to Logicolor!</h5>
-                        </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-2 text-center">
-                                <img src="images/pokemon/icons/155.png" class="">
-                            </div>
-                            <div class="col-xs-10">
-                                <h5>You just earned your first badge. Welcome to Logicolor!</h5>
-                            </div>
-                        </div>
-                        </tbody>
-                        
-                    </table>
-                </div>
-            </div>
+            <!-- We use AJAX to append the rewards here -->
+            <div class="modal-body" id="rewardQuery"></div>
 
             <div class="modal-footer">
                 <button type="button" class="btn" data-dismiss="modal">Back</button>
