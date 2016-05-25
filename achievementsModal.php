@@ -31,6 +31,24 @@
                         </thead>
                         <!-- We use AJAX to append the rewards here -->
                         <tbody id="rewardQuery"></tbody>
+                        <tbody>
+                        <div class="row">
+                        <div class="col-xs-2 text-center">
+                            <img src="images/pokemon/icons/155.png" class="">
+                        </div>
+                        <div class="col-xs-10">
+                            <h5>You just earned your first badge. Welcome to Logicolor!</h5>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2 text-center">
+                                <img src="images/pokemon/icons/155.png" class="">
+                            </div>
+                            <div class="col-xs-10">
+                                <h5>You just earned your first badge. Welcome to Logicolor!</h5>
+                            </div>
+                        </div>
+                        </tbody>
                         
                     </table>
                 </div>

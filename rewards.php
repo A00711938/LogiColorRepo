@@ -43,7 +43,7 @@ if ($row2 > 0){
  ";
 }
 
-$reward3 = $databaseConnection->prepare("SELECT * FROM `logicolorscores` WHERE `user_id` = :user_id AND `scores` > 1000");
+$reward3 = $databaseConnection->prepare("SELECT * FROM `logicolorscores` WHERE `user_id` = :user_id AND `scores` > 500");
 $reward3->bindParam('user_id', $_SESSION['user_id']);
 $reward3->execute();
 $row3 = $reward3->fetch(PDO::FETCH_ASSOC);
@@ -53,7 +53,7 @@ if ($row3 > 0){
                         <!-- Reward #3 -->
                             <tr>
                                 <td class=\"text-center\"><img src=\"images/pokemon/icons/65-mega.png\" class=\"img-responsive\"></td>
-                                <td class=\"text-center\"><h5>Over 1000 points. You're certainly a pro!</h5></td>
+                                <td class=\"text-center\"><h5>Over 500 points. You're certainly a pro!</h5></td>
                             </tr>
  ";
 }
