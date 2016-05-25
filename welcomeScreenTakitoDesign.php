@@ -84,18 +84,25 @@ I copied the format which I think works well.
 		<button type="button" class="dodge btn btn-lg btn-block">Rewards</button>
     </div>
 	
-		<!-- Tutorial modal! -->
-		<!-- Below, we have the code for the complete modal. The code is divided by header, body, and footer -->
+		<!-- 
+		Modals Below! 
+		Note that the modals are stored in their individual files (in pieces) and the individual pieces
+		are called with php.
+		-->
 
 				
 <?php
+
 include 'tutorialModal.php';
 
 include 'settingsModal.php';
 
 include 'achievementsModal.php';
 
+include 'rewardsAutomatedModals.php'
+
 ?>
+<span id="additionalModals"></span>
 
 	</div>
 </div>
@@ -106,6 +113,7 @@ include 'achievementsModal.php';
     var index = 1;
     //DOM manipulation of this particular site happens below
     $(document).ready(function(){
+        
         document.getElementById('musicVal').innerHTML = musicVol*10;
         document.getElementById('sfxVal').innerHTML = sfxVol*10;
         document.getElementById('musicslider').value = musicVol*10;
@@ -130,7 +138,7 @@ include 'achievementsModal.php';
                             break;
 							//data-toggle="modal" data-target="#settingsModal"
 					case 6: $("#rewardsModal").modal();
-						break;
+						    break;
                     default: break;
                 }
             }
@@ -150,8 +158,23 @@ include 'achievementsModal.php';
 
         });
 
+        //The following piece of code calls the most recent rewards earned by the player!
+        $.get(
+            "rewards.php",
+            {},
+            function (data){
+                $("#rewardQuery").html(data);
+            }
+        )
+        event.preventDefault();
 
+        //The following piece of code calls the modal that only activates on the day the award was earned.
+        $("#rewardModal1").modal();
+        $("#rewardModal2").modal();
+        $("#rewardModal3").modal();
+        
     });
+    
     function easterEgg() {
         var image = document.getElementById('myLogo');
         if (image.src.match("alt")) {
@@ -161,6 +184,7 @@ include 'achievementsModal.php';
             playSound(this,'Sound/woof.mp3');
         }
     }
+    
     function whichChild(elem){
         var i = 1;
         while((elem=elem.previousElementSibling)!=null)
@@ -170,6 +194,7 @@ include 'achievementsModal.php';
     
     document.getElementById('musicVal').innerHTML = musicVol*10;
     document.getElementById('sfxVal').innerHTML = sfxVol*10;
+    
 </script>
 </body>
 </html>

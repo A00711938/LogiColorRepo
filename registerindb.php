@@ -55,8 +55,8 @@ if(isset($_POST['submit'])){
     //In here we say: If no erroMsg is triggered, then prepare to DB
     //for some fun info.
     if($errMsg == ''){
-        $records = $databaseConnection->prepare("INSERT INTO logicolorusers (user_id, email, username, first, password, last_login)
-			VALUES ('',:email,:username,:first,:password, now())");
+        $records = $databaseConnection->prepare("INSERT INTO logicolorusers (user_id, email, username, first, password, last_login, first_login)
+			VALUES ('',:email,:username,:first,:password, now(), now())");
         //$records->bindParam('', $userid);	
         //$records->bindParam(':fname', $fname);			
         $records->bindParam(':email', $email);
@@ -79,8 +79,9 @@ if(isset($_POST['submit'])){
         //So if everything went smoothly, the new user will be entered in the database
         //and the user will be directed to the main screen. A message confirming the
         //successful query will appear on the screen for 2 seconds.
-        header('refresh:2; url=welcomeScreenTakitoDesign.php');
+        header('refresh:2; url=loginTakitoDesign.php');
         echo "New account created successfully";
+        echo "Please log-in using your new username and password.";
         exit;
     }else{
         $errMsg .= 'Error creating account<br>';
