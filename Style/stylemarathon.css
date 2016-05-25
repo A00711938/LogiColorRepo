@@ -45,6 +45,7 @@ td {
 	border-bottom-width: 0;
 	background-color: #51514F;
 	color: #F26A68;
+	text-align: center;
 }
 
 .modal-body {
@@ -55,6 +56,7 @@ td {
 .modal-footer {
 	border-top-width: 0;
 	background-color: #51514F;
+	
 }
 
 .btn {
@@ -68,3 +70,13 @@ td {
 .footer .glyphicon {
 	font-size: 40px;
 }
+
+/**
+#midtable  {
+    text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;
+}
+**/
