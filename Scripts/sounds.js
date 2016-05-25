@@ -1,5 +1,5 @@
 var musEl,musFile;
-var randSong = Math.floor(Math.random() * 3);
+var randSong = Math.floor(Math.random() * 22);
 
 function playSound(el,soundfile) {
     if (el.mp3) {
@@ -40,13 +40,12 @@ function sfxChange(value){
 }
 
 function randMusic(){
-    switch(randSong){
-        case 0: playMusic(this,'Sound/marathonmusic.mp3');
-                break;
-        case 1: playMusic(this,'Sound/marathonmusic2.mp3');
-                break;
-        case 2: playMusic(this,'Sound/marathonmusic3.mp3');
-                break;
-        default: break;
-    }
+    if(randSong < 7)
+        playMusic(this,'Sound/marathonmusic.mp3');
+    else if(randSong < 14)
+        playMusic(this,'Sound/marathonmusic2.mp3');
+    else if(randSong < 21)
+        playMusic(this,'Sound/marathonmusic3.mp3');
+    else
+        playMusic(this,'Sound/marathonmusiccreepy.mp3');
 }
