@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+-<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title> Speed Mode</title>
@@ -37,6 +37,11 @@
 	<script src="Scripts/Speed/speedCheck.js"></script>
 	
 	<script src="Scripts/Speed/newgame.js"></script>
+	
+	<script src="Scripts/Speed/shapesEasy.js"></script>
+	<script src="Scripts/Speed/draw.js"></script>
+	<script src="Scripts/Speed/clearCanvas.js"></script>
+	
 </head>
 <body>
     <!-- Settings modal! -->
@@ -143,11 +148,11 @@
 	
 	<!--The following two rows are for in game operations -->
 	<div class="game row" id="midtable">
-		<div class="col-xs-3 text-center"><h1 id="num1" class="fancy"></h1></div>
+		<div class="col-xs-3 text-center"><h1 id="num1" class="fancy"></h1><canvas class = "" id = "figure1" width="80" height="80"></canvas></div>
 		<div class="col-xs-1 text-center"><h1 id="operation" class="fancy"></h1></div>
-		<div class="col-xs-3 text-center"><h1 id="num2" class="fancy"></h1></div>
+		<div class="col-xs-3 text-center"><h1 id="num2" class="fancy"></h1><canvas class = "" id = "figure2" width="80" height="80"></canvas></div>
 		<div class="col-xs-1 text-center"><h1 class="fancy">=</h1></div>
-		<div class="col-xs-3 text-center"><h1 id="sum" class="fancy"></h1></div>
+		<div class="col-xs-3 text-center"><h1 id="sum" class="fancy"></h1><canvas class = "" id = "figure3" width="80" height="80"></canvas></div>
 		
 		<div class="col-xs-12 text-center"><h1 id="racetext" class="fancy"></h1></div>
 	</div>
