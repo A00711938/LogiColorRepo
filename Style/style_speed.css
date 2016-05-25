@@ -39,3 +39,7 @@ h1{
 #racetext{
 	font-size: 500%;
 }
+
+.footer .glyphicon {
+	font-size: 40px;
+}

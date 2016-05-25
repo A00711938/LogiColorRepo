@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Created by IntelliJ IDEA.
@@ -21,7 +22,7 @@ echo "
 					</tr>
 				</thead>
 
-				<tbody>
+				<tbody class=\"tbodyscroll\" data-spy=\"scroll\" data-target=\".navbar\" data-offset=\"50\">
 
 ";
 

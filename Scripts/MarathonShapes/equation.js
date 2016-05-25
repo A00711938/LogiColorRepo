@@ -20,7 +20,7 @@ function displayMessage(){
 
 function generateQuestion(){
 	generateColor();
-	generateMediumShapes();
+	generateEasyShapes();
 	document.getElementById('operation').innerHTML = operation[op];
 	document.getElementById('equal').innerHTML = " = ";
 }
