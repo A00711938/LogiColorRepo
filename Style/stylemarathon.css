@@ -71,7 +71,6 @@ td {
 	font-size: 40px;
 }
 
-/**
 #midtable  {
     text-shadow:
     -1px -1px 0 #FFF,
@@ -79,4 +78,19 @@ td {
     -1px 1px 0 #FFF,
     1px 1px 0 #FFF;
 }
-**/
+
+.first {
+	padding: 10px;
+}
+.plus {
+	padding: 10px 25px 10px 10px;
+}
+.second {
+	padding: 10px 10px 10px 20px;
+}
+.equal {
+	padding: 10px 25px 10px 15px;
+}
+.third {
+	padding: 10px 5px 10px 20px;
+}
