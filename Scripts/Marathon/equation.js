@@ -22,18 +22,21 @@ function displayMessage(){
 function generateQuestion(){
 	var questionRandomizer = Math.floor(Math.random() * 2);
 	generateColor();
-	if (difficulty == 0) { // Easy 
+	if (difficulty == 0) { // Easy
+		checkAnswer = 0;
 		clearCanvases();
 		generateNumber();
 		displayMessage();
 	} else if (difficulty == 1) { // Medium
 		if (questionRandomizer == 0) {
+			checkAnswer = 0;
 			clearCanvases();
 			generateNumber();
 			displayMessage();
 		}
 		else if (questionRandomizer == 1) {
 			if (op == 0) {
+				checkAnswer = 1;
 				document.getElementById('num1').innerHTML = "";
 				document.getElementById('num2').innerHTML = "";
 				document.getElementById('sum').innerHTML = "";
@@ -41,6 +44,7 @@ function generateQuestion(){
 				document.getElementById('operation').innerHTML = operation[op];
 				document.getElementById('equal').innerHTML = " = ";
 			} else {
+				checkAnswer = 0;
 				clearCanvases();
 				generateNumber();
 				displayMessage();
@@ -48,11 +52,13 @@ function generateQuestion(){
 		}	
 	} else if (difficulty == 2) { // Colors Everywhere
 		if (questionRandomizer == 0) {
+			checkAnswer = 0;
 			clearCanvases();
 			generateNumber();
 			displayMessage();
 		}
 		else if (questionRandomizer == 1) {
+			checkAnswer = 1;
 			document.getElementById('num1').innerHTML = "";
 			document.getElementById('num2').innerHTML = "";
 			document.getElementById('sum').innerHTML = "";

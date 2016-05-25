@@ -11,10 +11,8 @@ function userAnswer(myAns){
 	var message = document.getElementById('message');
 	
 	if(myAns == questionAns){
-		//Score increment here
 		correct();
-	} else {
-		
+	} else {	
 		wrong();
 	}
 	generateQuestion();
