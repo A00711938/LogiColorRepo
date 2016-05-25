@@ -124,7 +124,7 @@ include 'rewardsAutomatedModals.php'
         $(".dodge").click(function(){
             if(index == whichChild(this)){
                 switch(index){
-                    case 1: window.location.href = "difficultyCopyTakitoTest.html";
+                    case 1: window.location.href = "marathon.html";
                             break;
                     case 2: window.location.href = "marathon-leaderboard.php";
                             break;
