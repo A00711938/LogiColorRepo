@@ -78,6 +78,12 @@ function updateTimeBar(){
 function correctAnswer(){
 	score += addScore(time);
 	updateScore();
+    if(++level == 10){
+        difficulty = 1;
+    } else if(level == 20){
+        difficulty = 2;
+    }
+    document.getElementById('level').innerHTML = "Level : " + level;
 	resetComponent();
 }
 //This function returns the appropriate score compared to the time.

@@ -61,5 +61,6 @@ function levelEnd(score) {
 		generateQuestion();
 		document.getElementById('message').innerHTML = "";
 		score = 0;
+        difficulty = 0;
 	}
 }

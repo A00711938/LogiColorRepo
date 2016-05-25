@@ -17,8 +17,9 @@ var musicVol = 0.5;
 var sfxVol = 0.5;
 
 /** difficultyCopyTakitoTest.html */
-var difficulty = 2;
+var difficulty = 0;
 
 var randShape = 0;
 var checkAnswer;
+var level = 1;
 
