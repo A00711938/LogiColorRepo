@@ -19,3 +19,6 @@ var sfxVol = 0.5;
 /** difficultyCopyTakitoTest.html */
 var difficulty = 2;
 
+var randShape = 0;
+var checkAnswer;
+

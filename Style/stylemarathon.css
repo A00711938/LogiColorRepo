@@ -71,12 +71,11 @@ td {
 	font-size: 40px;
 }
 
-/**
-#midtable  {
+#midtable .col-xs-1 {
+	color: #fff;
     text-shadow:
     -1px -1px 0 #FFF,
     1px -1px 0 #FFF,
     -1px 1px 0 #FFF,
     1px 1px 0 #FFF;
 }
-**/
