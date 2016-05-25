@@ -16,5 +16,6 @@ var operation = ["+", "-"];
 var musicVol = 0.5;
 var sfxVol = 0.5;
 
-/** shapes.js */
-var randomShapes = Math.floor(Math.random() * 33);
+/** difficultyCopyTakitoTest.html */
+var difficulty = 2;
+

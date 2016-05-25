@@ -15,8 +15,8 @@ function generateEasyShapes() {
 	var fig3 = canvas3.getContext('2d');
 	var fig4 = canvas3.getContext('2d');
 	
-	// randomShapes
-	switch (randomShapes) {
+	// randomShapes = 
+	switch (Math.floor(Math.random() * 33)) {
 		case 0: // right triangles + square
 			// figure1
 			triangle(fig1, 0, 0, 80, 0, 0, 80, color[c1]);
@@ -26,6 +26,7 @@ function generateEasyShapes() {
 			// figure3
 			square( fig3, 0, 0, 80, 80, color[c2]);
 			triangle(fig4, 0, 0, 80, 0, 0, 80, color[c3]);
+	
 			break;
 		case 1: // right triangles + square
 			// figure1
