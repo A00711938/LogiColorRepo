@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b22569e1-0104-4201-b2ed-a9b10bf76d2d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sound/tutorial.mp4" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Style/style_welcome_difficulty.css" afterPath="$PROJECT_DIR$/Style/style_welcome_difficulty.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/welcomeScreenTakitoDesign.html" afterPath="$PROJECT_DIR$/welcomeScreenTakitoDesign.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/achievementsModal.php" afterPath="$PROJECT_DIR$/achievementsModal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rewards.php" afterPath="$PROJECT_DIR$/rewards.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rewardsAutomatedModals.php" afterPath="$PROJECT_DIR$/rewardsAutomatedModals.php" />
     </list>
     <ignored path="LogiColorRepo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +29,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="welcomeScreenTakitoDesign.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/welcomeScreenTakitoDesign.html">
+      <file leaf-file-name="rewardsAutomatedModals.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rewardsAutomatedModals.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="225" column="56" selection-start-line="225" selection-start-column="56" selection-end-line="225" selection-end-column="56" />
+            <state relative-caret-position="2482">
+              <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+              <folding>
+                <marker date="1464205080000" expanded="true" signature="865:2258" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="898:2251" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="967:2239" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="1008:1554" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="1044:1295" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="1140:1271" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="1339:1535" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="1397:1512" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="1594:2073" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="1654:2042" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="1703:1837" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="1887:2011" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="2115:2223" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="3075:4456" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="3108:4449" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="3177:4437" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="3218:3764" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="3254:3505" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="3350:3481" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="3549:3745" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="3607:3722" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="3804:4271" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="3858:4236" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="3907:4041" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="4091:4205" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="4313:4421" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="5269:6648" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="5302:6641" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="5371:6629" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="5412:5958" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="5448:5699" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="5544:5675" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="5743:5939" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="5801:5916" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="5998:6463" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="6055:6428" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="6104:6238" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="6288:6397" placeholder="..." />
+                <marker date="1464205080000" expanded="true" signature="6505:6613" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rewards.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rewards.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+              <folding>
+                <marker date="1464204773000" expanded="true" signature="521:909" placeholder="..." />
+                <marker date="1464204773000" expanded="true" signature="570:704" placeholder="..." />
+                <marker date="1464204773000" expanded="true" signature="754:878" placeholder="..." />
+                <marker date="1464204773000" expanded="true" signature="1278:1656" placeholder="..." />
+                <marker date="1464204773000" expanded="true" signature="1327:1461" placeholder="..." />
+                <marker date="1464204773000" expanded="true" signature="1511:1625" placeholder="..." />
+                <marker date="1464204773000" expanded="true" signature="2015:2388" placeholder="..." />
+                <marker date="1464204773000" expanded="true" signature="2064:2198" placeholder="..." />
+                <marker date="1464204773000" expanded="true" signature="2248:2357" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="achievementsModal.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/achievementsModal.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -62,8 +132,6 @@
         <option value="$PROJECT_DIR$/inGameScreenTakitoDesign.html" />
         <option value="$PROJECT_DIR$/databasedetails.php" />
         <option value="$PROJECT_DIR$/loginTakitoDesign.html" />
-        <option value="$PROJECT_DIR$/registerindb.php" />
-        <option value="$PROJECT_DIR$/difficultyCopyTakitoTest.html" />
         <option value="$PROJECT_DIR$/loginTakitoDesign.php" />
         <option value="$PROJECT_DIR$/signinTakitoDesign.html" />
         <option value="$PROJECT_DIR$/speedrun-leaderboard.html" />
@@ -71,25 +139,37 @@
         <option value="$PROJECT_DIR$/marathon-leaderboard.html" />
         <option value="$PROJECT_DIR$/Style/style_settings.css" />
         <option value="$PROJECT_DIR$/databaseConnection.php" />
-        <option value="$PROJECT_DIR$/queryMarathonDB.php" />
-        <option value="$PROJECT_DIR$/logintodb.php" />
-        <option value="$PROJECT_DIR$/querySpeedrunDB.php" />
         <option value="$PROJECT_DIR$/speedrunResult.php" />
-        <option value="$PROJECT_DIR$/getSpeedRunDB.php" />
         <option value="$PROJECT_DIR$/marathonResult.php" />
-        <option value="$PROJECT_DIR$/getMarathonDB.php" />
         <option value="$PROJECT_DIR$/Style/style_welcome_difficulty.css" />
         <option value="$PROJECT_DIR$/Style/stylemarathon.css" />
-        <option value="$PROJECT_DIR$/marathon-leaderboard.php" />
         <option value="$PROJECT_DIR$/Scripts/script.js" />
-        <option value="$PROJECT_DIR$/Scripts/modals.js" />
-        <option value="$PROJECT_DIR$/marathon.html" />
-        <option value="$PROJECT_DIR$/speedmode.html" />
         <option value="$PROJECT_DIR$/unusedthings/KuanyshStuff2point0/index.html" />
         <option value="$PROJECT_DIR$/unusedthings/KuanyshStuff2point0/marathon-shapes.html" />
         <option value="$PROJECT_DIR$/unusedthings/KuanyshStuff2point0/marathon.html" />
         <option value="$PROJECT_DIR$/saveScore.php" />
         <option value="$PROJECT_DIR$/welcomeScreenTakitoDesign.html" />
+        <option value="$PROJECT_DIR$/getSpeedRunDB.php" />
+        <option value="$PROJECT_DIR$/getMarathonDB.php" />
+        <option value="$PROJECT_DIR$/webhostDBdetails.php" />
+        <option value="$PROJECT_DIR$/settingsModal.php" />
+        <option value="$PROJECT_DIR$/tutorialModal.php" />
+        <option value="$PROJECT_DIR$/Scripts/modals.js" />
+        <option value="$PROJECT_DIR$/difficulty.html" />
+        <option value="$PROJECT_DIR$/logintodb.php" />
+        <option value="$PROJECT_DIR$/marathon-leaderboard.php" />
+        <option value="$PROJECT_DIR$/speedmode.html" />
+        <option value="$PROJECT_DIR$/README.txt" />
+        <option value="$PROJECT_DIR$/registerindb.php" />
+        <option value="$PROJECT_DIR$/welcomeScreenTakitoDesign.php" />
+        <option value="$PROJECT_DIR$/queryMarathonDB.php" />
+        <option value="$PROJECT_DIR$/querySpeedrunDB.php" />
+        <option value="$PROJECT_DIR$/Scripts/global.js" />
+        <option value="$PROJECT_DIR$/difficultyCopyTakitoTest.html" />
+        <option value="$PROJECT_DIR$/marathon.html" />
+        <option value="$PROJECT_DIR$/achievementsModal.php" />
+        <option value="$PROJECT_DIR$/rewards.php" />
+        <option value="$PROJECT_DIR$/rewardsAutomatedModals.php" />
       </list>
     </option>
   </component>
@@ -138,7 +218,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -159,14 +239,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="coverage" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Testing" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -177,11 +257,11 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -491,6 +571,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -534,12 +620,15 @@
       <option name="presentableId" value="Default" />
       <updated>1462911476293</updated>
       <workItem from="1462911477570" duration="42504000" />
-      <workItem from="1463360361044" duration="59087000" />
+      <workItem from="1463360361044" duration="60515000" />
+      <workItem from="1463691963236" duration="6727000" />
+      <workItem from="1463774562890" duration="2610000" />
+      <workItem from="1464127813334" duration="31164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101591000" />
+    <option name="totallyTimeSpent" value="143520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -553,8 +642,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2879518" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28674698" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -567,6 +655,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
@@ -582,7 +671,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -590,95 +681,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/loginTakitoDesign.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="104" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/marathon-leaderboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speedrun-leaderboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/marathon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="85" column="39" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inGameScreenTakitoDesign.html" />
-    <entry file="file://$PROJECT_DIR$/loginTakitoDesign.html" />
-    <entry file="file://$PROJECT_DIR$/testFolder/Colt'sStuff/marathon.html" />
-    <entry file="file://$PROJECT_DIR$/testFolder/KuanyshStuff2point0/marathon-leaderboard.html" />
     <entry file="file://$PROJECT_DIR$/testFolder/KuanyshStuff2point0/marathon.html" />
-    <entry file="file://$PROJECT_DIR$/databasedetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonathanMarathonDemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonathanSpeedDemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/JonathanMarathonDemo.html" />
+    <entry file="file://$PROJECT_DIR$/JonathanSpeedDemo.html" />
     <entry file="file://$PROJECT_DIR$/colorlogic_jei.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/signinTakitoDesign.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="99" column="31" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -693,110 +702,19 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/logoalt.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/difficulty.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/images/logoalt.jpg" />
     <entry file="file://$PROJECT_DIR$/Style/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="108" column="84" selection-start-line="108" selection-start-column="83" selection-end-line="108" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-215">
-          <caret line="46" column="104" selection-start-line="46" selection-start-column="104" selection-end-line="46" selection-end-column="104" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/marathon-leaderboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/difficultyCopyTakitoTest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
-          <folding>
-            <marker date="1463521855000" expanded="true" signature="4795:5106" placeholder="//..." />
-            <marker date="1463521855000" expanded="true" signature="4795:5937" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/querySpeedrunDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="e#6#103#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/marathonResult.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#103#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/marathon-leaderboard.html" />
     <entry file="file://$PROJECT_DIR$/speedrunResult.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="e#6#220#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getSpeedRunDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="81" />
-          <folding>
-            <marker date="1463632688000" expanded="true" signature="231:422" placeholder="..." />
-            <marker date="1463632688000" expanded="true" signature="243:407" placeholder="..." />
-            <marker date="1463632688000" expanded="true" signature="253:394" placeholder="..." />
-            <marker date="1463632688000" expanded="true" signature="691:841" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getMarathonDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#6#189#0#PHP" expanded="true" />
-            <marker date="1463632688000" expanded="true" signature="476:668" placeholder="..." />
-            <marker date="1463632688000" expanded="true" signature="488:653" placeholder="..." />
-            <marker date="1463632688000" expanded="true" signature="498:640" placeholder="..." />
-            <marker date="1463632688000" expanded="true" signature="937:1089" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,90 +736,224 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/speedrun-leaderboard.html">
+    <entry file="file://$PROJECT_DIR$/speedrun-leaderboard.html" />
+    <entry file="file://$PROJECT_DIR$/Scripts/script_color.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginTakitoDesign.php">
+    <entry file="file://$PROJECT_DIR$/Scripts/speedModeTime.js" />
+    <entry file="file://$PROJECT_DIR$/unusedthings/KuanyshStuff2point0/marathon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="179">
+          <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unusedthings/KuanyshStuff2point0/marathon-shapes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="128" column="34" selection-start-line="128" selection-start-column="34" selection-end-line="128" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unusedthings/KuanyshStuff2point0/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/score.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="178">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="77" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/script_color.js">
+    <entry file="file://$PROJECT_DIR$/getSpeedRunDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="102" selection-start-line="24" selection-start-column="102" selection-end-line="24" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databasedetails.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/speedModeTime.js">
+    <entry file="file://$PROJECT_DIR$/welcomeScreenTakitoDesign.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settingsModal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="70" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webhostDBdetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/difficulty.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/databaseConnection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="150">
           <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#103#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/modals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/queryMarathonDB.php">
+    <entry file="file://$PROJECT_DIR$/README.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="12" selection-end-column="10" />
+        <state relative-caret-position="446">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginTakitoDesign.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="56" column="27" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signinTakitoDesign.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="669">
+          <caret line="99" column="9" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registerindb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getMarathonDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
-            <element signature="e#6#103#0#PHP" expanded="true" />
+            <element signature="e#7#190#0#PHP" expanded="true" />
+            <marker date="1464193095000" expanded="true" signature="477:669" placeholder="..." />
+            <marker date="1464193095000" expanded="true" signature="489:654" placeholder="..." />
+            <marker date="1464193095000" expanded="true" signature="499:641" placeholder="..." />
+            <marker date="1464193095000" expanded="true" signature="667:669" placeholder="..." />
+            <marker date="1464193095000" expanded="true" signature="938:1090" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/script.js">
+    <entry file="file://$PROJECT_DIR$/marathonResult.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1903">
-          <caret line="273" column="67" selection-start-line="273" selection-start-column="67" selection-end-line="273" selection-end-column="67" />
+        <state relative-caret-position="75">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/marathon-leaderboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="93" column="17" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logintodb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="32" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="32" />
+        <state relative-caret-position="489">
+          <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/querySpeedrunDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="138" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speedmode.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="103" column="10" selection-start-line="103" selection-start-column="10" selection-end-line="103" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/queryMarathonDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorialModal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/welcomeScreenTakitoDesign.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4080">
+          <caret line="272" column="9" selection-start-line="272" selection-start-column="4" selection-end-line="272" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -916,76 +966,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/registerindb.php">
+    <entry file="file://$PROJECT_DIR$/Scripts/modals.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="79" column="49" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
+        <state relative-caret-position="339">
+          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/marathon-leaderboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <marker date="1463632688000" expanded="true" signature="2465:2491" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unusedthings/KuanyshStuff2point0/marathon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unusedthings/KuanyshStuff2point0/marathon-shapes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="128" column="34" selection-start-line="128" selection-start-column="34" selection-end-line="128" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unusedthings/KuanyshStuff2point0/index.html">
+    <entry file="file://$PROJECT_DIR$/Scripts/global.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/speedmode.html">
+    <entry file="file://$PROJECT_DIR$/global.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="172" column="26" selection-start-line="172" selection-start-column="26" selection-end-line="172" selection-end-column="26" />
+        <state relative-caret-position="90">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/difficultyCopyTakitoTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="111" column="68" selection-start-line="111" selection-start-column="68" selection-end-line="111" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/marathon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="168" column="26" selection-start-line="168" selection-start-column="26" selection-end-line="168" selection-end-column="26" />
+        <state relative-caret-position="500">
+          <caret line="372" column="9" selection-start-line="372" selection-start-column="9" selection-end-line="372" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/welcomeScreenTakitoDesign.html">
+    <entry file="file://$PROJECT_DIR$/rewardsAutomatedModals.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="225" column="56" selection-start-line="225" selection-start-column="56" selection-end-line="225" selection-end-column="56" />
+        <state relative-caret-position="2482">
+          <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+          <folding>
+            <marker date="1464205080000" expanded="true" signature="865:2258" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="898:2251" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="967:2239" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="1008:1554" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="1044:1295" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="1140:1271" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="1339:1535" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="1397:1512" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="1594:2073" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="1654:2042" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="1703:1837" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="1887:2011" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="2115:2223" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="3075:4456" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="3108:4449" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="3177:4437" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="3218:3764" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="3254:3505" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="3350:3481" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="3549:3745" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="3607:3722" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="3804:4271" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="3858:4236" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="3907:4041" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="4091:4205" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="4313:4421" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="5269:6648" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="5302:6641" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="5371:6629" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="5412:5958" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="5448:5699" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="5544:5675" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="5743:5939" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="5801:5916" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="5998:6463" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="6055:6428" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="6104:6238" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="6288:6397" placeholder="..." />
+            <marker date="1464205080000" expanded="true" signature="6505:6613" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rewards.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+          <folding>
+            <marker date="1464204773000" expanded="true" signature="521:909" placeholder="..." />
+            <marker date="1464204773000" expanded="true" signature="570:704" placeholder="..." />
+            <marker date="1464204773000" expanded="true" signature="754:878" placeholder="..." />
+            <marker date="1464204773000" expanded="true" signature="1278:1656" placeholder="..." />
+            <marker date="1464204773000" expanded="true" signature="1327:1461" placeholder="..." />
+            <marker date="1464204773000" expanded="true" signature="1511:1625" placeholder="..." />
+            <marker date="1464204773000" expanded="true" signature="2015:2388" placeholder="..." />
+            <marker date="1464204773000" expanded="true" signature="2064:2198" placeholder="..." />
+            <marker date="1464204773000" expanded="true" signature="2248:2357" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievementsModal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding />
         </state>
       </provider>
