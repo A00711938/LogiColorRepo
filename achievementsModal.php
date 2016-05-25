@@ -29,23 +29,9 @@
                                 <th class="text-center"></th>
                             </tr>
                         </thead>
-                        <tbody>
-                        <!-- Reward #1 -->
-                            <tr>
-                                <td class="text-center"><img src="images/pokemon/icons/6-mega-x.png" class="img-responsive"></td>
-                                <td class="text-center"><h5>You just earned your first badge. Welcome to Logicolor!</h5></td>
-                            </tr>
-                        <!-- Reward #2 -->
-                            <tr>
-                                <td class="text-center"><img src="images/pokemon/icons/155.png" class="img-responsive"></td>
-                                <td class="text-center"><h5>You've played your first game. Awesome start!</h5></td>
-                            </tr>
-                        <!-- Reward #3 -->
-                            <tr>
-                                <td class="text-center"><img src="images/pokemon/icons/65-mega.png" class="img-responsive"></td>
-                                <td class="text-center"><h5>Over 1000 points. You're certainly a pro!</h5></td>
-                            </tr>
-                        </tbody>
+                        <!-- We use AJAX to append the rewards here -->
+                        <tbody id="rewardQuery"></tbody>
+                        
                     </table>
                 </div>
             </div>
