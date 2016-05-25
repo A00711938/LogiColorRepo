@@ -21,7 +21,7 @@ if ($row1 > 0){
  echo "
                          <!-- Reward #1 -->
                             <tr>
-                                <td class=\"text-center\"><img src=\"images/pokemon/icons/6-mega-x.png\" class=\"img-responsive\"></td>
+                                <td class=\"text-center\"><img src=\"images/achieve1.png" alt=\"Dangerous to go alone\" class=\"img-responsive\"></td>
                                 <td class=\"text-center\"><h5>You just earned your first badge. Welcome to Logicolor!</h5></td>
                             </tr>
                         
@@ -37,7 +37,7 @@ if ($row2 > 0){
  echo "
                          <!-- Reward #2 -->
                             <tr>
-                                <td class=\"text-center\"><img src=\"images/pokemon/icons/155.png\" class=\"img-responsive\"></td>
+                                <td class=\"text-center\"><img src=\"images/achieve2.png" alt=\"Boulderbadge\" class=\"img-responsive\"></td>
                                 <td class=\"text-center\"><h5>You've played your first game. Awesome start!</h5></td>
                             </tr>
  ";
@@ -52,7 +52,7 @@ if ($row3 > 0){
  echo "
                         <!-- Reward #3 -->
                             <tr>
-                                <td class=\"text-center\"><img src=\"images/pokemon/icons/65-mega.png\" class=\"img-responsive\"></td>
+                                <td class=\"text-center\"><img src=\"images/achieve3.png" alt=\"Rainbowbadge\" class=\"img-responsive\"></td>
                                 <td class=\"text-center\"><h5>Over 1000 points. You're certainly a pro!</h5></td>
                             </tr>
  ";

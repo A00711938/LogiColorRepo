@@ -1,4 +1,4 @@
-<!-- Settings modal! -->
+<!-- Rewards modal! -->
 <!-- Below, we have the code for the complete modal. The code is divided by header, body, and footer -->
 <div id="rewardsModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
