@@ -59,11 +59,16 @@ if(isset($_POST['submit'])){
             $_SESSION['first'] = $results['first'];
             $_SESSION['user_id'] = $results['user_id'];
             $_SESSION['password'] = $results['password'];
-            
+            //The items below update the users login timestamp
+            $updateLoginTimestamp = $databaseConnection->prepare('UPDATE `logicolorusers` SET `last_login` = now() WHERE `user_id` = :user_id');
+            $updateLoginTimestamp->bindParam(':user_id', $_SESSION['user_id']);
+            $updateLoginTimestamp->execute();
+
+
             //below we pretty much tell the system with PHP that after all the successful
             //changes above, refresh the screen with a confirmation message that says 
             //"Successfully Logged in and reroute the user to Welcome Screen TakitoDesign.html.
-            header('refresh:2; url=WelcomeScreenTakitoDesign.html');
+            header('refresh:2; url=welcomeScreenTakitoDesign.php');
             echo "Succesfully logged in";
             exit;
         }else{
