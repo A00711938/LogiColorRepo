@@ -70,7 +70,7 @@
 		<br/>
 		<!-- Back button to go back to the welcome screen -->
 		<div class="row text-center backbtn">
-		<a href="welcomeScreenTakitoDesign.html"><button type="button" class="btn btn-lg" id="back">Back</button></a>
+		<a href="welcomeScreenTakitoDesign.php"><button type="button" class="btn btn-lg" id="back">Back</button></a>
 		</div>
 	</div>
 

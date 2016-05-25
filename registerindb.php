@@ -17,12 +17,7 @@ session_start();
 require 'databasedetails.php';
 
 //PDO Database Connection. Simply put, it connects to DB
-try {
-    $databaseConnection = new PDO('mysql:host='._HOST_NAME_.';dbname='._DATABASE_NAME_, _USER_NAME_, _DB_PASSWORD);
-    $databaseConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-    echo 'ERROR: ' . $e->getMessage();
-}
+include 'databaseConnection.php';
 
 //Below all we are saying is:
 //If any info is passed through post. catch them and save
@@ -60,8 +55,8 @@ if(isset($_POST['submit'])){
     //In here we say: If no erroMsg is triggered, then prepare to DB
     //for some fun info.
     if($errMsg == ''){
-        $records = $databaseConnection->prepare("INSERT INTO logicolorusers (user_id, email, username, first, password)
-			VALUES ('',:email,:username,:first,:password)");
+        $records = $databaseConnection->prepare("INSERT INTO logicolorusers (user_id, email, username, first, password, last_login)
+			VALUES ('',:email,:username,:first,:password, now())");
         //$records->bindParam('', $userid);	
         //$records->bindParam(':fname', $fname);			
         $records->bindParam(':email', $email);
@@ -84,7 +79,7 @@ if(isset($_POST['submit'])){
         //So if everything went smoothly, the new user will be entered in the database
         //and the user will be directed to the main screen. A message confirming the
         //successful query will appear on the screen for 2 seconds.
-        header('refresh:2; url=welcomeScreenTakitoDesign.html');
+        header('refresh:2; url=welcomeScreenTakitoDesign.php');
         echo "New account created successfully";
         exit;
     }else{
