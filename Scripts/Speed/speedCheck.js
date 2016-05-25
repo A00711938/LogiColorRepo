@@ -16,6 +16,7 @@ function readying(){
 		textbox.innerHTML = "";
 		generateQuestion();
 		startTimer();
+        randMusic();
 	}
 	readySecond--;
 }
