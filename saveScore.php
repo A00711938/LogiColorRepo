@@ -24,8 +24,8 @@ if (isset($_POST['scoreDB'])){
     $scoreDB = trim($_POST['scoreDB']);
     //echo ($smt);
 
-    $records = $databaseConnection->prepare("INSERT INTO `logicolorscores`(`score_id`, `user_id`, `scores`, `time`) 
-    VALUES ('', :user_id, :scores, '')");
+    $records = $databaseConnection->prepare("INSERT INTO `logicolorscores`(`score_id`, `user_id`, `scores`, `time`, `timestamp`) 
+    VALUES ('', :user_id, :scores, '', now())");
     //$records->bindParam('', $userid);
     //$records->bindParam(':fname', $fname);
     $records->bindParam(':user_id', $_SESSION['user_id']);
