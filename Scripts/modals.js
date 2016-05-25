@@ -24,7 +24,7 @@ function playerReady() {
 	//This disperse the modal and redirect the page to menu.
 	btn1.onclick = function() {
 		modal.style.display = "none";
-		window.location.href = "welcomeScreenTakitoDesign.html";
+		window.location.href = "welcomeScreenTakitoDesign.php";
 	}
 	//This disperse the modal and initiate the game.
 	btn2.onclick = function() {

@@ -22,7 +22,7 @@ Log in to start the game
 
 Click the ‘Sign up’ button to create a new account.
 
-2.  Below is our main page you’ll see after you sign in, welcomeScreenTakitoDesign.html.
+2.  Below is our main page you’ll see after you sign in, welcomeScreenTakitoDesign.php.
 The first two buttons are linked to the game - Marathon mode and Speed run mode. Currently we are still working on implementing shapes and patterns into our game play for different levels and difficulties.
 
 The ‘Leaderboard’ button takes you to our leaderboard where you can see your ranking after playing games. ‘Tutorial’ has a short demonstration video on how to play the game. The video will be edited after implementing more difficult level games and with our updated game mode.
@@ -39,7 +39,3 @@ Git Network Graph:
 
 
 Check our deliverables for pictures with the instructions above.
-
-
-
-
