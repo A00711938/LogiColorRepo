@@ -116,6 +116,7 @@ include 'rewardsAutomatedModals.php'
         document.getElementById('sfxVal').innerHTML = sfxVol*10;
         document.getElementById('musicslider').value = musicVol*10;
         document.getElementById('sfxslider').value = sfxVol*10;
+        playMusic(this,'Sound/menumusic.mp3')
         //The first two functions below this message allow me to manipulate the dodge pic
         //so the selector moves as the user clicks. We can change that eventually if we like to.
         $(".dodge").find("img").css({"float":"left"});
