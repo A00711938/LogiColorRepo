@@ -10,6 +10,12 @@ body{
 	background-color : #51514F;
 }
 
+/** Navi bar */
+.container {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
 .navigation{
 	background-color: #FFE066;
 }
@@ -40,6 +46,74 @@ h1{
 	font-size: 500%;
 }
 
+.btn {
+    background-color: #F26A68;
+    color: #FFE272;
+    padding: 15px 10px;
+	font-family: 'Trade Winds', cursive;
+}
+.backbtn {
+	margin-bottom: 10px;
+}
+thead {
+	font-family: 'Trade Winds', cursive;
+    font-size: 1.5em;
+    color: #F26A68;
+    margin-bottom: 15px;
+}
+td {
+    background-color: #70c1b2;
+    font-family: 'Chewy', cursive;
+
+}
+
+.modal-dialog {
+	margin: 10px;
+	width: 90%;
+	position: relative;
+}
+.modal-content {
+	background-color: #51514F;
+	font-family: 'Permanent Marker', cursive;
+}
+.content {
+	text-align: center;
+}
+
+.modal-header{
+	border-bottom-width: 0;
+	background-color: #51514F;
+	color: #F26A68;
+	text-align: center;
+}
+
+.modal-body {
+	background-color: #70c1b2;
+	font-family: 'Trade Winds', cursive;
+}
+
+.modal-footer {
+	border-top-width: 0;
+}
+
+.btn {
+	background-color: #F26A68;
+	font-family: 'Trade Winds', cursive;
+	font-size: 20px;
+	color: #FFE272;
+	padding: 15px 10px;
+}
+
+
 .footer .glyphicon {
 	font-size: 40px;
+}
+
+#midtable .col-xs-1 {
+	color: #fff;
+    text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;
 }

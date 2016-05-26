@@ -11,6 +11,12 @@
 #body h2 {
 	color: #F26A68;
 }
+/** Navi bar */
+.container {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
 
 .btn {
     background-color: #F26A68;
@@ -71,18 +77,14 @@ td {
 	font-size: 40px;
 }
 
-<<<<<<< HEAD
-#midtable  {
-=======
+
 #midtable .col-xs-1 {
 	color: #fff;
->>>>>>> master
     text-shadow:
     -1px -1px 0 #FFF,
     1px -1px 0 #FFF,
     -1px 1px 0 #FFF,
     1px 1px 0 #FFF;
-<<<<<<< HEAD
 }
 
 .first {
@@ -99,6 +101,4 @@ td {
 }
 .third {
 	padding: 10px 5px 10px 20px;
-=======
->>>>>>> master
 }
