@@ -7,10 +7,23 @@
 	background: #FFFF00;
 }
 
+#score {
+	font-family: 'Chewy', cursive;
+}
+
 body{
 	background-color : #51514F;
 }
 
+/** Navi bar */
+.container {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+.navibar {
+	margin-top: -20px;
+}
 .navigation{
 	background-color: #FFE066;
 }
@@ -31,14 +44,70 @@ body{
 	width: 100%;
 }
 h1{
-	font-size: 400%;
+	font-size: 450%;
 }
 
 .fancy{
-	font-family: 'Covered By Your Grace', cursive;
+	font-weight: bold;
 }
 #racetext{
-	font-size: 500%;
+	font-size: 400%;
+}
+
+.btn {
+    background-color: #F26A68;
+    color: #FFE272;
+    padding: 15px 10px;
+	font-family: 'Trade Winds', cursive;
+}
+.backbtn {
+	margin-bottom: 10px;
+}
+thead {
+	font-family: 'Trade Winds', cursive;
+    font-size: 1.5em;
+    color: #F26A68;
+    margin-bottom: 15px;
+}
+td {
+    background-color: #70c1b2;
+    font-family: 'Chewy', cursive;
+
+}
+/**modal size*/
+.modal-dialog {
+	width: auto;
+}
+.modal-content {
+	background-color: #51514F;
+	font-family: 'Permanent Marker', cursive;
+}
+.content {
+	text-align: center;
+}
+
+.modal-header{
+	border-bottom-width: 0;
+	background-color: #51514F;
+	color: #F26A68;
+	text-align: center;
+}
+
+.modal-body {
+	background-color: #70c1b2;
+	font-family: 'Trade Winds', cursive;
+}
+
+.modal-footer {
+	border-top-width: 0;
+}
+
+.btn {
+	background-color: #F26A68;
+	font-family: 'Trade Winds', cursive;
+	font-size: 20px;
+	color: #FFE272;
+	padding: 15px 10px;
 }
 
 .modal-content {
@@ -88,8 +157,31 @@ h1{
     -1px 1px 0 #FFF,
     1px 1px 0 #FFF;
 }
+
 .container{
 	width: 100%;
 	margin-left: 0;
 	margin-right: 0;
+}
+/** Put the problem in the center*/
+.game {
+	margin-top: 40px;
+}
+.colfix {
+	padding: 40px 0px;
+}
+.first {
+	padding: 20px 0px 10px 13px;
+}
+.plus {
+	padding: 20px 5px 10px 5px;
+}
+.second {
+	padding: 20px 20px 10px 10px;
+}
+.equal {
+	padding: 20px 25px 10px 3px;
+}
+.third {
+	padding: 20px 5px 10px 20px;
 }
