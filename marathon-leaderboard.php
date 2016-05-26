@@ -78,7 +78,7 @@
 	<script>
 		//The following manipulates the DOM so the background music starts:
 		$(document).ready(function(){
-
+            musicVol = 0.2;
 			playMusic(this,'Sound/scoresmusic.mp3');
 
 		//Even thought it looks like a duplicated piece of code, Well... this is not a duplicated piece of code. By having
