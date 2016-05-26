@@ -17,7 +17,9 @@
 	margin-left: 0;
 	margin-right: 0;
 }
-
+.navibar {
+	font-family: 'Chewy', cursive;
+}
 .btn {
     background-color: #F26A68;
     color: #FFE272;
@@ -92,29 +94,53 @@ td {
 }
 .shape2 {
 	margin-top: -20px;
-	margin-left: 7px;
+	margin-left: 0px;
 }
 .shape3 {
 	margin-top: -20px;
-	margin-left: 25px;
+	margin-left: 0px;
 }
 
 /** Put the problem in the center*/
-.colfix {
-	padding: 60px 0px;
+
+.colfix1{
+	padding: 0px;
 }
+.colfix2 {
+	padding: 0px;
+	width: 14.5%;
+}
+.gamecontainer {
+	text-align: center;
+	margin-left: -12px;
+	display: block;
+	margin-top: 60px;
+}
+
+.vertical-center {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;  /* vertical alignment of the inline element */
+                           /* reset the font property */
+}
+
+
+.game {
+	text-align: center;
+}
+
 .first {
-	padding: 10px 0px 10px 0px;
+	padding: 20px 0px 10px 0px;
 }
 .plus {
-	padding-top: 10px;
+	padding: 20px 0px 10px 0px;
 }
 .second {
-	padding: 10px 20px 10px 10px;
+	padding: 20px 0px 10px 0px;
 }
 .equal {
-	padding: 10px 25px 10px 10px;
+	padding: 20px 0px 10px 0px;
 }
 .third {
-	padding: 10px 5px 10px 20px;
+	padding: 20px 5px 10px 0px;
 }

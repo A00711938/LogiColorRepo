@@ -52,6 +52,7 @@
     </head>
 
 <body>
+<div class="body">
 <!--
 Modal 'Are You Ready'
 For whatever reason I wasn't able to create the fade in effect when the modal appears on screen.
@@ -84,7 +85,7 @@ The first container holds the game's navigation bar.
 <div class="container">
 
 <!-- Top bar (nav bar) with icons are placed in the following row -->
-<div class="navigation row">
+<div class="navigation navibar row">
 
     <div class="col-xs-3 text-center" id="leftCorner">
         <h4>
@@ -230,18 +231,19 @@ the bootstrap screen. We'll have to fix this one from JS.
 	
 	<div id="bonusbar"></div>
 <!--The following two rows are for in game operations -->
-<div class="game row" id="midtable">
+<div class="gamecontainer">
+<div class="game row vertical-center"id="midtable">
 
-        <div class = "col-xs-3 text-center colfix"><h1 id="num1" class="first"></h1><canvas class = "shape1" id = "figure1" width="70" height="70"></canvas></div>
+        <div class = "col-xs-3 text-center colfix1"><h1 id="num1" class="first"></h1><canvas class = "shape1" id = "figure1" width="70" height="70"></canvas></div>
 			
-		<div class="col-xs-1 text-center colfix"><h1 id="operation" class="plus"></h1></div>
+		<div class="col-xs-2 text-center colfix2"><h1 id="operation" class="plus"></h1></div>
 			
-		<div class = "col-xs-3 text-center colfix"><h1 id="num2" class="second"></h1><canvas class = "shape2" id = "figure2" width="70" height="70"></canvas></div>
+		<div class = "col-xs-3 text-center colfix1"><h1 id="num2" class="second"></h1><canvas class = "shape2" id = "figure2" width="70" height="70"></canvas></div>
 		
-		<div class="col-xs-1 text-center colfix"><h1 class="eq equal" id = "equal"></h1></div>
+		<div class="col-xs-2 text-center colfix2"><h1 class="eq equal" id = "equal"></h1></div>
 			
-		<div class = "col-xs-3 text-center colfix"><h1 id="sum" class="third"></h1><canvas class = "shape3" id = "figure3" width="70" height="70"></canvas></div>
-
+		<div class = "col-xs-2 text-center colfix1"><h1 id="sum" class="third"></h1><canvas class = "shape3" id = "figure3" width="70" height="70"></canvas></div>
+</div>
 </div>
 
 </div>
@@ -364,7 +366,6 @@ $(document).ready(function () {
 
 });
 </script>
-
-
+</div>
 </body>
 </html>
