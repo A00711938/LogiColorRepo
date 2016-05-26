@@ -75,7 +75,8 @@ I copied the format which I think works well.
     </div>
     <div id="doge">
         <button type="button" class="dodge btn btn-lg btn-block">
-            <img class="img-circle" src="images/dodge.gif" width="30px" height="30px" alt="">Play</button>
+            <img class="img-circle" src="images/dodge.gif" width="30px" height="30px" alt="">Marathon Mode</button>
+        <button type="button" class="dodge btn btn-lg btn-block">Speed Mode</button>
         <button type="button" class="dodge btn btn-lg btn-block">Leaderboard</button>
         <button type="button" class="dodge btn btn-lg btn-block">Tutorial</button>
 		<button type="button" class="dodge btn btn-lg btn-block" id="myBtn">Settings</button>
@@ -124,16 +125,18 @@ include 'rewardsAutomatedModals.php'
         $(".dodge").click(function(){
             if(index == whichChild(this)){
                 switch(index){
-                    case 1: window.location.href = "difficultyCopyTakitoTest.html";
+                    case 1: window.location.href = "marathon.html";
                             break;
-                    case 2: window.location.href = "marathon-leaderboard.php";
+                    case 2: window.location.href = "speedmode.html";
                             break;
-					case 3: $("#tutorialModal").modal();
+                    case 3: window.location.href = "marathon-leaderboard.php";
                             break;
-                    case 4: $("#settingsModal").modal();
+					case 4: $("#tutorialModal").modal();
+                            break;
+                    case 5: $("#settingsModal").modal();
                             break;
 							//data-toggle="modal" data-target="#settingsModal"
-					case 5: $("#rewardsModal").modal();
+					case 6: $("#rewardsModal").modal();
 						    break;
                     default: break;
                 }
