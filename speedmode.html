@@ -6,17 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<!-- Google font  -->
+	<link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>	
-	
-	<!--IMPORT THE CSS USED FOR THIS PAGE-->
+	<!--CSS/BOOTSTRAP USED FOR THIS PAGE-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">	
 	<link rel="stylesheet" type="text/css" href="Style/style_speed.css">
-	<!--THIS IS THE STYLE USED FOR FONT ON THIS PAGE-->
-	<link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
-	
+
+    <!-- Latest compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>	
+
 	<!--IMPORT GLOBAL VARIABLE FOR THE SCRIPT NEEDED BELOW-->
 	<script src="Scripts/global.js"></script>
 	<!--IMPORT THE ONLOAD FUNCTION FOR THIS PAGE-->
@@ -112,12 +114,13 @@
             </div>
         </div>
     </div>
+    <!-- End of the modal -->
 
 	<!--The first container holds the game's navigation bar-->
 	<div class="container">
 
 		<!-- Top bar (nav bar) with icons are placed in the following row -->
-		<div class="navigation row">
+		<div class="navigation row navibar">
 
 			<div class="col-xs-3 text-center" id="leftCorner">
 				<h4>
@@ -147,12 +150,12 @@
 	<div id="message" style="display: none"></div>
 	
 	<!--The following two rows are for in game operations -->
-	<div class="game row" id="midtable">
-		<div class="col-xs-3 text-center"><h1 id="num1" class="fancy"></h1><canvas class = "" id = "figure1" width="80" height="80"></canvas></div>
-		<div class="col-xs-1 text-center"><h1 id="operation" class="fancy"></h1></div>
-		<div class="col-xs-3 text-center"><h1 id="num2" class="fancy"></h1><canvas class = "" id = "figure2" width="80" height="80"></canvas></div>
-		<div class="col-xs-1 text-center"><h1 class="fancy">=</h1></div>
-		<div class="col-xs-3 text-center"><h1 id="sum" class="fancy"></h1><canvas class = "" id = "figure3" width="80" height="80"></canvas></div>
+	<div class="game row text-center" id="midtable">
+		<div class="col-xs-3 text-center colfix"><h1 id="num1" class="fancy first"></h1><canvas class = "" id = "figure1" width="80" height="80"></canvas></div>
+		<div class="col-xs-1 text-center colfix"><h1 id="operation" class="fancy plus"></h1></div>
+		<div class="col-xs-3 text-center colfix"><h1 id="num2" class="fancy second"></h1><canvas class = "" id = "figure2" width="80" height="80"></canvas></div>
+		<div class="col-xs-1 text-center colfix"><h1 class="fancy equal">=</h1></div>
+		<div class="col-xs-3 text-center colfix"><h1 id="sum" class="fancy third"></h1><canvas class = "" id = "figure3" width="80" height="80"></canvas></div>
 		
 		<div class="col-xs-12 text-center"><h1 id="racetext" class="fancy"></h1></div>
 	</div>
@@ -163,7 +166,7 @@
 	<div class="footer container">
 		<div class="row" id="">
 			<div class="col-xs-6">
-				<button type="button" class="success btn btn-lg btn-block" name="answer1" onclick="userAnswer(true);playSound(this,'Sound/click.mp3');">
+				<button type="button" class="success btn btn-lg btn-block" style="background-color: rgb(112, 193, 178)" name="answer1" onclick="userAnswer(true);playSound(this,'Sound/click.mp3');">
 					<span class="glyphicon glyphicon-ok text-lg" ></span>
 				</button>
 			</div>
