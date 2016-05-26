@@ -68,7 +68,7 @@ if(isset($_POST['submit'])){
             //below we pretty much tell the system with PHP that after all the successful
             //changes above, refresh the screen with a confirmation message that says 
             //"Successfully Logged in and reroute the user to Welcome Screen TakitoDesign.html.
-            header('refresh:2; url=welcomeScreenTakitoDesign.php');
+            header('refresh:0; url=welcomeScreenTakitoDesign.php');
             echo "Succesfully logged in";
             exit;
         }else{
@@ -79,7 +79,7 @@ if(isset($_POST['submit'])){
     
     //If you cannot log in because anything is wrong, a message appears and you;ll be
     //redirected to the loginpage.
-    header('refresh:2; url=loginTakitoDesign.php');
+    header('refresh:0; url=loginTakitoDesign.php');
     echo "Something went wrong. Please try again";
     exit;
 }
