@@ -17,8 +17,6 @@
 	<link rel="stylesheet" type="text/css" href="Style/style_welcome_difficulty.css">
     <link rel="stylesheet" type="text/css" href="Style/style_settings.css">
 	
-	
-	
 	<!--IMPORT GLOBAL VARIABLE FOR THE SCRIPT NEEDED BELOW-->
     <script src="Scripts/global.js"></script>
 	<!--IMPORT FUNCTIONS FOR BACKGROUND MUSIC/SFX-->
@@ -34,166 +32,152 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- [endif]-->
 </head>
+
 <body onload="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload');">
-<!--
-Takito's design of main screen (aka welcome screen):
--->
 
-<!--
-Title container below.
--->
-<div class="container">
+	<!-- Title container below. -->
+	<div class="container">
 
-<div class="row">
-    <div class="col-xs-12 text-center">
-        <!--
-        <a href="loginTakitoDesign.html">
-        REMOVING THIS REF TEMPORARILY TO CHECK IF I CAN CENTER THE LOGICOLOR IMAGE with
-        Bootstrap. It worked so maybe we'll talk and confirm if the ref to the main screen is
-        necessary :)
-
-        P.S. I personally love this image as our logo. So I'd like to keep it.
-        -->
-        <img id="myLogo" onclick="easterEgg()" src="images/logo.gif" alt="logicolor" width="300px" height="80px">
-        <!--
-        </a>
-        -->
-    </div>
-</div>
-
-<!--
-Options Container below. Similar to the difficultyCopyTakitoTest,
-I copied the format which I think works well.
--->
-<div class="jumbotron">
-    <div class="row heading_welcome">
-        <div class="col-xs-12 text-centre">
-            <h3 class="text-success text-center">
-                Pick your Dogeventure!
-            </h3>
-        </div>
-    </div>
-    <div id="doge">
-        <button type="button" class="dodge btn btn-lg btn-block">
-            <img class="img-circle" src="images/dodge.gif" width="30px" height="30px" alt="">Marathon Mode</button>
-        <button type="button" class="dodge btn btn-lg btn-block">Speed Mode</button>
-        <button type="button" class="dodge btn btn-lg btn-block">Leaderboard</button>
-        <button type="button" class="dodge btn btn-lg btn-block">Tutorial</button>
-		<button type="button" class="dodge btn btn-lg btn-block" id="myBtn">Settings</button>
-		<button type="button" class="dodge btn btn-lg btn-block">Rewards</button>
-    </div>
-	
-		<!-- 
-		Modals Below! 
-		Note that the modals are stored in their individual files (in pieces) and the individual pieces
-		are called with php.
-		-->
-
-				
-<?php
-
-include 'tutorialModal.php';
-
-include 'settingsModal.php';
-
-include 'achievementsModal.php';
-
-include 'rewardsAutomatedModals.php'
-
-?>
-<span id="additionalModals"></span>
-
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<!-- The 'Logicolor' logo changes to 'Dodecolor' when clicked. -->
+			<img id="myLogo" onclick="easterEgg()" src="images/logo.gif" alt="logicolor" width="300px" height="80px">
+		</div>
 	</div>
-</div>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-
-<script>
-    var index = 1;
-    //DOM manipulation of this particular site happens below
-    $(document).ready(function(){
-        
-        document.getElementById('musicVal').innerHTML = musicVol*10;
-        document.getElementById('sfxVal').innerHTML = sfxVol*10;
-        document.getElementById('musicslider').value = musicVol*10;
-        document.getElementById('sfxslider').value = sfxVol*10;
-        playMusic(this,'Sound/menumusic.mp3')
-        //The first two functions below this message allow me to manipulate the dodge pic
-        //so the selector moves as the user clicks. We can change that eventually if we like to.
-        $(".dodge").find("img").css({"float":"left"});
+	<!--
+	Options Container below. Similar to the difficultyCopyTakitoTest,
+	I copied the format which I think works well.
+	-->
+	<div class="jumbotron">
+		<div class="row heading_welcome">
+			<div class="col-xs-12 text-centre">
+				<h3 class="text-success text-center">
+					Pick your Dogeventure!
+				</h3>
+			</div>
+		</div>
+		<div id="doge">
+			<button type="button" class="dodge btn btn-lg btn-block">
+				<img class="img-circle" src="images/dodge.gif" width="30px" height="30px" alt="">Marathon Mode</button>
+			<button type="button" class="dodge btn btn-lg btn-block">Speed Mode</button>
+			<button type="button" class="dodge btn btn-lg btn-block">Leaderboard</button>
+			<button type="button" class="dodge btn btn-lg btn-block">Tutorial</button>
+			<button type="button" class="dodge btn btn-lg btn-block" id="myBtn">Settings</button>
+			<button type="button" class="dodge btn btn-lg btn-block">Rewards</button>
+		</div>
 		
-        $(".dodge").click(function(){
-            if(index == whichChild(this)){
-                switch(index){
-                    case 1: window.location.href = "marathon.html";
-                            break;
-                    case 2: window.location.href = "speedmode.html";
-                            break;
-                    case 3: window.location.href = "marathon-leaderboard.php";
-                            break;
-					case 4: $("#tutorialModal").modal();
-                            break;
-                    case 5: $("#settingsModal").modal();
-                            break;
-							//data-toggle="modal" data-target="#settingsModal"
-					case 6: $("#rewardsModal").modal();
-						    break;
-                    default: break;
-                }
-            }
-            index = whichChild(this);
-            $(".dodge").find("img").remove();
-            $(this).prepend("<img class=\"img-circle\" src=\"images/dodge.gif\" width=\"30px\"; height=\"30px\" alt=\"\">");
-            $(".dodge").find("img").css({"float":"left"});
-        });
+			<!-- 
+			Modals Below! 
+			Note that the modals are stored in their individual files (in pieces) and the individual pieces
+			are called with php.
+			-->
 
-        //The following function manipulates the DOM so the whole container class centers in any
-        //cellphone and the background color stays #515151.
-        $(".container").css({
+					
+	<?php
 
-            //"padding-top":"30%",
-            //"padding-bottom":"30%",
-            "background-color":"#51514F"
+	include 'tutorialModal.php';
 
-        });
+	include 'settingsModal.php';
 
-        //The following piece of code calls the most recent rewards earned by the player!
-        $.get(
-            "rewards.php",
-            {},
-            function (data){
-                $("#rewardQuery").html(data);
-            }
-        )
-        event.preventDefault();
+	include 'achievementsModal.php';
 
-        //The following piece of code calls the modal that only activates on the day the award was earned.
-        $("#rewardModal1").modal();
-        $("#rewardModal2").modal();
-        $("#rewardModal3").modal();
-        
-    });
-    
-    function easterEgg() {
-        var image = document.getElementById('myLogo');
-        if (image.src.match("alt")) {
-            image.src = "images/logo.gif";
-        } else {
-            image.src = "images/logoalt.gif";
-            playSound(this,'Sound/woof.mp3');
-        }
-    }
-    
-    function whichChild(elem){
-        var i = 1;
-        while((elem=elem.previousElementSibling)!=null)
-            ++i;
-        return i;
-    }
-    
-    document.getElementById('musicVal').innerHTML = musicVol*10;
-    document.getElementById('sfxVal').innerHTML = sfxVol*10;
-    
-</script>
+	include 'rewardsAutomatedModals.php'
+
+	?>
+	<span id="additionalModals"></span>
+
+		</div>
+	</div>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+	<script>
+		var index = 1;
+		//DOM manipulation of this particular site happens below
+		$(document).ready(function(){
+			
+			document.getElementById('musicVal').innerHTML = musicVol*10;
+			document.getElementById('sfxVal').innerHTML = sfxVol*10;
+			document.getElementById('musicslider').value = musicVol*10;
+			document.getElementById('sfxslider').value = sfxVol*10;
+			playMusic(this,'Sound/menumusic.mp3')
+			//The first two functions below this message allow me to manipulate the dodge pic
+			//so the selector moves as the user clicks. We can change that eventually if we like to.
+			$(".dodge").find("img").css({"float":"left"});
+			
+			$(".dodge").click(function(){
+				if(index == whichChild(this)){
+					switch(index){
+						case 1: window.location.href = "marathon.html";
+								break;
+						case 2: window.location.href = "speedmode.html";
+								break;
+						case 3: window.location.href = "marathon-leaderboard.php";
+								break;
+						case 4: $("#tutorialModal").modal();
+								break;
+						case 5: $("#settingsModal").modal();
+								break;
+								//data-toggle="modal" data-target="#settingsModal"
+						case 6: $("#rewardsModal").modal();
+								break;
+						default: break;
+					}
+				}
+				index = whichChild(this);
+				$(".dodge").find("img").remove();
+				$(this).prepend("<img class=\"img-circle\" src=\"images/dodge.gif\" width=\"30px\"; height=\"30px\" alt=\"\">");
+				$(".dodge").find("img").css({"float":"left"});
+			});
+
+			//The following function manipulates the DOM so the whole container class centers in any
+			//cellphone and the background color stays #515151.
+			$(".container").css({
+
+				//"padding-top":"30%",
+				//"padding-bottom":"30%",
+				"background-color":"#51514F"
+
+			});
+
+			//The following piece of code calls the most recent rewards earned by the player!
+			$.get(
+				"rewards.php",
+				{},
+				function (data){
+					$("#rewardQuery").html(data);
+				}
+			)
+			event.preventDefault();
+
+			//The following piece of code calls the modal that only activates on the day the award was earned.
+			$("#rewardModal1").modal();
+			$("#rewardModal2").modal();
+			$("#rewardModal3").modal();
+			
+		});
+		
+		function easterEgg() {
+			var image = document.getElementById('myLogo');
+			if (image.src.match("alt")) {
+				image.src = "images/logo.gif";
+			} else {
+				image.src = "images/logoalt.gif";
+				playSound(this,'Sound/woof.mp3');
+			}
+		}
+		
+		function whichChild(elem){
+			var i = 1;
+			while((elem=elem.previousElementSibling)!=null)
+				++i;
+			return i;
+		}
+		
+		document.getElementById('musicVal').innerHTML = musicVol*10;
+		document.getElementById('sfxVal').innerHTML = sfxVol*10;
+		
+	</script>
 </body>
 </html>
