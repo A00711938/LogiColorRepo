@@ -41,12 +41,6 @@
                     <div class="col-xs-12">
                         <span id="sfxVal"></span>
                     </div>
-                    <div class="col-xs-12">
-                        <input type="checkbox" name="hint"/>&nbsp;&nbsp;Hints
-                    </div>
-                    <div class="col-xs-12">
-                        <input type="checkbox" name="colorblind"/>&nbsp;&nbsp;Colorblind Mode
-                    </div>
                 </div>
             </div>
 
