@@ -132,7 +132,7 @@ if ($count2 == 1){
  ";
 }}
 
-$reward3 = $databaseConnection->prepare("SELECT * FROM `logicolorscores` WHERE `user_id` = :user_id AND `scores` > 500");
+$reward3 = $databaseConnection->prepare("SELECT * FROM `logicolorscores` WHERE `user_id` = :user_id AND `scores` > 3000");
 $reward3->bindParam('user_id', $_SESSION['user_id']);
 $reward3->execute();
 $count3 = $reward3->rowCount();
