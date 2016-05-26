@@ -113,5 +113,6 @@ function resetComponent(){
 }
 //This function updates the score of the score box.
 function updateScore(){
-	document.getElementById('score').innerHTML = "Score: " + score;
+    if(!creepy)
+        document.getElementById('score').innerHTML = "Score: " + score;
 }

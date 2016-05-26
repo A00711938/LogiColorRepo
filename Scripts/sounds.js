@@ -26,26 +26,30 @@ function playMusic(el,soundfile) {
     el.mp3.play();
 }
 
-function musicChange(value){
+function musicChange(value) {
 	document.getElementById('musicVal').innerHTML = value;
     document.getElementById('musicslider').value = value;
     musicVol = value/10;
     playMusic(musEl,musFile);
 }
 
-function sfxChange(value){
+function sfxChange(value) {
 	document.getElementById('sfxVal').innerHTML = value;
     document.getElementById('sfxslider').value = value;
     sfxVol = value/10;
 }
 
-function randMusic(){
+function randMusic() {
+    randSong = 21;
     if(randSong < 7)
         playMusic(this,'Sound/marathonmusic.mp3');
     else if(randSong < 14)
         playMusic(this,'Sound/marathonmusic2.mp3');
     else if(randSong < 21)
         playMusic(this,'Sound/marathonmusic3.mp3');
-    else
+    else{
         playMusic(this,'Sound/marathonmusiccreepy.mp3');
+        document.getElementById('score').innerHTML = "Score: ???";
+        creepy = true;
+    }
 }
