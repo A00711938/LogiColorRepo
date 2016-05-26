@@ -13,7 +13,7 @@ echo "
 					<tr>
 						<th class=\"text-center\">Rank</th>
 						<th class=\"text-center\">Username</th>
-						<th class=\"text-center\">Time</th>
+						<th class=\"text-center\">Score</th>
 					</tr>
 				</thead>
 
@@ -28,7 +28,7 @@ do {
     $result = $getUsername->fetch(PDO::FETCH_ASSOC);
     echo "<tr><td class=\"text-center\">{$rank}</td>
 				<td class=\"text-center\">{$result['username']}</td>
-				<td class=\"text-center\">{$row['time']}</td></tr>";
+				<td class=\"text-center\">{$row['speedscore']}</td></tr>";
 
     $rank++;
 } while ($row = $records->fetch(PDO::FETCH_ASSOC));

@@ -17,3 +17,4 @@ include "queryMarathonDB.php";
 
 //Returns values from the database in the specified format.
 include "getMarathonDB.php";
+

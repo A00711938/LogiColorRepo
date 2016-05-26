@@ -2,10 +2,8 @@
 /**
  * Created by IntelliJ IDEA.
  * User: chico_percedes
- * Date: 2016-05-18
- * Time: 11:21 PM
- *
- *
+ * Date: 2016-05-26
+ * Time: 9:36 AM
  */
 session_start();
 
@@ -25,10 +23,10 @@ if (isset($_POST['scoreDB'])){
     //echo ($smt);
 
     $records = $databaseConnection->prepare("INSERT INTO `logicolorscores`(`score_id`, `user_id`, `scores`, `speedscore`, `timestamp`) 
-    VALUES ('', :user_id, :scores, '', now())");
+    VALUES ('', :user_id, '', :speedscore, now())");
     //$records->bindParam('', $userid);
     //$records->bindParam(':fname', $fname);
     $records->bindParam(':user_id', $_SESSION['user_id']);
-    $records->bindParam(':scores', $scoreDB);
+    $records->bindParam(':speedscore', $scoreDB);
     $records->execute();
 }

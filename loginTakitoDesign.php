@@ -75,8 +75,8 @@ Below I add all the content required for Boostrap to create the log-in page.
                         <!--
                         NOTE: The remember me function is not working yet. We need to get that information
                         working sometime in week 4. I won't add this until beg. of week 4 scrum :O
+                        <label><input type="checkbox"> Remember me</label> REMOVED
                         -->
-                        <label><input type="checkbox"> Remember me</label>
                     </div>
                     <div class="text-center">
                         <button type="submit" name="submit" class="btn">Log in</button>

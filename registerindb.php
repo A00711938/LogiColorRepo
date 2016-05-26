@@ -79,7 +79,7 @@ if(isset($_POST['submit'])){
         //So if everything went smoothly, the new user will be entered in the database
         //and the user will be directed to the main screen. A message confirming the
         //successful query will appear on the screen for 2 seconds.
-        header('refresh:2; url=loginTakitoDesign.php');
+        header('refresh:0; url=loginTakitoDesign.php');
         echo "New account created successfully";
         echo "Please log-in using your new username and password.";
         exit;
@@ -92,6 +92,6 @@ if(isset($_POST['submit'])){
 //If anything wrong happens (e.g. an errMsg was triggered). The
 //user will see a message saying something went wrong and the user will be
 //redirected to the sign in screen.
-header('refresh:2; url=signinTakitoDesign.html');
+header('refresh:0; url=signinTakitoDesign.html');
 echo "Something went wrong so try again";
 exit;
