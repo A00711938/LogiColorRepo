@@ -43,7 +43,7 @@ function generateQuestion(){
 				document.getElementById('num1').innerHTML = "";
 				document.getElementById('num2').innerHTML = "";
 				document.getElementById('sum').innerHTML = "";
-				generateEasyShapes();
+				generateMediumShapes();
 				document.getElementById('operation').innerHTML = operation[op];
 				document.getElementById('equal').innerHTML = " = ";
 			} else {
@@ -65,7 +65,7 @@ function generateQuestion(){
 			document.getElementById('num1').innerHTML = "";
 			document.getElementById('num2').innerHTML = "";
 			document.getElementById('sum').innerHTML = "";
-			generateEasyShapes();
+			generateShapes(op);
 			document.getElementById('operation').innerHTML = operation[op];
 			document.getElementById('equal').innerHTML = " = ";
 		}
