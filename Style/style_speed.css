@@ -1,9 +1,10 @@
 #timebar{
-	width: 1000px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 	height: 20px;
 	border: 1px solid black;
 	background: #FFFF00;
-	margin: auto;
 }
 
 body{
@@ -40,6 +41,55 @@ h1{
 	font-size: 500%;
 }
 
+.modal-content {
+	background-color: #51514F;
+	font-family: 'Permanent Marker', cursive;
+}
+.content {
+	text-align: center;
+}
+
+.modal-header{
+	border-bottom-width: 0;
+	background-color: #51514F;
+	color: #F26A68;
+	text-align: center;
+}
+
+.modal-body {
+	background-color: #70c1b2;
+	font-family: 'Trade Winds', cursive;
+}
+
+.modal-footer {
+	border-top-width: 0;
+	background-color: #51514F;
+	
+}
+
+.btn {
+	background-color: #F26A68;
+	font-family: 'Trade Winds', cursive;
+	font-size: 20px;
+	color: #FFE272;
+	padding: 15px 10px;
+}
+
 .footer .glyphicon {
 	font-size: 40px;
+}
+
+#midtable .col-xs-1 {
+	vertical-align: middle;
+	color: #fff;
+    text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;
+}
+.container{
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
 }

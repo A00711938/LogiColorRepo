@@ -1,3 +1,7 @@
+/***************************************************************************
+ *         REQUIRED JAVASCRIPT FILES                 GLOBAL.JS             *
+ ***************************************************************************/
+ 
 //This fuction will generate the color part of the equation.
 //Currently the answer will generate at 71% correctness
 function generateColor() {
@@ -6,10 +10,8 @@ function generateColor() {
 	//Selecting the operand by random.
 	op = Math.floor(Math.random() * 2);
 	do{
-		if(choice < 71){
-			//CORRECT COLOR (forcebly)
-			if(!op){
-				//ADDITION
+		if(choice < 71){//CORRECT COLOR (forcebly)
+			if(!op){	//ADDITION
 				//Obtain the final color.
 				var rand = Math.floor(Math.random() * 9);
 				c1 = rand == 0 ? 15 : rand;
@@ -19,8 +21,7 @@ function generateColor() {
 				} while (!isValid());
 				//Determine the outcome depend on the first two color.
 				c3 = b2d(add(d2b(c1), d2b(c2)));
-			} else {
-				//SUBTRACTION
+			} else {	//SUBTRACTION
 				//Obtain the first color
 				var rand = Math.floor(Math.random() * 9);
 				c1 = rand == 0 ? 15 : rand;
@@ -32,8 +33,7 @@ function generateColor() {
 				//Determine the outcome depend on the first two color.
 				c3 = b2d(minus(d2b(c1), d2b(c2)));
 			}
-		} else {
-			//INCORRECT COLOR (mostly)
+		} else {//INCORRECT COLOR (mostly)
 			//Generate all 3 color randomly.
 			//Looping the algorithm again when the random generated a correct statement.
 			do{
@@ -47,6 +47,7 @@ function generateColor() {
 		}
 	} while(!isValid());
 }
+//This function checks if the color equation is correct or not
 function colorCheck(){
 	return	op ? c3 == b2d(minus(d2b(c1), d2b(c2))):
 				(c1 == c2 && c2 == c3) || (c3 == b2d(add(d2b(c1), d2b(c2))));
@@ -54,17 +55,23 @@ function colorCheck(){
 //THIS FUNCTION VALIDATES IF THE EQUATION ARE SHOWABLE ON SCREEN. ADD/REMOVE RESTRICTIONS IF NEEDED.
 function isValid(){
 	if(op){ //CHECK MINUS STATEMENT
-		if(isSame() || isWhite(c1) || isOxy() || isBlack(c2) || isGrey(c2)) return false;	//This checks if the first is white, both the same, second is black or is opposite in binary.
-		if(isWhat(1, c1) || isWhat(2, c1) && isWhat(2, c2)) return false;
-		if(isBlack(c1)) return !(isWhite(c2) || isGrey(c2));								//This checks if it is a valid combination with black as first.
-		if(isGrey(c1)) return (isWhite(c2) || isBlack(c2));									//This checks if grey being the first, is a combination of the second.
-		if(isWhite(c2)) return (isGrey(c1));
+		if(isSame()) 		return false;						//This checks if both colors are same.
+		if(isWhite(c1)) 	return false;						//This checks if the first color is white.
+		if(isOxy())	 		return false;						//This checks if the secondary color can be minus by primary.
+		if(isGrey(c2))		return false;						//This checks if the second color is grey.
+		if(isGrey(c1))		return (isWhite(c2) || isBlack(c2));//This checks if the second is a component of grey as first color.
+		if(isBlack(c1))	 	return !(isWhite(c2) || isGrey(c2));//This checks if the combination are minus-able from black.
+		if(isWhat(1, c1))	return false;						//This checks if the first color is primary.
+		return !(isWhat(2, c1) && isWhat(2, c2))				//This checks if both colors are secondary.
 	} else {//CHECK ADD STATEMENT
-		if(containsGrey()) return isSame();													//This checks if both are grey.
-		if(containsWhite()) return (isSame() || containsBlack());							//This checks if both are white or is a white black combination.
+		if(containsGrey())	return isSame();					//This checks if both are grey.
+		if(containsWhite()) return (isSame() || containsBlack());//This checks if both are white or is a white black combination.
 	}
 	return true;
 }
+
+/** THE FUNCTIONS BELOW ARE UTILITY FUNCTION FOR THIS JAVASCRIPT */
+
 //THIS CHECKS IF THE FIRST TWO COLORS HAVE WHITE
 function containsWhite(){
 	return (c1 == 8) || (c2 == 8);

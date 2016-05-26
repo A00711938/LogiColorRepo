@@ -114,7 +114,7 @@
 		<!-- Top bar (nav bar) with icons are placed in the following row -->
 		<div class="navigation row">
 
-			<div class="col-xs-3 text-center" id="leftCorner">
+			<div class="col-xs-3 text-center navibar" id="leftCorner">
 				<h4>
 				<!--Button that returns to home screen-->
 				<a href="welcomeScreenTakitoDesign.php"><span class="glyphicon glyphicon-home"></span></a>
@@ -129,11 +129,12 @@
 					Stage Completed: 0
 				</h4>
 			</div>
+			
 		</div>
 	</div>
 	<!--This row is where the "lives" of the mode. For speed mode, it is a time bar-->
 	<div class="navigation row text-center">
-		<div class="col-xs-12" id="timebar"></div>
+		<div class="col-xs-9 text-center" id="timebar"></div>
 	</div>
 	
 	<br/><br/>
@@ -188,10 +189,8 @@
 				</div>
 				<div class="modal-footer">
 					<div class = "centered text-center">
-						<div class="col-md-4 col-md-offset-4">
-							<a href="speedmode.html" class="btn btn-default" data-dismiss="modal" onclick="newGame();" id = "tryAgain">Try Again</a>
-							<a href="welcomeScreenTakitoDesign.php" class="btn btn-default" name = "next">Next</a>
-						</div>
+						<a href="speedmode.html" class="btn btn-default" data-dismiss="modal" onclick="newGame();" id = "tryAgain">Try Again</a>
+						<a href="welcomeScreenTakitoDesign.php" class="btn btn-default" name = "next">Next</a>
 					</div>
 				</div>
 			</div>
