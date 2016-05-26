@@ -90,6 +90,10 @@ td {
     1px 1px 0 #FFF;
 }
 
+.game {
+	text-align: center;
+	margin-left: 5px;
+}
 
 .shape1 {
 	margin-top: -20px;
@@ -100,12 +104,17 @@ td {
 }
 .shape3 {
 	margin-top: -20px;
-	margin-left: 25px;
+	margin-left: 7px;
 }
 
 /** Put the problem in the center*/
-.colfix {
+.colfix1 {
 	padding: 60px 0px;
+	width: 22%;
+}
+.colfix2 {
+	padding: 60px 0px;
+	width: 14%;
 }
 
 .first {
@@ -121,5 +130,5 @@ td {
 	padding: 10px 25px 10px 10px;
 }
 .third {
-	padding: 10px 5px 10px 20px;
+	padding: 10px 5px 10px 0px;
 }
