@@ -40,7 +40,6 @@ function sfxChange(value) {
 }
 
 function randMusic() {
-    randSong = 21;
     if(randSong < 7)
         playMusic(this,'Sound/marathonmusic.mp3');
     else if(randSong < 14)
