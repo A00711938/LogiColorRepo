@@ -3,12 +3,16 @@
  *                                      NUMBERLOGIC.JS            *
  *                                      EQUATION.JS               *
  ******************************************************************/
+ 
+ //This function returns the equation's answer.
 function getAnswer(){
 	return colorCheck() && numberCheck(); // For numbers
 }
 function getAnswer2() { // For shapes
 	return colorCheck();
 }
+//This function check if the user's answer is same as equation's answer.
+//It then compute if its correct or wrong.
 function userAnswer(myAns){
 	var questionAns;
 	if (checkAnswer == 0) {
