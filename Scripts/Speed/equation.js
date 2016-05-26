@@ -19,6 +19,7 @@ function displayMessage(){
 	document.getElementById('num1').innerHTML = firstNumber;
 	document.getElementById('operation').innerHTML = operation[op];
 	document.getElementById('num2').innerHTML = secondNumber;
+	document.getElementById('equal').innerHTML = " = ";
 	document.getElementById('sum').innerHTML = sum;
 }
 //This function generates the question using the logics provided, then display them to the user.
