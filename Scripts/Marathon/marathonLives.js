@@ -7,7 +7,6 @@ var correctStage = 20;
  *                        DO NOT CHANGE THE CODE BELOW                         *
  *******************************************************************************/
 
-var life = 3;
 var heart = new Array(life);
 //This function initializes the time variables and the child objects.
 //REDIRECT WHERE THE HEART IMAGE IS.

@@ -23,3 +23,6 @@ var randShape = 0;
 var checkAnswer;
 var level = 1;
 var creepy = false;
+
+/** marathonLives.js */
+var life = 3;

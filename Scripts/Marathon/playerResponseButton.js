@@ -29,5 +29,7 @@ function userAnswer(myAns){
 		message.innerHTML = "<h4>Wrong!</h4>"
 		//show hint if enabled
 	}
-	generateQuestion();
+	if (life != 0) {
+		generateQuestion();
+	}
 }

@@ -24,8 +24,9 @@ function userAnswer(myAns){
 	
 	if(myAns == questionAns){
 		correct();
+		generateQuestion();
 	} else {	
 		wrong();
 	}
-	generateQuestion();
+	
 }
