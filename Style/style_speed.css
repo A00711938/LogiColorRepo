@@ -48,6 +48,7 @@ h1{
 
 .fancy{
 	font-weight: bold;
+	margin-top: -10px;
 }
 #racetext{
 	font-size: 400%;
