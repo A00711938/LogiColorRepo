@@ -1,7 +1,15 @@
-/******************************************************************
- *     THIS NEEDS THE FOLLOWING: COLORLOGIC.JS NUMBERLOGIC.JS     *
- ******************************************************************/
+/***************************************************************************
+ *           REQUIRED ID ELEMENT                        NUM1               *
+ *                                                      NUM2               *
+ *                                                      SUM                *
+ *                                                    OPERATION            *
+ *                                                                         *
+ *         REQUIRED JAVASCRIPT FILES               COLORLOGIC.JS           *
+ *                                                 NUMBERLOGIC.JS          *
+ *                                                   GLOBAL.JS             *
+ ***************************************************************************/
 
+ //This function display the equation onto the board.
 function displayMessage(){
 	// Apply chosen colors to corresponding element
 	document.getElementById('num1').style.color = color[c1];
@@ -12,8 +20,8 @@ function displayMessage(){
 	document.getElementById('operation').innerHTML = operation[op];
 	document.getElementById('num2').innerHTML = secondNumber;
 	document.getElementById('sum').innerHTML = sum;
-} // end displayMessage
-
+}
+//This function generates the question using the logics provided, then display them to the user.
 function generateQuestion(){
 	var questionRandomizer = Math.floor(Math.random() * 2);
 	generateColor();
