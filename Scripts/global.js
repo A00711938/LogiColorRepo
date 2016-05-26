@@ -22,4 +22,4 @@ var difficulty = 0;
 var randShape = 0;
 var checkAnswer;
 var level = 1;
-
+var creepy = false;

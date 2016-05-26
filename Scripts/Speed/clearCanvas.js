@@ -10,8 +10,8 @@ function clearCanvases() {
 	
 	
 	
-	fig1.clearRect( 0, 0, 70, 70);
-	fig2.clearRect( 0, 0, 70, 70);
-	fig3.clearRect( 0, 0, 70, 70);
-	fig4.clearRect( 0, 0, 70, 70);
+	fig1.clearRect( 0, 0, 80, 80);
+	fig2.clearRect( 0, 0, 80, 80);
+	fig3.clearRect( 0, 0, 80, 80);
+	fig4.clearRect( 0, 0, 80, 80);
 }

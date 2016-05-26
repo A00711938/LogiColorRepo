@@ -7,14 +7,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-			<!-- Google font 
-		font-family: 'Chewy', cursive; -->
+		<!-- Google font  -->
 		<link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
 		
-        <!--q
-        Testing the app without the folowing css changes. Using default bootstrap for now.-->
+        <!-- Stylesheet -->
 		<link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="Style/stylemarathon.css">
@@ -43,8 +41,8 @@
 		<!--THIS MODE WILL NEED TO SHOW THE EQUATION TO THE USER-->
 		<script src="Scripts/Marathon/equation.js"></script>
 		<!--RANODMIZES THE SHAPE COMBINATION REGARDING TO CHOSEN DIFFICULTY-->
-		<script src="Scripts/Marathon/shapesEasy.js"></script><!--EASY-->
-		<script src="Scripts/Marathon/shapesMedium.js"></script><!--MEDIUM (In Progress)-->
+		<script src="Scripts/Marathon/shapesMix.js"></script><!-- FOR HARD LEVEL -->
+		<script src="Scripts/Marathon/shapesMedium.js"></script><!-- FOR MEDIUM LEVEL -->
 		<!--THIS MODE WILL NEED TO DRAW EACH SHAPES-->
 		<script src="Scripts/Marathon/draw.js"></script>
 		<!--THIS CLEARS THE CANVASES-->
@@ -54,6 +52,7 @@
     </head>
 
 <body>
+<div class="body">
 <!--
 Modal 'Are You Ready'
 For whatever reason I wasn't able to create the fade in effect when the modal appears on screen.
@@ -86,7 +85,7 @@ The first container holds the game's navigation bar.
 <div class="container">
 
 <!-- Top bar (nav bar) with icons are placed in the following row -->
-<div class="navigation row">
+<div class="navigation navibar row">
 
     <div class="col-xs-3 text-center" id="leftCorner">
         <h4>
@@ -232,23 +231,20 @@ the bootstrap screen. We'll have to fix this one from JS.
 	
 	<div id="bonusbar"></div>
 <!--The following two rows are for in game operations -->
-<div class="game row" id="midtable">
+<div class="gamecontainer">
+<div class="game row vertical-center"id="midtable">
 
-        <div class = "col-xs-3 text-center first"><h1 id="num1"></h1><canvas class = "" id = "figure1" width="80" height="80"></canvas></div>
+        <div class = "col-xs-3 text-center colfix1"><h1 id="num1" class="first"></h1><canvas class = "shape1" id = "figure1" width="70" height="70"></canvas></div>
 			
-		<div class="col-xs-1 text-center plus"><h1 id="operation"></h1></div>
+		<div class="col-xs-2 text-center colfix2"><h1 id="operation" class="plus"></h1></div>
 			
-		<div class = "col-xs-3 text-center second"><h1 id="num2"></h1><canvas class = "" id = "figure2" width="80" height="80"></canvas></div>
+		<div class = "col-xs-3 text-center colfix1"><h1 id="num2" class="second"></h1><canvas class = "shape2" id = "figure2" width="70" height="70"></canvas></div>
 		
-		<div class="col-xs-1 text-center equal"><h1 class="eq" id = "equal"></h1></div>
+		<div class="col-xs-2 text-center colfix2"><h1 class="eq equal" id = "equal"></h1></div>
 			
-		<div class = "col-xs-3 text-center third"><h1 id="sum"></h1><canvas class = "" id = "figure3" width="80" height="80"></canvas></div>
-
+		<div class = "col-xs-2 text-center colfix1"><h1 id="sum" class="third"></h1><canvas class = "shape3" id = "figure3" width="70" height="70"></canvas></div>
 </div>
-
-<!--
-The following row reserves space for the right/wrong message
--->
+</div>
 
 </div>
 
@@ -286,6 +282,7 @@ I suspect that the file modals.js has something to do with this problem.
                 <div id="modscore"></div>
                 <div id="scored"></div>
                 <p>You will get smarter if you keep playing in that manner.</p>
+                <p>WARNING: Scores may not save in default Android browser</p>
             </div>
             <div class="modal-footer">
                 <div class = "centered text-center">
@@ -295,7 +292,7 @@ I suspect that the file modals.js has something to do with this problem.
             </div>
         </div>
     </div>
-        </form>
+    </form>
 </div>
 
 <!--
@@ -370,7 +367,6 @@ $(document).ready(function () {
 
 });
 </script>
-
-
+</div>
 </body>
 </html>

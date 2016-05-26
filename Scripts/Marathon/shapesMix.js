@@ -1,4 +1,4 @@
-/* Easy Level Shapes Generator JS
+/* High Level Shapes Generator JS
  ******************************************************************
  *            THIS NEEDS THE FOLLOWING: GlOBAL.JS				  *
  *										COLORLOGIC.JS             *
@@ -6,7 +6,7 @@
  *                                      EQUATION.JS               *
  ******************************************************************/
 
-function generateEasyShapes() {
+function generateShapes(Cop) {
 	var canvas1 = document.getElementById('figure1');
 	var canvas2 = document.getElementById('figure2');
 	var canvas3 = document.getElementById('figure3');
@@ -20,8 +20,12 @@ function generateEasyShapes() {
 		fig2.clearRect( 0, 0, 70, 70);
 		fig3.clearRect( 0, 0, 70, 70);
 	}
-
-	randShape = Math.floor(Math.random() * 33);
+	if (Cop == 0){
+		randShape = Math.floor(Math.random() * 33);
+	} else {
+		randShape = Math.floor(Math.random() * 12 + 21);
+	}
+	
 	switch (randShape) {
 		case 0: // right triangles + square
 			clearAll();
@@ -69,103 +73,8 @@ function generateEasyShapes() {
 			square( fig3, 0, 0, 70, 70, color[c2]);
 			triangle(fig3, 0, 0, 70, 0, 70, 70, color[c3]);
 			break;
-		case 4: // square + right triangles
-			clearAll();
-			// figure1
-			square( fig1, 0, 0, 70, 70, color[c1]);
-			
-			// figure2
-			triangle(fig2, 0, 0, 70, 0, 0, 70, color[c2]);
-			
-			// figure3
-			square( fig3, 0, 0, 70, 70, color[c1]);
-			triangle(fig3, 0, 0, 70, 0, 0, 70, color[c3]);
-			break;
-		case 5: // square + right triangles
-			clearAll();
-			// figure1
-			square( fig1, 0, 0, 70, 70, color[c1]);
-			
-			// figure2
-			triangle(fig2, 70, 70, 70, 0, 0, 70, color[c2]);
-			
-			// figure3
-			square( fig3, 0, 0, 70, 70, color[c1]);
-			triangle(fig3, 70, 70, 70, 0, 0, 70, color[c3]);
-			break;
-		case 6: // square + right triangles
-			clearAll();
-			// figure1
-			square( fig1, 0, 0, 70, 70, color[c1]);
-			
-			// figure2
-			triangle(fig2, 0, 0, 0, 70, 70, 70, color[c2]);
-			
-			// figure3
-			square( fig3, 0, 0, 70, 70, color[c1]);
-			triangle(fig3, 0, 0, 0, 70, 70, 70, color[c3]);
-			break;
-		case 7:	// square + right triangles
-			clearAll();
-			// figure1
-			square( fig1, 0, 0, 70, 70, color[c1]);
-			
-			// figure2
-			triangle(fig2, 0, 0, 70, 0, 70, 70, color[c2]);
-			
-			// figure3
-			square( fig3, 0, 0, 70, 70, color[c1]);
-			triangle(fig3, 0, 0, 70, 0, 70, 70, color[c3]);
-			break;
-		case 8: // square + circle/arcs
-			clearAll();
-			// figure1
-			square( fig1, 0, 0, 70, 70, color[c1]);
-			
-			// figure2
-			circle(fig2, 35, 35, 35, 0, 2 * Math.PI, color[c2]);
-			
-			// figure3
-			square( fig3, 0, 0, 70, 70, color[c1]);
-			circle(fig3, 35, 35, 35, 0, 2 * Math.PI, color[c3]);
-			break;
-		case 9: // square + circle/arcs
-			clearAll();
-			// figure1
-			square( fig1, 0, 0, 70, 70, color[c1]);
-			
-			// figure2
-			arc(fig2, 35, 35, 35, 0, Math.PI, color[c2]);
-			
-			// figure3
-			square( fig3, 0, 0, 70, 70, color[c1]);
-			arc(fig3, 35, 35, 35, 0, Math.PI, color[c3]);
-			break;
-		case 10: // square + circle/arcs
-			clearAll();
-			// figure1
-			square( fig1, 0, 0, 70, 70, color[c1]);
-			
-			// figure2
-			arc(fig2, 35, 35, 35, 0.5 * Math.PI, 1.5 * Math.PI, color[c2]);
-			
-			// figure3
-			square( fig3, 0, 0, 70, 70, color[c1]);
-			arc(fig3, 35, 35, 35, 0.5 * Math.PI, 1.5 * Math.PI, color[c3]);
-			break;
-		case 11: // square + circle/arcs
-			clearAll();
-			// figure1
-			square( fig1, 0, 0, 70, 70, color[c1]);
-			
-			// figure2
-			arc(fig2, 35, 35, 35, 1.5 * Math.PI, 0.5 * Math.PI, color[c2]);
-			
-			// figure3
-			square( fig3, 0, 0, 70, 70, color[c2]);
-			arc(fig3, 35, 35, 35, 1.5 * Math.PI, 0.5 * Math.PI, color[c3]);
-			break;
-		case 12: // circle/arcs + square
+		
+		case 4: // circle/arcs + square
 			clearAll();
 			// figure1
 			circle( fig1, 35, 35, 35, 0, 2 * Math.PI, color[c1]);
@@ -177,7 +86,7 @@ function generateEasyShapes() {
 			square( fig3, 0, 0, 70, 70, color[c2]);
 			circle( fig3, 35, 35, 35, 0, 2 * Math.PI, color[c3]);
 			break;
-		case 13: // circle/arcs + square
+		case 5: // circle/arcs + square
 			clearAll();
 			// figure1
 			arc( fig1, 35, 35, 35, 0, Math.PI, color[c1]);
@@ -189,7 +98,7 @@ function generateEasyShapes() {
 			square( fig3, 0, 0, 70, 70, color[c2]);
 			arc( fig3, 35, 35, 35, 0, Math.PI, color[c3]);
 			break;
-		case 14: // circle/arcs + square
+		case 6: // circle/arcs + square
 			clearAll();
 			// figure1
 			arc( fig1, 35, 35, 35, 0.5 * Math.PI, 1.5 * Math.PI, color[c1]);
@@ -201,7 +110,7 @@ function generateEasyShapes() {
 			square( fig3, 0, 0, 70, 70, color[c2]);
 			arc( fig3, 35, 35, 35, 0.5 * Math.PI, 1.5 * Math.PI, color[c3]);
 			break; 
-		case 15: // circle/arcs + square
+		case 7: // circle/arcs + square
 			clearAll();
 			// figure1
 			arc( fig1, 35, 35, 35, 1.5 * Math.PI, 0.5 * Math.PI, color[c1]);
@@ -213,7 +122,7 @@ function generateEasyShapes() {
 			square( fig3, 0, 0, 70, 70, color[c2]);
 			arc( fig3, 35, 35, 35, 1.5 * Math.PI, 0.5 * Math.PI, color[c3]);
 			break;
-		case 16:// circle + rectangle  (maybe for different level)
+		case 8:// circle + rectangle  (maybe for different level)
 			clearAll();
 			// figure1
 			circle( fig1, 35, 35, 35, 0, 2 * Math.PI, color[c1]);
@@ -226,7 +135,7 @@ function generateEasyShapes() {
 			arc( fig3, 35, 35, 35, 0.5 * Math.PI, 1.5 * Math.PI, color[c3]);
 			arc( fig3, 35, 35, 35, 1.5 * Math.PI, 0.5 * Math.PI, color[c1]);
 			break;
-		case 17: // circle + rectangle
+		case 9: // circle + rectangle
 			clearAll();
 			// figure1
 			circle(fig1, 35, 35, 35, 0, 2 * Math.PI, color[c1]);
@@ -239,7 +148,7 @@ function generateEasyShapes() {
 			arc( fig3, 35, 35, 35, 0.5 * Math.PI, 1.5 * Math.PI, color[c1]);
 			arc( fig3, 35, 35, 35, 1.5 * Math.PI, 0.5 * Math.PI, color[c3]);
 			break;
-		case 18: // circle + rectangle
+		case 10: // circle + rectangle
 			clearAll();
 			// figure1
 			circle( fig1, 35, 35, 35, 0, 2 * Math.PI, color[c1]);
@@ -252,7 +161,7 @@ function generateEasyShapes() {
 			arc( fig3, 35, 35, 35, Math.PI, 2 * Math.PI, color[c1]);
 			arc( fig3, 35, 35, 35, 0, Math.PI, color[c3]);
 			break;
-		case 19: // circle + rectangle
+		case 11: // circle + rectangle
 			clearAll();
 			// figure1
 			circle( fig1, 35, 35, 35, 0, 2 * Math.PI, color[c1]);
@@ -265,7 +174,7 @@ function generateEasyShapes() {
 			arc( fig3, 35, 35, 35, 0, Math.PI, color[c1]);
 			arc( fig3, 35, 35, 35, Math.PI, 2 * Math.PI, color[c3]);
 			break;
-		case 20: // circle + right triangle
+		case 12: // circle + right triangle
 			clearAll();
 			// figure1
 			circle( fig1, 35, 35, 35, 0, 2 * Math.PI, color[c1]);
@@ -278,7 +187,7 @@ function generateEasyShapes() {
 			arc( fig3, 35, 35, 35, 1.75 * Math.PI, 0.75 * Math.PI, color[c1]);
 			arc( fig3, 35, 35, 35, 0.75 * Math.PI, 1.75 * Math.PI, color[c3]);
 			break;
-		case 21: // circle + right triangle
+		case 13: // circle + right triangle
 			clearAll();
 			// figure1
 			circle( fig1, 35, 35, 35, 0, 2 * Math.PI, color[c1]);
@@ -291,7 +200,7 @@ function generateEasyShapes() {
 			arc( fig3, 35, 35, 35, 0.75 * Math.PI, 1.75 * Math.PI, color[c1]);
 			arc( fig3, 35, 35, 35, 1.75 * Math.PI, 0.75 * Math.PI, c3);
 			break;
-		case 22: // circle + right triangle
+		case 14: // circle + right triangle
 			clearAll();
 			// figure1
 			circle( fig1, 35, 35, 35, 0, 2 * Math.PI, color[c1]);
@@ -304,7 +213,7 @@ function generateEasyShapes() {
 			arc( fig3, 35, 35, 35, 0.25 * Math.PI, 1.25 * Math.PI, color[c1]);
 			arc( fig3, 35, 35, 35, 1.25 * Math.PI, 0.25 * Math.PI, color[c3]);
 			break;
-		case 23: // circle + right triangle
+		case 15: // circle + right triangle
 			clearAll();
 			// figure1
 			circle( fig1, 35, 35, 35, 0, 2 * Math.PI, color[c1]);
@@ -317,7 +226,7 @@ function generateEasyShapes() {
 			arc( fig3, 35, 35, 35, 1.25 * Math.PI, 0.25 * Math.PI, color[c1]);
 			arc( fig3, 35, 35, 35, 0.25 * Math.PI, 1.25 * Math.PI, color[c3]);
 			break;
-		case 24: // right triangle + right triangle
+		case 16: // right triangle + right triangle
 			clearAll();
 			// figure1
 			triangle( fig1, 0, 0, 0, 70, 70, 70, color[c1]);
@@ -330,7 +239,7 @@ function generateEasyShapes() {
 			triangle( fig3, 70, 0, 0, 70, 70, 70, color[c2]);
 			triangle( fig3, 0, 70, 35, 35, 70, 70, color[c3]);
 			break;
-		case 25: // right triangle + right triangle
+		case 17: // right triangle + right triangle
 			clearAll();
 			// figure1
 			triangle( fig1, 0, 0, 70, 0, 70, 70, color[c1]);
@@ -343,7 +252,7 @@ function generateEasyShapes() {
 			triangle( fig3, 70, 0, 0, 70, 70, 70, color[c2]);
 			triangle( fig3, 70, 0, 35, 35, 70, 70, color[c3]);
 			break;
-		case 26: // right triangle + right triangle
+		case 18: // right triangle + right triangle
 			clearAll();
 			// figure1
 			triangle( fig1, 0, 0, 70, 0, 0, 70, color[c1]);
@@ -355,7 +264,7 @@ function generateEasyShapes() {
 			triangle( fig3, 0, 0, 70, 0, 0, 70, color[c1]);
 			triangle( fig3, 70, 0, 0, 70, 70, 70, color[c2]);
 			break;
-		case 27: // right triangle + right triangle
+		case 19: // right triangle + right triangle
 			clearAll();
 			// figure1
 			triangle( fig1, 0, 0, 70, 0, 0, 70, color[c1]);
@@ -368,7 +277,7 @@ function generateEasyShapes() {
 			triangle( fig3, 0, 70, 0, 0, 70, 70, color[c2]);
 			triangle( fig3, 0, 70, 35, 35, 0, 0, color[c3]);
 			break;
-		case 28: // right triangle + right triangle
+		case 20: // right triangle + right triangle
 			clearAll();
 			// figure1
 			triangle( fig1, 0, 0, 70, 0, 0, 70, color[c1]);
@@ -381,6 +290,104 @@ function generateEasyShapes() {
 			triangle( fig3, 70, 0, 0, 0, 70, 70, color[c2]);
 			triangle( fig3, 70, 0, 35, 35, 0, 0, color[c3]);
 			break;
+			
+		case 21: // square + right triangles
+			clearAll();
+			// figure1
+			square( fig1, 0, 0, 70, 70, color[c1]);
+			
+			// figure2
+			triangle(fig2, 0, 0, 70, 0, 0, 70, color[c2]);
+			
+			// figure3
+			square( fig3, 0, 0, 70, 70, color[c1]);
+			triangle(fig3, 0, 0, 70, 0, 0, 70, color[c3]);
+			break;
+		case 22: // square + right triangles
+			clearAll();
+			// figure1
+			square( fig1, 0, 0, 70, 70, color[c1]);
+			
+			// figure2
+			triangle(fig2, 70, 70, 70, 0, 0, 70, color[c2]);
+			
+			// figure3
+			square( fig3, 0, 0, 70, 70, color[c1]);
+			triangle(fig3, 70, 70, 70, 0, 0, 70, color[c3]);
+			break;
+		case 23: // square + right triangles
+			clearAll();
+			// figure1
+			square( fig1, 0, 0, 70, 70, color[c1]);
+			
+			// figure2
+			triangle(fig2, 0, 0, 0, 70, 70, 70, color[c2]);
+			
+			// figure3
+			square( fig3, 0, 0, 70, 70, color[c1]);
+			triangle(fig3, 0, 0, 0, 70, 70, 70, color[c3]);
+			break;
+		case 24:	// square + right triangles
+			clearAll();
+			// figure1
+			square( fig1, 0, 0, 70, 70, color[c1]);
+			
+			// figure2
+			triangle(fig2, 0, 0, 70, 0, 70, 70, color[c2]);
+			
+			// figure3
+			square( fig3, 0, 0, 70, 70, color[c1]);
+			triangle(fig3, 0, 0, 70, 0, 70, 70, color[c3]);
+			break;
+		case 25: // square + circle/arcs
+			clearAll();
+			// figure1
+			square( fig1, 0, 0, 70, 70, color[c1]);
+			
+			// figure2
+			circle(fig2, 35, 35, 35, 0, 2 * Math.PI, color[c2]);
+			
+			// figure3
+			square( fig3, 0, 0, 70, 70, color[c1]);
+			circle(fig3, 35, 35, 35, 0, 2 * Math.PI, color[c3]);
+			break;
+		case 26: // square + circle/arcs
+			clearAll();
+			// figure1
+			square( fig1, 0, 0, 70, 70, color[c1]);
+			
+			// figure2
+			arc(fig2, 35, 35, 35, 0, Math.PI, color[c2]);
+			
+			// figure3
+			square( fig3, 0, 0, 70, 70, color[c1]);
+			arc(fig3, 35, 35, 35, 0, Math.PI, color[c3]);
+			break;
+		case 27: // square + circle/arcs
+			clearAll();
+			// figure1
+			square( fig1, 0, 0, 70, 70, color[c1]);
+			
+			// figure2
+			arc(fig2, 35, 35, 35, 0.5 * Math.PI, 1.5 * Math.PI, color[c2]);
+			
+			// figure3
+			square( fig3, 0, 0, 70, 70, color[c1]);
+			arc(fig3, 35, 35, 35, 0.5 * Math.PI, 1.5 * Math.PI, color[c3]);
+			break;
+		case 28: // square + circle/arcs
+			clearAll();
+			// figure1
+			square( fig1, 0, 0, 70, 70, color[c1]);
+			
+			// figure2
+			arc(fig2, 35, 35, 35, 1.5 * Math.PI, 0.5 * Math.PI, color[c2]);
+			
+			// figure3
+			square( fig3, 0, 0, 70, 70, color[c2]);
+			arc(fig3, 35, 35, 35, 1.5 * Math.PI, 0.5 * Math.PI, color[c3]);
+			break;
+			
 		case 29: // right triangle + right triangle (overlap)
 			clearAll();
 			// figure1

@@ -1,5 +1,5 @@
 var musEl,musFile;
-var randSong = Math.floor(Math.random() * 3);
+var randSong = Math.floor(Math.random() * 22);
 
 function playSound(el,soundfile) {
     if (el.mp3) {
@@ -26,27 +26,29 @@ function playMusic(el,soundfile) {
     el.mp3.play();
 }
 
-function musicChange(value){
+function musicChange(value) {
 	document.getElementById('musicVal').innerHTML = value;
     document.getElementById('musicslider').value = value;
     musicVol = value/10;
     playMusic(musEl,musFile);
 }
 
-function sfxChange(value){
+function sfxChange(value) {
 	document.getElementById('sfxVal').innerHTML = value;
     document.getElementById('sfxslider').value = value;
     sfxVol = value/10;
 }
 
-function randMusic(){
-    switch(randSong){
-        case 0: playMusic(this,'Sound/marathonmusic.mp3');
-                break;
-        case 1: playMusic(this,'Sound/marathonmusic2.mp3');
-                break;
-        case 2: playMusic(this,'Sound/marathonmusic3.mp3');
-                break;
-        default: break;
+function randMusic() {
+    if(randSong < 7)
+        playMusic(this,'Sound/marathonmusic.mp3');
+    else if(randSong < 14)
+        playMusic(this,'Sound/marathonmusic2.mp3');
+    else if(randSong < 21)
+        playMusic(this,'Sound/marathonmusic3.mp3');
+    else{
+        playMusic(this,'Sound/marathonmusiccreepy.mp3');
+        document.getElementById('score').innerHTML = "Score: ???";
+        creepy = true;
     }
 }
