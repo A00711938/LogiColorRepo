@@ -1,3 +1,4 @@
+<script src="Scripts/global.js"></script>
 <div id="tutorialModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 <!-- Modal content-->
@@ -21,8 +22,8 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <button class="btn" onclick="playVid()" type="button">Play</button>
-                <button class="btn" onclick="pauseVid()" type="button">Pause</button><br>
+                <button class="btn" onclick="playVid();musicVol = 0;" type="button">Play</button>
+                <button class="btn" onclick="pauseVid();musicVol = 5;" type="button">Pause</button><br>
 
                 <video id="tutorialVideo">
                     <source src="Sound/tutorial.mp4" width="90%" type="video/mp4">
