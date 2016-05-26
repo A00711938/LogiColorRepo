@@ -122,6 +122,9 @@ td {
     1px 1px 0 #FFF;
 }
 /** Put the problem in the center*/
+.game {
+	margin-top: 40px;
+}
 .colfix {
 	padding: 40px 0px;
 }
