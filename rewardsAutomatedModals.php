@@ -175,7 +175,7 @@ if ($count3 == 1){
                             <img src=\"images\achieve3.png\" alt=\"Dangerous to go alone\" class=\"\">
                         </div>
                         <div class=\"col-xs-10\">
-                            <h5>Over 500 points. You're certainly a pro!</h5>
+                            <h5>Over 3000 points. You're certainly a pro!</h5>
                         </div>
                         </div>
                
