@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" onload="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload');">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Welcome Screen</title>
-	
+
 	<!--Google font-->
 	<link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
@@ -16,7 +16,7 @@
 	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="Style/style_welcome_difficulty.css">
     <link rel="stylesheet" type="text/css" href="Style/style_settings.css">
-	
+
 	<!--IMPORT GLOBAL VARIABLE FOR THE SCRIPT NEEDED BELOW-->
     <script src="Scripts/global.js"></script>
 	<!--IMPORT FUNCTIONS FOR BACKGROUND MUSIC/SFX-->
@@ -33,7 +33,7 @@
     <!-- [endif]-->
 </head>
 
-<body>
+<body onload="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload');">
 
 	<!-- Title container below. -->
 	<div class="container">
@@ -96,7 +96,6 @@
 		var index = 1;
 		//DOM manipulation of this particular site happens below
 		$(document).ready(function(){
-			
 			document.getElementById('musicVal').innerHTML = musicVol*10;
 			document.getElementById('sfxVal').innerHTML = sfxVol*10;
 			document.getElementById('musicslider').value = musicVol*10;
