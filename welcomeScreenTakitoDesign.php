@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onload="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload');">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,7 +33,7 @@
     <!-- [endif]-->
 </head>
 
-<body onload="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload');">
+<body>
 
 	<!-- Title container below. -->
 	<div class="container">
