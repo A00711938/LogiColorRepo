@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en" onload="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload');">
 <head>
     <meta charset="utf-8">
@@ -82,7 +82,7 @@
 
 	include 'achievementsModal.php';
 
-	include 'rewardsAutomatedModals.php'
+	include 'rewardsAutomatedModals.php';
 
 	?>
 	<span id="additionalModals"></span>
