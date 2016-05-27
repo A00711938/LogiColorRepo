@@ -6,6 +6,11 @@
     (Takito Cabrera, Jei Yang, Kuanysh Boranbayev, Jonathan Huang, Colt King)
 
 - Game Description:
+	LogiColor is a brain game that focus on multiprocessing and arithmatic logic on numbers, colors and shapes. As the name LogiColor implies, it 
+	will mainly consist of a color aspect in each of the problem shown. In the game, there will be tutorial and a color wheel for players who are
+	new to the combination of the primary colors and secondary colors. The game offers two mode being marathon mode and speed mode. Marathon limits
+	the player with only three lives and the score accumulated are depending on how fast the player solves the problem. The other mode, speed mode,
+	is more like a survival where the player has to solve the problem under pressure inorder to progress or climb the ladder.
 
 - Code Structue:
     1) Javascript files, Images, Stylesheets and Sounds were stored in their respective folder.
