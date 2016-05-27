@@ -8,16 +8,20 @@
 - Game Description:
 
 - Code Structue:
+    1) Javascript files, Images, Stylesheets and Sounds were stored in their respective folder.
+    2) Most of the apps html files were turned to .php extensions and stored in the main Repo folder. We used PHP to break the
+    code into manageable pieces that could be used across multiple files.
+    3) The names used for most of our files attempt to describe the main functions contained within the file.
 
 - Technology used:
     HTML, CSS, Bootstrap,
     JavaScript, PHP
-    Github
+    Github, MySQL
 
 - Issues/Problems encountered:
     We had some issues with github a couple of times, but we were able to fix the problem and merge everything during the group meetings.
     During the sprint #2: 
-    We have been working on implementing the background music and sound effect, and volume slider to control the volume. 
+    We have been working on implementing the background music and sound effect, and volume slider to control the volume.
     But it is taking more time than we expected due to some js variable issues. We will be able to figure it out during next sprint.
     During the sprint #3: 
     We focused on debugging/testing our game. 
@@ -29,4 +33,5 @@
 
 
 - User guide submitted via dropbox.
+
 - Github network graph screenshot submitted via dropbox.
